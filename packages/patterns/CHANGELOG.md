@@ -1,5 +1,12 @@
 # @toucan-ui/patterns
 
+## 0.1.3
+
+### Patch Changes
+
+- Updated dependencies
+  - @toucan-ui/tokens@0.1.1
+
 ## 0.1.1
 
 ### Patch Changes
