@@ -1,0 +1,29 @@
+/* ==========================================================================
+   Blog Theme — FT-Inspired Editorial Overrides
+   Salmon paper, serif headings, warm tones, dense editorial typography.
+   ========================================================================== */
+
+:root {
+  /* Surface — FT signature salmon paper */
+  --color-surface-default: #fff1e5;
+  --color-surface-muted: #f2dfce;
+  --color-surface-raised: #ffffff;
+
+  /* Text — warm near-black and warm greys */
+  --color-on-surface-default: #33302e;
+  --color-on-surface-muted: #66605c;
+
+  /* Primary — FT claret accent */
+  --color-primary: #990f3d;
+  --color-primary-hover: #800b33;
+
+  /* Borders — warm, subtle */
+  --color-border-default: #ccc1b7;
+
+  /* Typography — serif headings, tighter editorial rhythm */
+  --font-family-heading: Georgia, 'Times New Roman', serif;
+  --font-family-display: Georgia, 'Times New Roman', serif;
+  --heading-font-weight: 700;
+  --text-body-font-size: 1rem;
+  --text-body-line-height: 1.6;
+}

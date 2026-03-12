@@ -1,0 +1,95 @@
+/* ==========================================================================
+   Inner Pages — Layout CSS
+   All values via var() token references. No hardcoded dimensions or colours.
+   ========================================================================== */
+
+/* --- Shell: sidebar + content --- */
+
+.docs-shell {
+  min-height: calc(100vh - var(--scale-12));
+}
+
+.docs-shell-sidebar {
+  align-self: start;
+}
+
+@media (min-width: 768px) {
+  .docs-shell-sidebar {
+    position: sticky;
+    top: var(--scale-8);
+    max-height: calc(100vh - var(--scale-8) * 2);
+    overflow-y: auto;
+  }
+
+  /* On md+, hide toggle buttons and show static headings */
+  .docs-shell-sidebar .tcn-side-nav[data-collapsible] .tcn-side-nav-toggle {
+    display: none;
+  }
+  .docs-shell-sidebar .tcn-side-nav[data-collapsible] .tcn-side-nav-heading {
+    display: block;
+  }
+  /* Ensure lists are always visible on desktop even if JS state says collapsed */
+  .docs-shell-sidebar .tcn-side-nav[data-collapsible] .tcn-side-nav-list[data-collapsed='true'] {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* --- Demo panel --- */
+
+.docs-demo-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--scale-2);
+  padding: var(--scale-2) var(--scale-3);
+  background: var(--color-surface-muted);
+  border-bottom: var(--border-width-thin) solid var(--color-border-default);
+}
+
+.docs-demo-controls {
+  display: flex;
+  align-items: center;
+  gap: var(--scale-2);
+}
+
+.docs-demo-preview {
+  padding: var(--scale-6);
+  background: var(--color-surface-default);
+  overflow-x: auto;
+}
+
+.docs-demo-code {
+  border-top: var(--border-width-thin) solid var(--color-border-default);
+}
+
+/* --- Demo utility classes --- */
+
+.docs-demo-constrain {
+  max-width: var(--layout-80);
+}
+
+.docs-demo-padded {
+  padding: var(--scale-3);
+}
+
+/* --- Token browser --- */
+
+.docs-token-swatch {
+  display: inline-block;
+  width: var(--scale-6);
+  height: var(--scale-6);
+  border-radius: var(--radius-sm);
+  border: var(--border-width-thin) solid var(--color-border-default);
+  vertical-align: middle;
+}
+
+/* --- Link cards for index pages --- */
+
+.docs-link-card {
+  display: block;
+}
+
+.docs-link-card:hover {
+  opacity: var(--opacity-hover);
+}

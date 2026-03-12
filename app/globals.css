@@ -1,0 +1,23 @@
+/* ==========================================================================
+   Design System Factory — Docs Site Global CSS
+   Import order: base tokens → pattern CSS → page resets
+   ========================================================================== */
+
+/* 1. Base tokens + atom CSS (ground zero) */
+@import '@toucan-ui/tokens/css';
+
+/* 2. Pattern CSS (all patterns) */
+@import '@toucan-ui/patterns/css';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--text-font-family);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
