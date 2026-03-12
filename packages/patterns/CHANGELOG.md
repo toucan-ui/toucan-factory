@@ -1,5 +1,11 @@
 # @toucan-ui/patterns
 
+## 0.1.1
+
+### Patch Changes
+
+- Fix CSS bundle missing from published package (tsup clean was wiping build-css output).
+
 ## 0.1.0
 
 ### Minor Changes
