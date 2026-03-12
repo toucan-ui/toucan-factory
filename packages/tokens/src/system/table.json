@@ -1,0 +1,31 @@
+{
+  "table": {
+    "font-size": { "$value": "{font.size.sm}", "$type": "dimension" },
+    "border-color": { "$value": "{color.border.default}", "$type": "color" },
+    "border-width": { "$value": "{border-width.thin}", "$type": "dimension" },
+    "header": {
+      "surface": { "$value": "{color.surface.muted}", "$type": "color" },
+      "on-surface": { "$value": "{color.on-surface.default}", "$type": "color" },
+      "font-weight": { "$value": "{font.weight.medium}", "$type": "fontWeight" },
+      "font-size": { "$value": "{font.size.xs}", "$type": "dimension" }
+    },
+    "cell": {
+      "padding-x": { "$value": "{spacing.lg}", "$type": "dimension" },
+      "padding-y": { "$value": "{spacing.md}", "$type": "dimension" },
+      "on-surface": { "$value": "{color.on-surface.default}", "$type": "color" }
+    },
+    "dense": {
+      "padding-x": { "$value": "{spacing.md}", "$type": "dimension" },
+      "padding-y": { "$value": "{spacing.xs}", "$type": "dimension" },
+      "font-size": { "$value": "{font.size.xs}", "$type": "dimension" }
+    },
+    "striped": {
+      "surface": { "$value": "{color.surface.muted}", "$type": "color" }
+    },
+    "caption": {
+      "font-size": { "$value": "{font.size.sm}", "$type": "dimension" },
+      "color": { "$value": "{color.on-surface.muted}", "$type": "color" },
+      "padding-y": { "$value": "{spacing.sm}", "$type": "dimension" }
+    }
+  }
+}

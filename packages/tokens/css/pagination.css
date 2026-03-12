@@ -1,0 +1,57 @@
+.tcn-pagination {
+  display: flex;
+  align-items: center;
+  gap: var(--pagination-gap);
+}
+
+.tcn-pagination-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: var(--pagination-item-size);
+  height: var(--pagination-item-size);
+  padding: 0;
+  border-radius: var(--pagination-item-radius);
+  font-family: var(--text-font-family);
+  font-size: var(--pagination-item-font-size);
+  font-weight: var(--pagination-item-font-weight);
+  border: var(--pagination-item-border-width) solid var(--color-border-default);
+  background-color: var(--color-surface-default);
+  color: var(--text-body-color);
+  cursor: pointer;
+}
+
+.tcn-pagination-item:hover:not(:disabled):not([data-current]) {
+  background-color: var(--color-surface-muted);
+  color: var(--text-body-color);
+  border-color: var(--color-border-strong);
+}
+
+.tcn-pagination-item[data-current] {
+  background-color: var(--color-primary);
+  color: var(--color-on-primary);
+  border-color: var(--color-primary);
+}
+
+.tcn-pagination-item:disabled {
+  background-color: var(--color-disabled);
+  color: var(--color-on-disabled);
+  border-color: var(--color-disabled);
+  cursor: not-allowed;
+}
+
+.tcn-pagination-item:focus-visible {
+  outline: var(--focus-ring-width) var(--focus-ring-style) var(--focus-ring-color);
+  outline-offset: var(--focus-ring-offset);
+}
+
+.tcn-pagination-ellipsis {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: var(--pagination-item-size);
+  height: var(--pagination-item-size);
+  font-family: var(--text-font-family);
+  font-size: var(--pagination-item-font-size);
+  color: var(--text-body-color);
+}

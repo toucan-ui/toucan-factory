@@ -1,0 +1,35 @@
+/* ==========================================================================
+   Progress — Atom CSS
+   Maps core's .tcn-progress data attributes to system token references.
+   Unscoped — resolves against :root or nearest [data-theme] ancestor.
+   ========================================================================== */
+
+.tcn-progress {
+  width: 100%;
+  background-color: var(--color-surface-muted);
+  border-radius: var(--progress-radius);
+  overflow: hidden;
+}
+
+.tcn-progress[data-size='sm'] {
+  height: var(--progress-sm-height);
+}
+
+.tcn-progress[data-size='md'] {
+  height: var(--progress-md-height);
+}
+
+.tcn-progress[data-size='lg'] {
+  height: var(--progress-lg-height);
+}
+
+.tcn-progress-bar {
+  height: 100%;
+  background-color: var(--color-primary);
+  border-radius: var(--progress-radius);
+}
+
+/* Indeterminate — static width (animation is V2) */
+.tcn-progress[data-indeterminate] .tcn-progress-bar {
+  width: var(--progress-indeterminate-width);
+}

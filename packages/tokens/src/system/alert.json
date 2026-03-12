@@ -1,0 +1,28 @@
+{
+  "alert": {
+    "radius": { "$value": "{radius.lg}", "$type": "dimension" },
+    "padding-x": { "$value": "{spacing.lg}", "$type": "dimension" },
+    "padding-y": { "$value": "{spacing.md}", "$type": "dimension" },
+    "border-width": { "$value": "{border-width.thin}", "$type": "dimension" },
+    "info": {
+      "surface": { "$value": "{color.info-surface}", "$type": "color" },
+      "on-surface": { "$value": "{color.on-info-surface}", "$type": "color" },
+      "border": { "$value": "{color.info}", "$type": "color" }
+    },
+    "success": {
+      "surface": { "$value": "{color.success-surface}", "$type": "color" },
+      "on-surface": { "$value": "{color.on-success-surface}", "$type": "color" },
+      "border": { "$value": "{color.success}", "$type": "color" }
+    },
+    "warning": {
+      "surface": { "$value": "{color.warning-surface}", "$type": "color" },
+      "on-surface": { "$value": "{color.on-warning-surface}", "$type": "color" },
+      "border": { "$value": "{color.warning}", "$type": "color" }
+    },
+    "danger": {
+      "surface": { "$value": "{color.danger-surface}", "$type": "color" },
+      "on-surface": { "$value": "{color.on-danger-surface}", "$type": "color" },
+      "border": { "$value": "{color.danger}", "$type": "color" }
+    }
+  }
+}

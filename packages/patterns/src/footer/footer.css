@@ -1,0 +1,42 @@
+/* ==========================================================================
+   Footer — Catalog Pattern CSS
+   Multi-column site footer with logo slot and legal text.
+   Self-contained: Section + Wrapper are rendered inside the <footer>.
+   ========================================================================== */
+
+.tcn-footer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--scale-4);
+  font-family: var(--text-font-family);
+}
+
+.tcn-footer-content {
+  align-items: start;
+}
+
+.tcn-footer-column {
+  display: flex;
+  flex-direction: column;
+  gap: var(--scale-3);
+}
+
+.tcn-footer-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--scale-2);
+}
+
+.tcn-footer-link {
+  color: var(--color-on-surface-muted);
+  text-decoration: none;
+  font-size: var(--text-sm-font-size);
+  line-height: var(--text-sm-line-height);
+}
+
+.tcn-footer-legal {
+  text-align: center;
+}

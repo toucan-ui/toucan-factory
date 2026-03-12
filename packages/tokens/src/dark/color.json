@@ -1,0 +1,41 @@
+{
+  "color": {
+    "primary": { "$value": "{color.blue.500}", "$type": "color" },
+    "primary-hover": { "$value": "{color.blue.600}", "$type": "color" },
+    "primary-active": { "$value": "{color.blue.700}", "$type": "color" },
+    "on-primary": { "$value": "{color.white}", "$type": "color" },
+    "surface": {
+      "default": { "$value": "{color.neutral.900}", "$type": "color" },
+      "muted": { "$value": "{color.neutral.800}", "$type": "color" },
+      "raised": { "$value": "{color.neutral.800}", "$type": "color" }
+    },
+    "on-surface": {
+      "default": { "$value": "{color.neutral.50}", "$type": "color" },
+      "muted": { "$value": "{color.neutral.400}", "$type": "color" }
+    },
+    "border": {
+      "default": { "$value": "{color.neutral.700}", "$type": "color" },
+      "strong": { "$value": "{color.neutral.500}", "$type": "color" },
+      "focus": { "$value": "{color.blue.500}", "$type": "color" }
+    },
+    "danger": { "$value": "{color.red.500}", "$type": "color" },
+    "danger-surface": { "$value": "{color.red.700}", "$type": "color" },
+    "on-danger": { "$value": "{color.white}", "$type": "color" },
+    "on-danger-surface": { "$value": "{color.white}", "$type": "color" },
+    "success": { "$value": "{color.green.500}", "$type": "color" },
+    "success-surface": { "$value": "{color.green.700}", "$type": "color" },
+    "on-success": { "$value": "{color.white}", "$type": "color" },
+    "on-success-surface": { "$value": "{color.white}", "$type": "color" },
+    "warning": { "$value": "{color.amber.500}", "$type": "color" },
+    "warning-surface": { "$value": "{color.amber.700}", "$type": "color" },
+    "on-warning": { "$value": "{color.black}", "$type": "color" },
+    "on-warning-surface": { "$value": "{color.white}", "$type": "color" },
+    "info": { "$value": "{color.cyan.500}", "$type": "color" },
+    "info-surface": { "$value": "{color.cyan.700}", "$type": "color" },
+    "on-info": { "$value": "{color.white}", "$type": "color" },
+    "on-info-surface": { "$value": "{color.white}", "$type": "color" },
+    "disabled": { "$value": "{color.neutral.800}", "$type": "color" },
+    "on-disabled": { "$value": "{color.neutral.500}", "$type": "color" },
+    "backdrop": { "$value": "rgba(0, 0, 0, 0.7)", "$type": "color" }
+  }
+}

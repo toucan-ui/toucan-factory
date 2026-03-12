@@ -1,0 +1,79 @@
+/* ==========================================================================
+   AlertBanner — Catalog Pattern CSS
+   Compact alert banner for notifications.
+   ========================================================================== */
+
+.tcn-alert-banner {
+  container-type: inline-size;
+  display: flex;
+  align-items: center;
+  gap: var(--scale-3);
+  padding: var(--scale-3) var(--scale-4);
+  border-radius: var(--radius-sm);
+  border: var(--border-width-thin) solid;
+  font-family: var(--text-font-family);
+  font-size: var(--text-body-font-size);
+  line-height: var(--text-body-line-height);
+}
+
+.tcn-alert-banner[data-alert-variant='info'] {
+  background-color: var(--color-info-surface);
+  color: var(--color-on-info-surface);
+  border-color: var(--color-info);
+  --text-body-color: var(--color-on-info-surface);
+}
+
+.tcn-alert-banner[data-alert-variant='success'] {
+  background-color: var(--color-success-surface);
+  color: var(--color-on-success-surface);
+  border-color: var(--color-success);
+  --text-body-color: var(--color-on-success-surface);
+}
+
+.tcn-alert-banner[data-alert-variant='warning'] {
+  background-color: var(--color-warning-surface);
+  color: var(--color-on-warning-surface);
+  border-color: var(--color-warning);
+  --text-body-color: var(--color-on-warning-surface);
+}
+
+.tcn-alert-banner[data-alert-variant='danger'] {
+  background-color: var(--color-danger-surface);
+  color: var(--color-on-danger-surface);
+  border-color: var(--color-danger);
+  --text-body-color: var(--color-on-danger-surface);
+}
+
+.tcn-alert-banner[data-alert-variant='neutral'] {
+  background-color: var(--color-surface-muted);
+  color: var(--color-on-surface-default);
+  border-color: var(--color-border-default);
+  --text-body-color: var(--color-on-surface-default);
+}
+
+.tcn-alert-banner-icon {
+  flex-shrink: 0;
+  width: 1em;
+  height: 1em;
+}
+
+.tcn-alert-banner-message {
+  flex: 1;
+  min-width: 0;
+}
+
+.tcn-alert-banner-action {
+  margin-left: auto;
+}
+
+/* Compact: wrap action below message */
+@container (max-width: 20rem) {
+  .tcn-alert-banner {
+    flex-wrap: wrap;
+  }
+
+  .tcn-alert-banner-action {
+    width: 100%;
+    margin-left: 0;
+  }
+}

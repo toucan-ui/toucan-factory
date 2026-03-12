@@ -1,0 +1,22 @@
+/* ==========================================================================
+   FeatureCard — Catalog Pattern CSS
+   Icon + heading + description card for feature grids.
+   ========================================================================== */
+
+.tcn-feature-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--scale-3);
+  font-family: var(--text-font-family);
+}
+
+.tcn-feature-card-icon {
+  font-size: var(--text-heading-h2-font-size);
+  color: var(--color-primary);
+  line-height: 1;
+}
+
+.tcn-feature-card-title {
+  font-size: var(--text-heading-h4-font-size);
+  line-height: var(--text-heading-h4-line-height);
+}

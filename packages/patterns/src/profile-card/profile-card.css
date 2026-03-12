@@ -1,0 +1,30 @@
+/* ==========================================================================
+   ProfileCard — Catalog Pattern CSS
+   Expanded person card with avatar, bio, and action buttons.
+   ========================================================================== */
+
+.tcn-profile-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--scale-2);
+  font-family: var(--text-font-family);
+}
+
+.tcn-profile-card-name {
+  font-size: var(--text-heading-h4-font-size);
+  line-height: var(--text-heading-h4-line-height);
+  margin-top: var(--scale-2);
+}
+
+.tcn-profile-card-bio {
+  max-width: var(--layout-80);
+}
+
+.tcn-profile-card-actions {
+  display: flex;
+  flex-direction: row;
+  gap: var(--scale-2);
+  margin-top: var(--scale-2);
+}

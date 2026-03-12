@@ -1,0 +1,22 @@
+{
+  "drawer": {
+    "backdrop": {
+      "color": { "$value": "{color.backdrop}", "$type": "color" },
+      "z-index": { "$value": "{stacking.modal}", "$type": "number" }
+    },
+    "surface": { "$value": "{color.surface.raised}", "$type": "color" },
+    "on-surface": { "$value": "{color.on-surface.default}", "$type": "color" },
+    "shadow": { "$value": "{shadow.lg}", "$type": "shadow" },
+    "padding": { "$value": "{spacing.xl}", "$type": "dimension" },
+    "width": {
+      "sm": { "$value": "{layout.80}", "$type": "dimension" },
+      "md": { "$value": "{layout.120}", "$type": "dimension" },
+      "lg": { "$value": "{layout.192}", "$type": "dimension" }
+    },
+    "height": {
+      "sm": { "$value": "{layout.80}", "$type": "dimension" },
+      "md": { "$value": "{layout.120}", "$type": "dimension" },
+      "lg": { "$value": "{layout.192}", "$type": "dimension" }
+    }
+  }
+}

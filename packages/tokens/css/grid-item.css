@@ -1,0 +1,43 @@
+/* GridItem — column span control */
+
+.tcn-grid-item {
+  grid-column: span var(--tcn-grid-item-span, 1);
+}
+
+/* Static overrides for 1–12 */
+.tcn-grid-item[data-span='1'] {
+  grid-column: span 1;
+}
+.tcn-grid-item[data-span='2'] {
+  grid-column: span 2;
+}
+.tcn-grid-item[data-span='3'] {
+  grid-column: span 3;
+}
+.tcn-grid-item[data-span='4'] {
+  grid-column: span 4;
+}
+.tcn-grid-item[data-span='5'] {
+  grid-column: span 5;
+}
+.tcn-grid-item[data-span='6'] {
+  grid-column: span 6;
+}
+.tcn-grid-item[data-span='7'] {
+  grid-column: span 7;
+}
+.tcn-grid-item[data-span='8'] {
+  grid-column: span 8;
+}
+.tcn-grid-item[data-span='9'] {
+  grid-column: span 9;
+}
+.tcn-grid-item[data-span='10'] {
+  grid-column: span 10;
+}
+.tcn-grid-item[data-span='11'] {
+  grid-column: span 11;
+}
+.tcn-grid-item[data-span='12'] {
+  grid-column: span 12;
+}

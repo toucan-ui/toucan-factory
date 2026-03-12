@@ -1,0 +1,17 @@
+{
+  "progress": {
+    "surface": { "$value": "{color.surface.muted}", "$type": "color" },
+    "bar-surface": { "$value": "{color.primary}", "$type": "color" },
+    "radius": { "$value": "{radius.full}", "$type": "dimension" },
+    "sm": {
+      "height": { "$value": "{scale.1}", "$type": "dimension" }
+    },
+    "md": {
+      "height": { "$value": "{scale.2}", "$type": "dimension" }
+    },
+    "lg": {
+      "height": { "$value": "{sizing.3xs}", "$type": "dimension" }
+    },
+    "indeterminate-width": { "$value": "40%", "$type": "dimension" }
+  }
+}

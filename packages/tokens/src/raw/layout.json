@@ -1,0 +1,18 @@
+{
+  "layout": {
+    "20": { "$value": "80px", "$type": "dimension" },
+    "40": { "$value": "160px", "$type": "dimension" },
+    "45": { "$value": "180px", "$type": "dimension" },
+    "50": { "$value": "200px", "$type": "dimension" },
+    "60": { "$value": "240px", "$type": "dimension" },
+    "70": { "$value": "280px", "$type": "dimension" },
+    "80": { "$value": "320px", "$type": "dimension" },
+    "120": { "$value": "480px", "$type": "dimension" },
+    "140": { "$value": "560px", "$type": "dimension" },
+    "192": { "$value": "768px", "$type": "dimension" },
+    "240": { "$value": "960px", "$type": "dimension" },
+    "256": { "$value": "1024px", "$type": "dimension" },
+    "300": { "$value": "1200px", "$type": "dimension" },
+    "320": { "$value": "1280px", "$type": "dimension" }
+  }
+}

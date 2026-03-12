@@ -1,0 +1,72 @@
+/* ==========================================================================
+   Text — Atom CSS
+   Maps core's .tcn-text data attributes to system token references.
+   Unscoped — resolves against :root or nearest [data-theme] ancestor.
+   ========================================================================== */
+
+.tcn-text {
+  margin: 0;
+  font-family: var(--text-font-family);
+  font-size: var(--text-body-font-size);
+  font-weight: var(--text-body-font-weight);
+  line-height: var(--text-body-line-height);
+  letter-spacing: var(--body-letter-spacing);
+  color: var(--text-body-color);
+}
+
+.tcn-text[data-size='sm'] {
+  font-size: var(--text-sm-font-size);
+  font-weight: var(--text-sm-font-weight);
+  line-height: var(--text-sm-line-height);
+  letter-spacing: var(--text-sm-letter-spacing);
+}
+
+.tcn-text[data-size='lg'] {
+  font-size: var(--text-lg-font-size);
+  font-weight: var(--text-lg-font-weight);
+  line-height: var(--text-lg-line-height);
+  letter-spacing: var(--text-lg-letter-spacing);
+}
+
+.tcn-text[data-muted] {
+  color: var(--text-muted-color);
+}
+
+.tcn-text[data-mono] {
+  font-family: var(--text-mono-font-family);
+}
+
+.tcn-text[data-size='xs'] {
+  font-size: var(--text-xs-font-size);
+  font-weight: var(--text-xs-font-weight);
+  line-height: var(--text-xs-line-height);
+  letter-spacing: var(--text-xs-letter-spacing);
+}
+
+.tcn-text[data-variant='muted'] {
+  color: var(--text-muted-color);
+}
+
+.tcn-text[data-weight='medium'] {
+  font-weight: var(--font-weight-medium);
+}
+
+.tcn-text[data-weight='semibold'] {
+  font-weight: var(--font-weight-semibold);
+}
+
+.tcn-text[data-weight='bold'] {
+  font-weight: var(--font-weight-bold);
+}
+
+.tcn-text[data-align='left'] {
+  text-align: left;
+}
+
+.tcn-text[data-align='center'] {
+  text-align: center;
+}
+
+.tcn-text[data-align='right'] {
+  text-align: right;
+}

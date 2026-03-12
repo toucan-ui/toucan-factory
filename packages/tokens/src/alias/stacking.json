@@ -1,0 +1,10 @@
+{
+  "stacking": {
+    "dropdown": { "$value": "{z-index.dropdown}", "$type": "number" },
+    "sticky": { "$value": "{z-index.sticky}", "$type": "number" },
+    "popover": { "$value": "{z-index.popover}", "$type": "number" },
+    "tooltip": { "$value": "{z-index.tooltip}", "$type": "number" },
+    "modal": { "$value": "{z-index.modal}", "$type": "number" },
+    "toast": { "$value": "{z-index.toast}", "$type": "number" }
+  }
+}

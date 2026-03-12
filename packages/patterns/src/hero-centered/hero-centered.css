@@ -1,0 +1,18 @@
+/* ==========================================================================
+   HeroCentered — Catalog Pattern CSS
+   Centered text hero with optional subtitle and CTA.
+   Layout (full-bleed, centering, edge padding) handled by Section + Wrapper.
+   ========================================================================== */
+
+.tcn-hero-centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--scale-4);
+}
+
+.tcn-hero-centered-subtitle {
+  color: var(--color-on-surface-muted);
+  max-width: var(--layout-140);
+}

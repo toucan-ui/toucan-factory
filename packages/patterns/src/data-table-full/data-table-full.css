@@ -1,0 +1,9 @@
+/* ==========================================================================
+   DataTableFull — Catalog Pattern CSS
+   Full data table composing the Table atom compound.
+   ========================================================================== */
+
+.tcn-data-table-full {
+  width: 100%;
+  font-family: var(--text-font-family);
+}

@@ -1,0 +1,11 @@
+{
+  "grid": {
+    "columns": {
+      "default": { "$value": "1", "$type": "number" }
+    },
+    "gap": {
+      "default": { "$value": "{scale.8}", "$type": "dimension" }
+    },
+    "min-item-size": { "$value": "{layout.60}", "$type": "dimension" }
+  }
+}

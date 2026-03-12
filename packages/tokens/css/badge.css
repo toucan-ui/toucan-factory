@@ -1,0 +1,73 @@
+/* ==========================================================================
+   Badge — Atom CSS
+   Maps core's .tcn-badge data attributes to system token references.
+   Unscoped — resolves against :root or nearest [data-theme] ancestor.
+   ========================================================================== */
+
+.tcn-badge {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  border-radius: var(--badge-radius);
+  font-family: var(--text-font-family);
+  font-weight: var(--badge-font-weight);
+  white-space: nowrap;
+}
+
+.tcn-badge[data-size='sm'] {
+  padding: var(--badge-sm-padding-y) var(--badge-sm-padding-x);
+  font-size: var(--badge-sm-font-size);
+}
+
+.tcn-badge[data-size='md'] {
+  padding: var(--badge-md-padding-y) var(--badge-md-padding-x);
+  font-size: var(--badge-md-font-size);
+}
+
+.tcn-badge[data-size='lg'] {
+  padding: var(--badge-lg-padding-y) var(--badge-lg-padding-x);
+  font-size: var(--badge-lg-font-size);
+}
+
+/* Variant colours — use alias tokens directly so [data-theme] overrides work */
+.tcn-badge[data-variant='neutral'] {
+  background-color: var(--color-surface-muted);
+  color: var(--color-on-surface-default);
+  --text-body-color: var(--color-on-surface-default);
+}
+
+.tcn-badge[data-variant='primary'] {
+  background-color: var(--color-primary);
+  color: var(--color-on-primary);
+  --text-body-color: var(--color-on-primary);
+}
+
+.tcn-badge[data-variant='success'] {
+  background-color: var(--color-success-surface);
+  color: var(--color-on-success-surface);
+  --text-body-color: var(--color-on-success-surface);
+}
+
+.tcn-badge[data-variant='warning'] {
+  background-color: var(--color-warning-surface);
+  color: var(--color-on-warning-surface);
+  --text-body-color: var(--color-on-warning-surface);
+}
+
+.tcn-badge[data-variant='danger'] {
+  background-color: var(--color-danger-surface);
+  color: var(--color-on-danger-surface);
+  --text-body-color: var(--color-on-danger-surface);
+}
+
+.tcn-badge[data-variant='info'] {
+  background-color: var(--color-info-surface);
+  color: var(--color-on-info-surface);
+  --text-body-color: var(--color-on-info-surface);
+}
+
+.tcn-badge[data-variant='custom'] {
+  background-color: var(--badge-surface);
+  color: var(--badge-on-surface);
+  --text-body-color: var(--badge-on-surface);
+}

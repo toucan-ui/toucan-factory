@@ -1,0 +1,7 @@
+{
+  "border-width": {
+    "none": { "$value": "{scale.0}", "$type": "dimension" },
+    "thin": { "$value": "{scale.0-25}", "$type": "dimension" },
+    "thick": { "$value": "{scale.0-5}", "$type": "dimension" }
+  }
+}

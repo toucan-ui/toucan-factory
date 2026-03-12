@@ -1,0 +1,64 @@
+/* ==========================================================================
+   Table — Atom CSS
+   Maps core's .tcn-table data attributes to system token references.
+   Unscoped — resolves against :root or nearest [data-theme] ancestor.
+   ========================================================================== */
+
+.tcn-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--text-font-family);
+  font-size: var(--table-font-size);
+}
+
+/* Caption */
+.tcn-table-caption {
+  font-size: var(--table-caption-font-size);
+  color: var(--text-muted-color);
+  padding-top: var(--table-caption-padding-y);
+  padding-bottom: var(--table-caption-padding-y);
+  text-align: left;
+  caption-side: top;
+}
+
+/* Header */
+.tcn-table-head {
+  background-color: var(--color-surface-muted);
+}
+
+.tcn-table-header {
+  padding: var(--table-cell-padding-y) var(--table-cell-padding-x);
+  font-size: var(--table-header-font-size);
+  font-weight: var(--table-header-font-weight);
+  color: var(--text-body-color);
+  text-align: left;
+  border-bottom: var(--table-border-width) solid var(--color-border-default);
+}
+
+/* Cells */
+.tcn-table-cell {
+  padding: var(--table-cell-padding-y) var(--table-cell-padding-x);
+  color: var(--text-body-color);
+  border-bottom: var(--table-border-width) solid var(--color-border-default);
+}
+
+/* Row */
+.tcn-table-row {
+  /* Structural — no tokens needed */
+}
+
+/* Striped rows (even rows in tbody) */
+.tcn-table[data-striped] .tcn-table-body .tcn-table-row:nth-child(even) {
+  background-color: var(--color-surface-muted);
+}
+
+/* Dense mode */
+.tcn-table[data-dense] .tcn-table-header {
+  padding: var(--table-dense-padding-y) var(--table-dense-padding-x);
+  font-size: var(--table-dense-font-size);
+}
+
+.tcn-table[data-dense] .tcn-table-cell {
+  padding: var(--table-dense-padding-y) var(--table-dense-padding-x);
+  font-size: var(--table-dense-font-size);
+}

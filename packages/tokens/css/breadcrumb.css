@@ -1,0 +1,39 @@
+/* ==========================================================================
+   Breadcrumb — Atom CSS
+   Maps core's .tcn-breadcrumb data attributes to system token references.
+   Unscoped — resolves against :root or nearest [data-theme] ancestor.
+   ========================================================================== */
+
+.tcn-breadcrumb {
+  font-family: var(--text-font-family);
+  font-size: var(--breadcrumb-font-size);
+}
+
+.tcn-breadcrumb-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--breadcrumb-gap);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tcn-breadcrumb-item {
+  font-weight: var(--breadcrumb-font-weight-default);
+  color: var(--text-muted-color);
+}
+
+.tcn-breadcrumb-item a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.tcn-breadcrumb-item[aria-current='page'] {
+  font-weight: var(--breadcrumb-font-weight-current);
+  color: var(--text-body-color);
+}
+
+.tcn-breadcrumb-separator {
+  color: var(--text-muted-color);
+}

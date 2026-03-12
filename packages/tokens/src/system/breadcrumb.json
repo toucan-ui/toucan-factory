@@ -1,0 +1,16 @@
+{
+  "breadcrumb": {
+    "font-size": { "$value": "{font.size.sm}", "$type": "dimension" },
+    "font-weight": {
+      "default": { "$value": "{font.weight.regular}", "$type": "fontWeight" },
+      "current": { "$value": "{font.weight.medium}", "$type": "fontWeight" }
+    },
+    "color": {
+      "default": { "$value": "{color.on-surface.muted}", "$type": "color" },
+      "current": { "$value": "{color.on-surface.default}", "$type": "color" },
+      "separator": { "$value": "{color.on-surface.muted}", "$type": "color" }
+    },
+    "gap": { "$value": "{spacing.sm}", "$type": "dimension" },
+    "separator-gap": { "$value": "{spacing.sm}", "$type": "dimension" }
+  }
+}

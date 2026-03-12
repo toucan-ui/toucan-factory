@@ -1,0 +1,11 @@
+/* Page — full-viewport wrapper with configurable background + text color */
+
+.tcn-page {
+  min-height: 100vh;
+  background: var(--color-surface-default);
+  color: var(--color-on-surface-default);
+  --text-body-color: var(--color-on-surface-default);
+  --text-heading-color: var(--color-on-surface-default);
+  --text-display-color: var(--color-on-surface-default);
+  --text-muted-color: var(--color-on-surface-muted);
+}

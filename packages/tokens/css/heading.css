@@ -1,0 +1,82 @@
+/* ==========================================================================
+   Heading — Atom CSS
+   Maps core's .tcn-heading data attributes to system token references.
+   Unscoped — resolves against :root or nearest [data-theme] ancestor.
+   ========================================================================== */
+
+.tcn-heading {
+  margin: 0;
+  font-family: var(--text-heading-font-family);
+  color: var(--text-heading-color);
+}
+
+.tcn-heading[data-level='1'] {
+  font-size: var(--text-heading-h1-font-size);
+  font-weight: var(--text-heading-h1-font-weight);
+  line-height: var(--text-heading-h1-line-height);
+  letter-spacing: var(--text-heading-h1-letter-spacing);
+}
+
+.tcn-heading[data-level='2'] {
+  font-size: var(--text-heading-h2-font-size);
+  font-weight: var(--text-heading-h2-font-weight);
+  line-height: var(--text-heading-h2-line-height);
+  letter-spacing: var(--text-heading-h2-letter-spacing);
+}
+
+.tcn-heading[data-level='3'] {
+  font-size: var(--text-heading-h3-font-size);
+  font-weight: var(--text-heading-h3-font-weight);
+  line-height: var(--text-heading-h3-line-height);
+  letter-spacing: var(--text-heading-h3-letter-spacing);
+}
+
+.tcn-heading[data-level='4'] {
+  font-size: var(--text-heading-h4-font-size);
+  font-weight: var(--text-heading-h4-font-weight);
+  line-height: var(--text-heading-h4-line-height);
+  letter-spacing: var(--text-heading-h4-letter-spacing);
+}
+
+.tcn-heading[data-level='5'] {
+  font-size: var(--text-heading-h5-font-size);
+  font-weight: var(--text-heading-h5-font-weight);
+  line-height: var(--text-heading-h5-line-height);
+  letter-spacing: var(--text-heading-h5-letter-spacing);
+}
+
+.tcn-heading[data-level='6'] {
+  font-size: var(--text-heading-h6-font-size);
+  font-weight: var(--text-heading-h6-font-weight);
+  line-height: var(--text-heading-h6-line-height);
+  letter-spacing: var(--text-heading-h6-letter-spacing);
+}
+
+/* Display sizes — visual tier above h1, overrides level styling when both present */
+
+.tcn-heading[data-display='sm'] {
+  font-family: var(--text-display-font-family);
+  font-size: var(--text-display-sm-font-size);
+  font-weight: var(--text-display-sm-font-weight);
+  line-height: var(--text-display-sm-line-height);
+  letter-spacing: var(--text-display-sm-letter-spacing);
+  color: var(--text-display-color);
+}
+
+.tcn-heading[data-display='md'] {
+  font-family: var(--text-display-font-family);
+  font-size: var(--text-display-md-font-size);
+  font-weight: var(--text-display-md-font-weight);
+  line-height: var(--text-display-md-line-height);
+  letter-spacing: var(--text-display-md-letter-spacing);
+  color: var(--text-display-color);
+}
+
+.tcn-heading[data-display='lg'] {
+  font-family: var(--text-display-font-family);
+  font-size: var(--text-display-lg-font-size);
+  font-weight: var(--text-display-lg-font-weight);
+  line-height: var(--text-display-lg-line-height);
+  letter-spacing: var(--text-display-lg-letter-spacing);
+  color: var(--text-display-color);
+}

@@ -1,0 +1,16 @@
+{
+  "dialog": {
+    "backdrop": {
+      "color": { "$value": "{color.backdrop}", "$type": "color" },
+      "z-index": { "$value": "{stacking.modal}", "$type": "number" }
+    },
+    "surface": { "$value": "{color.surface.raised}", "$type": "color" },
+    "on-surface": { "$value": "{color.on-surface.default}", "$type": "color" },
+    "radius": { "$value": "{radius.lg}", "$type": "dimension" },
+    "shadow": { "$value": "{shadow.lg}", "$type": "shadow" },
+    "padding": { "$value": "{scale.8}", "$type": "dimension" },
+    "max-width": { "$value": "{layout.140}", "$type": "dimension" },
+    "width": { "$value": "100%", "$type": "dimension" },
+    "margin": { "$value": "{spacing.lg}", "$type": "dimension" }
+  }
+}

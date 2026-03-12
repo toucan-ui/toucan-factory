@@ -1,0 +1,114 @@
+/* ==========================================================================
+   Toggle (Switch) — Atom CSS
+   Maps core's .tcn-toggle data attributes to system token references.
+   Unscoped — resolves against :root or nearest [data-theme] ancestor.
+   ========================================================================== */
+
+.tcn-toggle-wrapper {
+  display: flex;
+  gap: var(--toggle-gap);
+  align-items: flex-start;
+}
+
+/* Track */
+.tcn-toggle {
+  position: relative;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  border: var(--toggle-track-border-width) solid var(--color-border-default);
+  border-radius: var(--toggle-track-radius);
+  background-color: var(--color-border-default);
+  padding: 0;
+  cursor: pointer;
+}
+
+/* Size: md (default) */
+.tcn-toggle[data-size='md'] {
+  width: var(--toggle-track-width-md);
+  height: var(--toggle-track-height-md);
+}
+
+/* Size: sm */
+.tcn-toggle[data-size='sm'] {
+  width: var(--toggle-track-width-sm);
+  height: var(--toggle-track-height-sm);
+}
+
+/* Checked */
+.tcn-toggle[data-checked] {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+/* Focus */
+.tcn-toggle:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 var(--focus-ring-width) var(--focus-ring-color);
+}
+
+/* Disabled */
+.tcn-toggle:disabled {
+  background-color: var(--color-disabled);
+  border-color: var(--color-disabled);
+  cursor: not-allowed;
+}
+
+/* Thumb */
+.tcn-toggle-thumb {
+  display: block;
+  border-radius: var(--toggle-thumb-radius);
+  background-color: var(--color-surface-raised);
+}
+
+/* Thumb sizes */
+.tcn-toggle[data-size='md'] .tcn-toggle-thumb {
+  width: var(--toggle-thumb-size-md);
+  height: var(--toggle-thumb-size-md);
+  transform: translateX(var(--toggle-thumb-offset));
+}
+
+.tcn-toggle[data-size='sm'] .tcn-toggle-thumb {
+  width: var(--toggle-thumb-size-sm);
+  height: var(--toggle-thumb-size-sm);
+  transform: translateX(var(--toggle-thumb-offset));
+}
+
+/* Thumb checked position — offset = track-width - thumb-size - thumb-offset */
+.tcn-toggle[data-size='md'][data-checked] .tcn-toggle-thumb {
+  transform: translateX(
+    calc(var(--toggle-track-width-md) - var(--toggle-thumb-size-md) - var(--toggle-thumb-offset))
+  );
+}
+
+.tcn-toggle[data-size='sm'][data-checked] .tcn-toggle-thumb {
+  transform: translateX(
+    calc(var(--toggle-track-width-sm) - var(--toggle-thumb-size-sm) - var(--toggle-thumb-offset))
+  );
+}
+
+/* Disabled thumb */
+.tcn-toggle:disabled .tcn-toggle-thumb {
+  background-color: var(--color-on-disabled);
+}
+
+/* Label + content */
+.tcn-toggle-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--toggle-label-gap);
+}
+
+.tcn-toggle-label {
+  font-family: var(--text-font-family);
+  font-size: var(--text-sm-font-size);
+  font-weight: var(--toggle-label-font-weight);
+  color: var(--text-body-color);
+}
+
+.tcn-toggle-description {
+  margin: 0;
+  font-family: var(--text-font-family);
+  font-size: var(--text-sm-font-size);
+  color: var(--text-muted-color);
+}

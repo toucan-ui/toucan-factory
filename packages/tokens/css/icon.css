@@ -1,0 +1,35 @@
+/* ==========================================================================
+   Icon — Atom CSS
+   Maps core's .tcn-icon data attributes to system token references.
+   Unscoped — resolves against :root or nearest [data-theme] ancestor.
+   ========================================================================== */
+
+.tcn-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: currentColor;
+  flex-shrink: 0;
+}
+
+/* Sizes */
+.tcn-icon[data-size='sm'] {
+  width: var(--icon-size-sm);
+  height: var(--icon-size-sm);
+}
+
+.tcn-icon[data-size='md'] {
+  width: var(--icon-size-md);
+  height: var(--icon-size-md);
+}
+
+.tcn-icon[data-size='lg'] {
+  width: var(--icon-size-lg);
+  height: var(--icon-size-lg);
+}
+
+/* Child SVG fills wrapper */
+.tcn-icon > svg {
+  width: 100%;
+  height: 100%;
+}

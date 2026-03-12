@@ -1,0 +1,29 @@
+/* ==========================================================================
+   AuthCard — Catalog Pattern CSS
+   Authentication card with form fields and submit.
+   ========================================================================== */
+
+.tcn-auth-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--scale-5);
+  max-width: var(--layout-80);
+  font-family: var(--text-font-family);
+}
+
+.tcn-auth-card-header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--scale-1);
+  text-align: center;
+}
+
+.tcn-auth-card-submit {
+  width: 100%;
+}
+
+.tcn-auth-card-footer {
+  text-align: center;
+  font-size: var(--text-sm-font-size);
+  color: var(--color-on-surface-muted);
+}

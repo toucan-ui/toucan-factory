@@ -1,0 +1,51 @@
+/* ==========================================================================
+   PageHeader — Catalog Pattern CSS
+   Page header with breadcrumb, title, and optional actions.
+   ========================================================================== */
+
+.tcn-page-header {
+  container-type: inline-size;
+  display: flex;
+  flex-direction: column;
+  gap: var(--scale-3);
+  padding-bottom: var(--scale-4);
+  border-bottom: var(--border-width-thin) solid var(--color-border-default);
+  font-family: var(--text-font-family);
+}
+
+.tcn-page-header-row {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--scale-4);
+}
+
+.tcn-page-header-text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--scale-1);
+}
+
+.tcn-page-header-description {
+  color: var(--color-on-surface-muted);
+}
+
+.tcn-page-header-actions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--scale-2);
+}
+
+/* Compact: stack title and actions */
+@container (max-width: 30rem) {
+  .tcn-page-header-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .tcn-page-header-actions {
+    align-self: flex-start;
+  }
+}

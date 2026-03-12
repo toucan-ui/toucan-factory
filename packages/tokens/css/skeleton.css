@@ -1,0 +1,27 @@
+/* ==========================================================================
+   Skeleton — Atom CSS
+   Maps core's .tcn-skeleton data attributes to system token references.
+   Unscoped — resolves against :root or nearest [data-theme] ancestor.
+   ========================================================================== */
+
+.tcn-skeleton {
+  display: block;
+  background-color: var(--color-surface-muted);
+}
+
+/* Text variant (default) */
+.tcn-skeleton[data-variant='text'] {
+  width: 100%;
+  height: var(--skeleton-text-height);
+  border-radius: var(--skeleton-radius-text);
+}
+
+/* Rectangular */
+.tcn-skeleton[data-variant='rectangular'] {
+  border-radius: var(--skeleton-radius-rectangular);
+}
+
+/* Circular */
+.tcn-skeleton[data-variant='circular'] {
+  border-radius: var(--skeleton-radius-circular);
+}

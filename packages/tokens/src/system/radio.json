@@ -1,0 +1,31 @@
+{
+  "radio": {
+    "size": { "$value": "{sizing.xs}", "$type": "dimension" },
+    "radius": { "$value": "{radius.full}", "$type": "dimension" },
+    "border-width": { "$value": "{border-width.thin}", "$type": "dimension" },
+    "border": {
+      "default": { "$value": "{color.border.default}", "$type": "color" },
+      "hover": { "$value": "{color.border.strong}", "$type": "color" },
+      "checked": { "$value": "{color.primary}", "$type": "color" },
+      "error": { "$value": "{color.danger}", "$type": "color" }
+    },
+    "surface": {
+      "default": { "$value": "{color.surface.default}", "$type": "color" },
+      "checked": { "$value": "{color.primary}", "$type": "color" },
+      "disabled": { "$value": "{color.disabled}", "$type": "color" }
+    },
+    "on-surface": {
+      "checked": { "$value": "{color.on-primary}", "$type": "color" },
+      "disabled": { "$value": "{color.on-disabled}", "$type": "color" }
+    },
+    "indicator": {
+      "size": { "$value": "{scale.2}", "$type": "dimension" }
+    },
+    "control-offset-y": { "$value": "{scale.0-5}", "$type": "dimension" },
+    "label-gap": { "$value": "{scale.0-5}", "$type": "dimension" },
+    "group-gap": { "$value": "{spacing.md}", "$type": "dimension" },
+    "gap": { "$value": "{spacing.sm}", "$type": "dimension" },
+    "group-label-font-weight": { "$value": "{font.weight.medium}", "$type": "fontWeight" },
+    "label-font-weight": { "$value": "{font.weight.medium}", "$type": "fontWeight" }
+  }
+}

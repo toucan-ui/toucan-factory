@@ -1,0 +1,56 @@
+/* ==========================================================================
+   Link — Atom CSS
+   Maps core's .tcn-link data attributes to system token references.
+   Unscoped — resolves against :root or nearest [data-theme] ancestor.
+   ========================================================================== */
+
+.tcn-link {
+  font-family: inherit;
+  font-weight: var(--link-font-weight);
+  color: var(--color-primary);
+  cursor: pointer;
+  border: none;
+  background: none;
+  padding: 0;
+}
+
+/* Variants */
+.tcn-link[data-variant='inline'] {
+  text-decoration: underline;
+}
+
+.tcn-link[data-variant='standalone'] {
+  text-decoration: none;
+}
+
+/* Sizes */
+.tcn-link[data-size='sm'] {
+  font-size: var(--text-sm-font-size);
+}
+
+.tcn-link[data-size='base'] {
+  font-size: var(--text-body-font-size);
+}
+
+.tcn-link[data-size='lg'] {
+  font-size: var(--text-lg-font-size);
+}
+
+/* States */
+.tcn-link:hover {
+  color: var(--color-primary-hover);
+}
+
+.tcn-link:active {
+  color: var(--color-primary-active);
+}
+
+.tcn-link:visited {
+  color: var(--color-primary);
+}
+
+/* Focus ring */
+.tcn-link:focus-visible {
+  outline: var(--focus-ring-width) var(--focus-ring-style) var(--focus-ring-color);
+  outline-offset: var(--focus-ring-offset);
+}

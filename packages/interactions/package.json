@@ -1,0 +1,49 @@
+{
+  "name": "@toucanui/interactions",
+  "version": "0.0.0",
+  "description": "Framework-agnostic interaction primitives for ToucanUI",
+  "license": "MIT",
+  "keywords": [
+    "design-system",
+    "toucanui",
+    "interactions",
+    "accessibility",
+    "keyboard-navigation"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./dom": {
+      "types": "./dist/dom.d.ts",
+      "import": "./dist/dom.js",
+      "require": "./dist/dom.cjs"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "clean": "rm -rf dist",
+    "lint": "eslint src/",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "jsdom": "^26.1.0",
+    "tsup": "^8.5.0",
+    "typescript": "^5.7.3",
+    "vitest": "^3.2.1"
+  }
+}

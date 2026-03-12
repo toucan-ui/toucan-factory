@@ -1,0 +1,69 @@
+/* ==========================================================================
+   Avatar — Atom CSS
+   Maps core's .tcn-avatar data attributes to system token references.
+   Unscoped — resolves against :root or nearest [data-theme] ancestor.
+   ========================================================================== */
+
+.tcn-avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--avatar-radius);
+  overflow: hidden;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+
+/* Sizes */
+.tcn-avatar[data-size='sm'] {
+  width: var(--avatar-size-sm);
+  height: var(--avatar-size-sm);
+}
+
+.tcn-avatar[data-size='md'] {
+  width: var(--avatar-size-md);
+  height: var(--avatar-size-md);
+}
+
+.tcn-avatar[data-size='lg'] {
+  width: var(--avatar-size-lg);
+  height: var(--avatar-size-lg);
+}
+
+/* Variants — surface */
+.tcn-avatar[data-variant='neutral'] {
+  background-color: var(--color-surface-muted);
+  color: var(--text-body-color);
+}
+
+.tcn-avatar[data-variant='primary'] {
+  background-color: var(--color-primary);
+  color: var(--color-on-primary);
+}
+
+/* Image */
+.tcn-avatar-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Initials */
+.tcn-avatar-initials {
+  font-family: var(--text-font-family);
+  font-weight: var(--avatar-font-weight);
+  line-height: 1;
+  user-select: none;
+}
+
+.tcn-avatar[data-size='sm'] .tcn-avatar-initials {
+  font-size: var(--avatar-font-size-sm);
+}
+
+.tcn-avatar[data-size='md'] .tcn-avatar-initials {
+  font-size: var(--avatar-font-size-md);
+}
+
+.tcn-avatar[data-size='lg'] .tcn-avatar-initials {
+  font-size: var(--avatar-font-size-lg);
+}

@@ -1,0 +1,26 @@
+{
+  "box": {
+    "surface": { "$value": "{color.surface.default}", "$type": "color" },
+    "on-surface": { "$value": "{color.on-surface.default}", "$type": "color" },
+    "on-surface-muted": { "$value": "{color.on-surface.muted}", "$type": "color" },
+    "border": { "$value": "{color.border.default}", "$type": "color" },
+    "border-width": { "$value": "{border-width.thin}", "$type": "dimension" },
+    "elevation": {
+      "0": { "$value": "{elevation.0}", "$type": "shadow" },
+      "1": { "$value": "{elevation.1}", "$type": "shadow" },
+      "2": { "$value": "{elevation.2}", "$type": "shadow" },
+      "3": { "$value": "{elevation.3}", "$type": "shadow" }
+    },
+    "radius": {
+      "none": { "$value": "{radius.none}", "$type": "dimension" },
+      "sm": { "$value": "{radius.sm}", "$type": "dimension" },
+      "md": { "$value": "{radius.md}", "$type": "dimension" },
+      "lg": { "$value": "{radius.lg}", "$type": "dimension" }
+    },
+    "padding": {
+      "sm": { "$value": "{spacing.sm}", "$type": "dimension" },
+      "md": { "$value": "{spacing.lg}", "$type": "dimension" },
+      "lg": { "$value": "{spacing.2xl}", "$type": "dimension" }
+    }
+  }
+}

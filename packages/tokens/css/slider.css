@@ -1,0 +1,87 @@
+.tcn-slider {
+  position: relative;
+  display: flex;
+  align-items: center;
+  touch-action: none;
+  user-select: none;
+}
+
+.tcn-slider[data-orientation='horizontal'] {
+  width: 100%;
+  height: var(--slider-thumb-size);
+}
+
+.tcn-slider[data-orientation='vertical'] {
+  width: var(--slider-thumb-size);
+  height: 100%;
+  flex-direction: column;
+}
+
+.tcn-slider-track {
+  position: relative;
+  flex-grow: 1;
+  border-radius: var(--slider-track-radius);
+  background-color: var(--color-surface-muted);
+}
+
+.tcn-slider[data-orientation='horizontal'] .tcn-slider-track {
+  height: var(--slider-track-height);
+}
+
+.tcn-slider[data-orientation='vertical'] .tcn-slider-track {
+  width: var(--slider-track-height);
+}
+
+.tcn-slider-fill {
+  position: absolute;
+  border-radius: var(--slider-track-radius);
+  background-color: var(--color-primary);
+}
+
+.tcn-slider[data-orientation='horizontal'] .tcn-slider-fill {
+  height: 100%;
+  left: 0;
+}
+
+.tcn-slider[data-orientation='vertical'] .tcn-slider-fill {
+  width: 100%;
+  bottom: 0;
+}
+
+.tcn-slider-thumb {
+  position: absolute;
+  width: var(--slider-thumb-size);
+  height: var(--slider-thumb-size);
+  border-radius: var(--slider-thumb-radius);
+  background-color: var(--color-surface-raised);
+  border: var(--slider-thumb-border-width) solid var(--color-primary);
+}
+
+.tcn-slider[data-orientation='horizontal'] .tcn-slider-thumb {
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.tcn-slider[data-orientation='vertical'] .tcn-slider-thumb {
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+
+.tcn-slider-thumb:focus-visible {
+  outline: var(--focus-ring-width) var(--focus-ring-style) var(--focus-ring-color);
+  outline-offset: var(--focus-ring-offset);
+}
+
+/* Disabled */
+.tcn-slider[data-disabled] .tcn-slider-track {
+  background-color: var(--color-disabled);
+}
+
+.tcn-slider[data-disabled] .tcn-slider-fill {
+  background-color: var(--color-on-disabled);
+}
+
+.tcn-slider[data-disabled] .tcn-slider-thumb {
+  background-color: var(--color-disabled);
+  border-color: var(--color-on-disabled);
+}

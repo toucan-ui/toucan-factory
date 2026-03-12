@@ -1,0 +1,16 @@
+{
+  "icon-button": {
+    "sm": {
+      "size": { "$value": "{sizing.md}", "$type": "dimension" },
+      "icon-size": { "$value": "{sizing.2xs}", "$type": "dimension" }
+    },
+    "md": {
+      "size": { "$value": "{sizing.lg}", "$type": "dimension" },
+      "icon-size": { "$value": "{sizing.xs}", "$type": "dimension" }
+    },
+    "lg": {
+      "size": { "$value": "{sizing.xl}", "$type": "dimension" },
+      "icon-size": { "$value": "{sizing.sm}", "$type": "dimension" }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "separator": {
+    "color": { "$value": "{color.border.default}", "$type": "color" },
+    "thickness": { "$value": "{border-width.thin}", "$type": "dimension" },
+    "spacing": { "$value": "{spacing.lg}", "$type": "dimension" }
+  }
+}

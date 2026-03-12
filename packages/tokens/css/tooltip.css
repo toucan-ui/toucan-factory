@@ -1,0 +1,92 @@
+/* Tooltip — maps .tcn-tooltip-* classes to system tokens */
+
+.tcn-tooltip-wrapper {
+  position: relative;
+  display: inline-block;
+  width: max-content;
+}
+
+.tcn-tooltip {
+  position: absolute;
+  z-index: var(--tooltip-z-index);
+  width: max-content;
+  max-width: var(--tooltip-max-width);
+  padding: var(--tooltip-padding-y) var(--tooltip-padding-x);
+  font-family: var(--text-font-family);
+  font-size: var(--tooltip-font-size);
+  font-weight: var(--tooltip-font-weight);
+  color: var(--color-surface-default);
+  background-color: var(--color-on-surface-default);
+  border-radius: var(--tooltip-radius);
+  box-shadow: var(--tooltip-shadow);
+  white-space: normal;
+  word-wrap: break-word;
+  pointer-events: none;
+  display: grid;
+  gap: var(--tooltip-gap);
+}
+
+/* Force child components (Heading, Text, etc.) to inherit tooltip color */
+.tcn-tooltip * {
+  color: inherit;
+}
+
+.tcn-tooltip:not([data-visible]) {
+  display: none;
+}
+
+/* Primary axis */
+.tcn-tooltip[data-anchor^='top'] {
+  bottom: 100%;
+  margin-bottom: var(--tooltip-offset);
+}
+.tcn-tooltip[data-anchor^='bottom'] {
+  top: 100%;
+  margin-top: var(--tooltip-offset);
+}
+.tcn-tooltip[data-anchor^='left'] {
+  right: 100%;
+  margin-right: var(--tooltip-offset);
+}
+.tcn-tooltip[data-anchor^='right'] {
+  left: 100%;
+  margin-left: var(--tooltip-offset);
+}
+
+/* Cross-axis for top/bottom — tooltip default is center */
+.tcn-tooltip[data-anchor='top'],
+.tcn-tooltip[data-anchor='bottom'],
+.tcn-tooltip[data-anchor='top-center'],
+.tcn-tooltip[data-anchor='bottom-center'] {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tcn-tooltip[data-anchor='top-left'],
+.tcn-tooltip[data-anchor='bottom-left'] {
+  left: 0;
+}
+
+.tcn-tooltip[data-anchor='top-right'],
+.tcn-tooltip[data-anchor='bottom-right'] {
+  right: 0;
+}
+
+/* Cross-axis for left/right — tooltip default is center */
+.tcn-tooltip[data-anchor='left'],
+.tcn-tooltip[data-anchor='right'],
+.tcn-tooltip[data-anchor='left-center'],
+.tcn-tooltip[data-anchor='right-center'] {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.tcn-tooltip[data-anchor='left-top'],
+.tcn-tooltip[data-anchor='right-top'] {
+  top: 0;
+}
+
+.tcn-tooltip[data-anchor='left-bottom'],
+.tcn-tooltip[data-anchor='right-bottom'] {
+  bottom: 0;
+}

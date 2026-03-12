@@ -1,0 +1,52 @@
+/* ==========================================================================
+   NotificationItem — Catalog Pattern CSS
+   Notification entry with unread indicator and dismiss action.
+   ========================================================================== */
+
+.tcn-notification-item {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: var(--scale-3);
+  padding: var(--scale-3) var(--scale-4);
+  text-decoration: none;
+  color: inherit;
+  font-family: var(--text-font-family);
+}
+
+.tcn-notification-item--unread {
+  background: var(--color-surface-muted);
+}
+
+.tcn-notification-item-left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--scale-2);
+}
+
+.tcn-notification-item-dot {
+  display: block;
+  width: var(--scale-2);
+  height: var(--scale-2);
+  border-radius: var(--radius-full);
+  background: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.tcn-notification-item-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--scale-0-5);
+}
+
+.tcn-notification-item-dismiss {
+  flex-shrink: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: var(--text-lg-font-size);
+  color: var(--color-on-surface-muted);
+  padding: 0;
+  line-height: 1;
+}

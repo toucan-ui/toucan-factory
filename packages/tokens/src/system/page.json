@@ -1,0 +1,7 @@
+{
+  "page": {
+    "surface": { "$value": "{color.surface.default}", "$type": "color" },
+    "on-surface": { "$value": "{color.on-surface.default}", "$type": "color" },
+    "on-surface-muted": { "$value": "{color.on-surface.muted}", "$type": "color" }
+  }
+}

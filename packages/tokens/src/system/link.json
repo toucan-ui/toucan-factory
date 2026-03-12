@@ -1,0 +1,11 @@
+{
+  "link": {
+    "color": {
+      "default": { "$value": "{color.primary}", "$type": "color" },
+      "hover": { "$value": "{color.primary-hover}", "$type": "color" },
+      "active": { "$value": "{color.primary-active}", "$type": "color" },
+      "visited": { "$value": "{color.primary}", "$type": "color" }
+    },
+    "font-weight": { "$value": "{font.weight.medium}", "$type": "fontWeight" }
+  }
+}

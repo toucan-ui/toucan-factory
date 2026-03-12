@@ -1,0 +1,33 @@
+/* Dialog — maps .tcn-dialog-* classes to system tokens */
+
+.tcn-dialog-backdrop {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-backdrop);
+  z-index: var(--dialog-backdrop-z-index);
+}
+
+.tcn-dialog {
+  position: relative;
+  background-color: var(--color-surface-default);
+  color: var(--color-on-surface-default);
+  --text-body-color: var(--color-on-surface-default);
+  --text-heading-color: var(--color-on-surface-default);
+  --text-display-color: var(--color-on-surface-default);
+  --text-muted-color: var(--color-on-surface-muted);
+  border-radius: var(--dialog-radius);
+  box-shadow: var(--dialog-shadow);
+  padding: var(--dialog-padding);
+  max-width: var(--dialog-max-width);
+  width: var(--dialog-width);
+  margin: var(--dialog-margin);
+  overflow-y: auto;
+  max-height: calc(100vh - var(--dialog-margin) * 2);
+}
+
+.tcn-dialog:focus-visible {
+  outline: none;
+}

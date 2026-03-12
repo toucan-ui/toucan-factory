@@ -1,0 +1,18 @@
+{
+  "rating": {
+    "color": {
+      "filled": { "$value": "{color.warning}", "$type": "color" },
+      "empty": { "$value": "{color.border.default}", "$type": "color" }
+    },
+    "sm": {
+      "size": { "$value": "{sizing.2xs}", "$type": "dimension" }
+    },
+    "md": {
+      "size": { "$value": "{sizing.xs}", "$type": "dimension" }
+    },
+    "lg": {
+      "size": { "$value": "{sizing.sm}", "$type": "dimension" }
+    },
+    "gap": { "$value": "{spacing.xs}", "$type": "dimension" }
+  }
+}

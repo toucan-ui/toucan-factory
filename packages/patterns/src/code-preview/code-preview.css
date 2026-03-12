@@ -1,0 +1,40 @@
+/* ==========================================================================
+   CodePreview — Catalog Pattern CSS
+   Interactive demo panel with toolbar, preview canvas, and collapsible code.
+   ========================================================================== */
+
+.tcn-code-preview {
+  border: var(--border-width-thin) solid var(--color-border-default);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.tcn-code-preview-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--scale-2);
+  padding: var(--scale-2) var(--scale-3);
+  background: var(--color-surface-muted);
+  border-bottom: var(--border-width-thin) solid var(--color-border-default);
+}
+
+.tcn-code-preview-controls {
+  display: flex;
+  align-items: center;
+  gap: var(--scale-2);
+}
+
+.tcn-code-preview-canvas {
+  padding: var(--scale-6);
+  background: var(--color-surface-default);
+}
+
+.tcn-code-preview-source {
+  border-top: var(--border-width-thin) solid var(--color-border-default);
+}
+
+.tcn-code-preview-source .tcn-code-block {
+  border: none;
+  border-radius: 0;
+}

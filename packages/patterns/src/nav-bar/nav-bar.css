@@ -1,0 +1,72 @@
+/* ==========================================================================
+   NavBar — Catalog Pattern CSS
+   Top navigation bar with logo, links, and trailing actions.
+   Self-contained: <header> provides full-bleed, <Wrapper> centers content.
+   ========================================================================== */
+
+.tcn-nav-bar {
+  background-color: var(--color-surface-default);
+}
+
+.tcn-nav-bar-inner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--scale-6);
+  padding-block: var(--scale-3);
+  font-family: var(--text-font-family);
+}
+
+.tcn-nav-bar-start {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--scale-6);
+}
+
+.tcn-nav-bar-logo {
+  font-weight: var(--text-heading-font-weight);
+  font-size: var(--text-lg-font-size);
+  color: var(--color-on-surface-default);
+}
+
+.tcn-nav-bar-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--tcn-nav-bar-link-gap, var(--scale-4));
+}
+
+.tcn-nav-bar-end {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.tcn-nav-bar-actions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--scale-2);
+}
+
+/* --- Responsive: mobile-first, desktop at md breakpoint --- */
+
+.tcn-nav-bar-desktop {
+  display: none;
+}
+
+.tcn-nav-bar-mobile {
+  display: flex;
+}
+
+@media (min-width: 768px) {
+  .tcn-nav-bar-desktop {
+    display: flex;
+    align-items: center;
+  }
+
+  .tcn-nav-bar-mobile {
+    display: none;
+  }
+}
