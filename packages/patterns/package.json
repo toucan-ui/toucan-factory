@@ -1,6 +1,6 @@
 {
   "name": "@toucan-ui/patterns",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Theme-agnostic layout patterns that compose ToucanUI core atoms",
   "license": "MIT",
   "keywords": [
