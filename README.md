@@ -24,7 +24,7 @@ See [docs/architecture.md](docs/architecture.md) for the full architecture guide
 ### Build Order
 
 ```
-tokens → core → patterns → docs
+tokens → core → patterns
 ```
 
 ## Quick Start
@@ -38,9 +38,6 @@ pnpm build
 
 # Run tests
 pnpm test
-
-# Start docs site
-pnpm --filter docs dev
 ```
 
 ## Documentation
@@ -48,6 +45,13 @@ pnpm --filter docs dev
 - [Architecture](docs/architecture.md) — threads, token cascade, surface conventions
 - [Atom CSS Rules](docs/atom-css-rules.md) — V1 CSS constraints and surface/text color rules
 - [Contributing](docs/contributing.md) — code style, naming conventions, how to add components
+
+## Consuming Apps
+
+The documentation site and theme configurator live in separate repos and consume the published npm packages:
+
+- **[toucan-docs](https://github.com/toucan-ui/toucan-docs)** — Documentation site with examples
+- **[toucan-wizard](https://github.com/toucan-ui/toucan-wizard)** — Visual theme configurator
 
 ## Key Decisions
 
@@ -57,7 +61,6 @@ pnpm --filter docs dev
 - **Token pipeline**: Style Dictionary v5 → CSS custom properties
 - **Bundler**: Tsup 8 (ESM + CJS)
 - **Testing**: Vitest 3
-- **Docs site**: Next.js 16 with MDX
 
 ## License
 

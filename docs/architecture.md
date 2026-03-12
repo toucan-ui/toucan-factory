@@ -55,7 +55,7 @@ Import paths:
 ## Build Dependency Order
 
 ```
-tokens → core → patterns → docs
+tokens → core → patterns
 ```
 
 ## Patterns Package
@@ -72,8 +72,13 @@ packages/
   core/                → React primitives (structure + accessibility)
   patterns/            → Theme-agnostic layout patterns
   interactions/        → Motion thread (V2)
-apps/
-  docs/                → Next.js documentation site
 ```
 
 Root-level configs (ESLint, TypeScript, Prettier) — not internal config packages. Package tsconfigs extend `tsconfig.base.json` but do not use `references` (conflicts with `noEmit`). Turborepo handles build ordering. Root `tsconfig.json` uses `references` for IDE navigation only.
+
+## Consuming Apps
+
+The documentation site and theme configurator are separate repositories that consume the published npm packages:
+
+- **toucan-docs** — Next.js documentation site with examples
+- **toucan-wizard** — Visual theme configurator

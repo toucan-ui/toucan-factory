@@ -26,11 +26,10 @@
 
 ```
 packages/
-  tokens/    → Style Dictionary config + JSON tokens + atom CSS
-  core/      → React primitives (structure + accessibility)
-  patterns/  → Theme-agnostic layout patterns
-apps/
-  docs/      → Next.js documentation site
+  tokens/        → Style Dictionary config + JSON tokens + atom CSS
+  core/          → React primitives (structure + accessibility)
+  patterns/      → Theme-agnostic layout patterns
+  interactions/  → Motion thread (V2)
 ```
 
 ## Adding a New Component
