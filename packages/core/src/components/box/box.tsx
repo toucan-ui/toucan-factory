@@ -9,10 +9,12 @@ export interface BoxProps extends React.HTMLAttributes<HTMLDivElement> {
   radius?: Radius;
   padding?: BoxPadding;
   overflow?: BoxOverflow;
+  /** Stretch to fill the parent's height (e.g. inside a Grid cell). */
+  fill?: boolean;
 }
 
 export const Box = forwardRef<HTMLDivElement, BoxProps>(function Box(
-  { elevation = 1, radius = 'md', padding = 'md', overflow, className, children, ...props },
+  { elevation = 1, radius = 'md', padding = 'md', overflow, fill, className, children, ...props },
   ref,
 ) {
   return (
@@ -23,6 +25,7 @@ export const Box = forwardRef<HTMLDivElement, BoxProps>(function Box(
       data-radius={radius}
       data-padding={padding}
       {...(overflow ? { 'data-overflow': overflow } : {})}
+      {...(fill ? { 'data-fill': '' } : {})}
       {...props}
     >
       {children}
