@@ -1,7 +1,7 @@
 'use client';
 
 import { forwardRef, useState, useEffect, useId } from 'react';
-import { cn, Text } from '@toucanui/core';
+import { cn, Text } from '@toucan-ui/core';
 
 export interface SideNavItem {
   label: string;

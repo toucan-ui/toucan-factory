@@ -1,6 +1,6 @@
 import { forwardRef } from 'react';
-import { cn, Box, Avatar, Heading, Text, Badge, FlexItem } from '@toucanui/core';
-import type { BadgeVariant, Elevation } from '@toucanui/core';
+import { cn, Box, Avatar, Heading, Text, Badge, FlexItem } from '@toucan-ui/core';
+import type { BadgeVariant, Elevation } from '@toucan-ui/core';
 
 export interface ContactCardProps extends React.HTMLAttributes<HTMLDivElement> {
   name: string;

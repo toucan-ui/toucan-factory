@@ -5,8 +5,8 @@ import {
   type ListboxConfig,
   type Item,
   type Effect,
-} from '@toucanui/interactions';
-import { onClickOutside, scrollIntoView } from '@toucanui/interactions/dom';
+} from '@toucan-ui/interactions';
+import { onClickOutside, scrollIntoView } from '@toucan-ui/interactions/dom';
 
 export interface UseListboxOptions {
   items: Item[];

@@ -1,5 +1,5 @@
 import { useCallback, useRef, useState } from 'react';
-import { toastReducer, type ToastItem, type ToastState } from '@toucanui/interactions';
+import { toastReducer, type ToastItem, type ToastState } from '@toucan-ui/interactions';
 
 let nextId = 0;
 

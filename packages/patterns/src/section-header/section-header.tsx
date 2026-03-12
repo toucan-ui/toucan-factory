@@ -1,5 +1,5 @@
 import { forwardRef } from 'react';
-import { cn, Badge, Heading, Text } from '@toucanui/core';
+import { cn, Badge, Heading, Text } from '@toucan-ui/core';
 
 export interface SectionHeaderProps extends React.HTMLAttributes<HTMLElement> {
   title: string;

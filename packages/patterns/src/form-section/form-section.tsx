@@ -1,5 +1,5 @@
 import { forwardRef } from 'react';
-import { cn, Grid, Heading, Text, Separator } from '@toucanui/core';
+import { cn, Grid, Heading, Text, Separator } from '@toucan-ui/core';
 
 export interface FormSectionProps extends React.HTMLAttributes<HTMLElement> {
   title: string;

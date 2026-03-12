@@ -1,5 +1,5 @@
 import { forwardRef } from 'react';
-import { cn, Text } from '@toucanui/core';
+import { cn, Text } from '@toucan-ui/core';
 
 export interface FieldRowProps extends React.HTMLAttributes<HTMLDivElement> {
   label: string;

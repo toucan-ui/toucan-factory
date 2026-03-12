@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { describe, it, expect, vi } from 'vitest';
-import { Input } from '@toucanui/core';
+import { Input } from '@toucan-ui/core';
 import { Form } from './form.js';
 import { FormField } from '../form-field/form-field';
 

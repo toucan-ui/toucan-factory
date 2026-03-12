@@ -1,5 +1,5 @@
 import { forwardRef } from 'react';
-import { cn, Heading, Text, Button } from '@toucanui/core';
+import { cn, Heading, Text, Button } from '@toucan-ui/core';
 
 export interface HeroCenteredProps extends React.HTMLAttributes<HTMLDivElement> {
   title: string;

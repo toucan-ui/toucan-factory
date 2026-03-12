@@ -1,5 +1,5 @@
 import { forwardRef } from 'react';
-import { cn, Heading, Text, Breadcrumb, BreadcrumbItem, FlexItem } from '@toucanui/core';
+import { cn, Heading, Text, Breadcrumb, BreadcrumbItem, FlexItem } from '@toucan-ui/core';
 
 export interface BreadcrumbEntry {
   label: string;

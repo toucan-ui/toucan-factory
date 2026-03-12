@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { lockScroll } from '@toucanui/interactions/dom';
+import { lockScroll } from '@toucan-ui/interactions/dom';
 
 export function useBodyScrollLock(active: boolean): void {
   useEffect(() => {

@@ -1,6 +1,6 @@
 import { forwardRef } from 'react';
-import { cn, Box, Text, Badge } from '@toucanui/core';
-import type { BadgeVariant, Elevation } from '@toucanui/core';
+import { cn, Box, Text, Badge } from '@toucan-ui/core';
+import type { BadgeVariant, Elevation } from '@toucan-ui/core';
 
 export type Trend = 'up' | 'down' | 'flat';
 

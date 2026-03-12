@@ -1,6 +1,6 @@
 import { forwardRef } from 'react';
-import { cn, Heading, Text, Separator, Section, Wrapper, Grid } from '@toucanui/core';
-import type { WrapperSize, SectionBackground, SectionPadding } from '@toucanui/core';
+import { cn, Heading, Text, Separator, Section, Wrapper, Grid } from '@toucan-ui/core';
+import type { WrapperSize, SectionBackground, SectionPadding } from '@toucan-ui/core';
 
 export interface FooterColumn {
   heading: string;

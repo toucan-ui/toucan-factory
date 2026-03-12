@@ -1,5 +1,5 @@
 import { forwardRef } from 'react';
-import { cn, Button } from '@toucanui/core';
+import { cn, Button } from '@toucan-ui/core';
 import { CodeBlock } from '../code-block/code-block';
 
 export interface CodePreviewProps extends React.HTMLAttributes<HTMLDivElement> {

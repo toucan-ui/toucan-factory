@@ -5,8 +5,8 @@ import {
   type MenuConfig,
   type Item,
   type Effect,
-} from '@toucanui/interactions';
-import { onClickOutside } from '@toucanui/interactions/dom';
+} from '@toucan-ui/interactions';
+import { onClickOutside } from '@toucan-ui/interactions/dom';
 
 export interface UseMenuOptions {
   open?: boolean;

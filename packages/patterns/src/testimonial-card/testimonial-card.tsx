@@ -1,6 +1,6 @@
 import { forwardRef } from 'react';
-import { cn, Box, Avatar, Text } from '@toucanui/core';
-import type { Elevation } from '@toucanui/core';
+import { cn, Box, Avatar, Text } from '@toucan-ui/core';
+import type { Elevation } from '@toucan-ui/core';
 
 export interface TestimonialCardProps extends React.HTMLAttributes<HTMLDivElement> {
   quote: string;

@@ -1,5 +1,5 @@
 {
-  "name": "@toucanui/patterns",
+  "name": "@toucan-ui/patterns",
   "version": "0.0.0",
   "description": "Theme-agnostic layout patterns that compose ToucanUI core atoms",
   "license": "MIT",
@@ -43,8 +43,8 @@
     "lint": "eslint src/"
   },
   "dependencies": {
-    "@toucanui/core": "workspace:*",
-    "@toucanui/tokens": "workspace:*"
+    "@toucan-ui/core": "workspace:*",
+    "@toucan-ui/tokens": "workspace:*"
   },
   "peerDependencies": {
     "react": "^19.0.0",

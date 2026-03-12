@@ -12,7 +12,7 @@ import {
 import type { Anchor } from '../../types.js';
 import { cn } from '../../utils/cn.js';
 import { useMenu } from '../../adapters/use-menu.js';
-import type { Item, MenuAction } from '@toucanui/interactions';
+import type { Item, MenuAction } from '@toucan-ui/interactions';
 
 // --- Context ---
 

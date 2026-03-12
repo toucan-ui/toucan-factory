@@ -1,5 +1,5 @@
 import { forwardRef } from 'react';
-import { cn, Skeleton, FlexItem } from '@toucanui/core';
+import { cn, Skeleton, FlexItem } from '@toucan-ui/core';
 
 export interface LoadingStateProps extends React.HTMLAttributes<HTMLDivElement> {
   lines?: number;

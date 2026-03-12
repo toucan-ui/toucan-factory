@@ -1,5 +1,5 @@
 import { useCallback, useMemo, useRef, useState } from 'react';
-import { sliderReducer, type SliderConfig } from '@toucanui/interactions';
+import { sliderReducer, type SliderConfig } from '@toucan-ui/interactions';
 
 export interface UseSliderOptions {
   value?: number;

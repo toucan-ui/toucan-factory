@@ -50,7 +50,7 @@ importers:
 
   packages/core:
     dependencies:
-      '@toucanui/interactions':
+      '@toucan-ui/interactions':
         specifier: workspace:*
         version: link:../interactions
     devDependencies:
@@ -108,10 +108,10 @@ importers:
 
   packages/patterns:
     dependencies:
-      '@toucanui/core':
+      '@toucan-ui/core':
         specifier: workspace:*
         version: link:../core
-      '@toucanui/tokens':
+      '@toucan-ui/tokens':
         specifier: workspace:*
         version: link:../tokens
     devDependencies:

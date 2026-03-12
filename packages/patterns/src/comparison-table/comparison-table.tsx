@@ -10,8 +10,8 @@ import {
   TableCell,
   Badge,
   Text,
-} from '@toucanui/core';
-import type { BadgeVariant } from '@toucanui/core';
+} from '@toucan-ui/core';
+import type { BadgeVariant } from '@toucan-ui/core';
 
 export interface ComparisonFeature {
   feature: string;

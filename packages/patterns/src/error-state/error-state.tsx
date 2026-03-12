@@ -1,5 +1,5 @@
 import { forwardRef } from 'react';
-import { cn, Box, Heading, Text, Button } from '@toucanui/core';
+import { cn, Box, Heading, Text, Button } from '@toucan-ui/core';
 
 export interface ErrorStateProps extends React.HTMLAttributes<HTMLDivElement> {
   title: string;

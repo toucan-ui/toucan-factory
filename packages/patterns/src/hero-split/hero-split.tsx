@@ -1,5 +1,5 @@
 import { forwardRef } from 'react';
-import { cn, Heading, Text, Button, FlexItem } from '@toucanui/core';
+import { cn, Heading, Text, Button, FlexItem } from '@toucan-ui/core';
 
 export interface HeroSplitProps extends React.HTMLAttributes<HTMLDivElement> {
   title: string;

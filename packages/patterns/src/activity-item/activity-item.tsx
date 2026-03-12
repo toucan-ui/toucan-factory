@@ -1,5 +1,5 @@
 import { forwardRef } from 'react';
-import { cn, Avatar, Text, FlexItem } from '@toucanui/core';
+import { cn, Avatar, Text, FlexItem } from '@toucan-ui/core';
 
 export interface ActivityItemProps extends React.HTMLAttributes<HTMLDivElement> {
   user: string;

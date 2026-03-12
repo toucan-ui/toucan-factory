@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { createFocusTrap } from '@toucanui/interactions/dom';
+import { createFocusTrap } from '@toucan-ui/interactions/dom';
 
 export function useFocusTrap(
   containerRef: React.RefObject<HTMLElement | null>,

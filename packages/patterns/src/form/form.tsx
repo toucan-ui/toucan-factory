@@ -1,6 +1,6 @@
 import { forwardRef, useRef, useCallback } from 'react';
-import { cn, Grid } from '@toucanui/core';
-import type { GridGap } from '@toucanui/core';
+import { cn, Grid } from '@toucan-ui/core';
+import type { GridGap } from '@toucan-ui/core';
 import { FormContext } from '../form-field/form-field';
 import type { FormFieldHandle } from '../form-field/form-field';
 

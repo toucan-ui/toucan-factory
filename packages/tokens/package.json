@@ -1,5 +1,5 @@
 {
-  "name": "@toucanui/tokens",
+  "name": "@toucan-ui/tokens",
   "version": "0.0.0",
   "description": "Design tokens and atom CSS for ToucanUI — the token-driven design system",
   "license": "MIT",

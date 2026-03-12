@@ -1,7 +1,7 @@
 import { forwardRef, useId, useMemo } from 'react';
 import { cn } from '../../utils/cn.js';
 import { useListbox } from '../../adapters/use-listbox.js';
-import type { Item } from '@toucanui/interactions';
+import type { Item } from '@toucan-ui/interactions';
 import type { Size } from '../../types.js';
 
 export interface SelectOption {
