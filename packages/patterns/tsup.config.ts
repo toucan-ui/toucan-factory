@@ -14,7 +14,7 @@ export default defineConfig({
   entry,
   format: ['esm', 'cjs'],
   dts: true,
-  clean: true,
+  clean: false,
   external: ['react', 'react-dom', '@toucan-ui/core', '@toucan-ui/tokens'],
   banner: { js: "'use client';" },
 });
