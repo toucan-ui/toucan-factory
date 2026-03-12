@@ -1,6 +1,6 @@
 import { forwardRef } from 'react';
-import { cn, Box, Heading, Text, Button, Separator } from '@toucanui/core';
-import type { Elevation } from '@toucanui/core';
+import { cn, Box, Heading, Text, Button, Separator } from '@toucan-ui/core';
+import type { Elevation } from '@toucan-ui/core';
 
 export interface PricingCardProps extends React.HTMLAttributes<HTMLDivElement> {
   tier: string;

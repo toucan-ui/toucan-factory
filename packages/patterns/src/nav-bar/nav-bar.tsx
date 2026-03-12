@@ -1,6 +1,6 @@
 import { forwardRef } from 'react';
-import { cn, Wrapper, FlexItem } from '@toucanui/core';
-import type { WrapperSize } from '@toucanui/core';
+import { cn, Wrapper, FlexItem } from '@toucan-ui/core';
+import type { WrapperSize } from '@toucan-ui/core';
 
 type NavBarGap = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 8 | 10 | 12 | 16;
 

@@ -13,7 +13,7 @@
 
 ### Packages
 
-- npm scope: `@toucanui/`
+- npm scope: `@toucan-ui/`
 - CSS class prefix: `tcn-` (e.g. `.tcn-button`, `.tcn-grid`)
 
 ### Tokens

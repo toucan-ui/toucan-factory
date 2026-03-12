@@ -1,5 +1,5 @@
 {
-  "name": "@toucanui/interactions",
+  "name": "@toucan-ui/interactions",
   "version": "0.0.0",
   "description": "Framework-agnostic interaction primitives for ToucanUI",
   "license": "MIT",

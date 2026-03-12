@@ -6,7 +6,7 @@ import {
   type Item,
   type Orientation,
   type Effect,
-} from '@toucanui/interactions';
+} from '@toucan-ui/interactions';
 
 export interface UseTabsOptions {
   value?: string;

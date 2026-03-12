@@ -49,8 +49,8 @@ Token tiers are built as separate CSS files (`raw.css`, `alias.css`, `system.css
 
 Import paths:
 
-- `@toucanui/tokens/css` — tokens + atom CSS (ground-zero import)
-- `@toucanui/tokens/css/tokens` — token values only
+- `@toucan-ui/tokens/css` — tokens + atom CSS (ground-zero import)
+- `@toucan-ui/tokens/css/tokens` — token values only
 
 ## Build Dependency Order
 
@@ -60,7 +60,7 @@ tokens → core → patterns → docs
 
 ## Patterns Package
 
-Patterns (`@toucanui/patterns`) are theme-agnostic layout components that compose core atoms. Their CSS uses `var()` token references that resolve against whichever theme's tokens are in scope.
+Patterns (`@toucan-ui/patterns`) are theme-agnostic layout components that compose core atoms. Their CSS uses `var()` token references that resolve against whichever theme's tokens are in scope.
 
 Each pattern directory under `packages/patterns/src/` contains `{name}.tsx`, `{name}.test.tsx`, and `{name}.css`. Pattern CSS is consumed standalone, not bundled into theme packages.
 

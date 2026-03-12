@@ -1,5 +1,5 @@
 import { forwardRef, useCallback, useState } from 'react';
-import { cn, Text, Button } from '@toucanui/core';
+import { cn, Text, Button } from '@toucan-ui/core';
 
 export interface CodeBlockProps extends React.HTMLAttributes<HTMLElement> {
   code: string;

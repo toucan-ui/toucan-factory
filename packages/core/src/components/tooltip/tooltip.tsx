@@ -1,7 +1,7 @@
 import { cloneElement, forwardRef, isValidElement, useCallback, useId, useState } from 'react';
 import type { Anchor } from '../../types.js';
 import { cn } from '../../utils/cn.js';
-import { disclosureReducer, type DisclosureConfig } from '@toucanui/interactions';
+import { disclosureReducer, type DisclosureConfig } from '@toucan-ui/interactions';
 
 export interface TooltipProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'content'> {
   content: React.ReactNode;

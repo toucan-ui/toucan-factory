@@ -1,6 +1,6 @@
 import { forwardRef } from 'react';
-import { cn, Box, Grid, Heading, Text, Input, Button } from '@toucanui/core';
-import type { Elevation } from '@toucanui/core';
+import { cn, Box, Grid, Heading, Text, Input, Button } from '@toucan-ui/core';
+import type { Elevation } from '@toucan-ui/core';
 
 export interface AuthCardField {
   label: string;

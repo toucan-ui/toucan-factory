@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef } from 'react';
-import { dialogReducer, type DialogConfig, type Effect } from '@toucanui/interactions';
-import { createFocusTrap, lockScroll, saveFocus } from '@toucanui/interactions/dom';
+import { dialogReducer, type DialogConfig, type Effect } from '@toucan-ui/interactions';
+import { createFocusTrap, lockScroll, saveFocus } from '@toucan-ui/interactions/dom';
 
 export interface UseDialogOptions {
   open: boolean;

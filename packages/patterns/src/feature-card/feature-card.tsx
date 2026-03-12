@@ -1,6 +1,6 @@
 import { forwardRef } from 'react';
-import { cn, Box, Heading, Text } from '@toucanui/core';
-import type { Elevation } from '@toucanui/core';
+import { cn, Box, Heading, Text } from '@toucan-ui/core';
+import type { Elevation } from '@toucan-ui/core';
 
 export interface FeatureCardProps extends React.HTMLAttributes<HTMLDivElement> {
   title: string;

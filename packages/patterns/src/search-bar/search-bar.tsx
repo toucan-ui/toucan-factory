@@ -1,5 +1,5 @@
 import { forwardRef } from 'react';
-import { cn, Input, Button, FlexItem } from '@toucanui/core';
+import { cn, Input, Button, FlexItem } from '@toucan-ui/core';
 
 export interface SearchBarProps extends React.HTMLAttributes<HTMLFormElement> {
   label?: string;

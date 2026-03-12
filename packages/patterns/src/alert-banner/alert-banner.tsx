@@ -1,5 +1,5 @@
 import { forwardRef } from 'react';
-import { cn, Text, FlexItem } from '@toucanui/core';
+import { cn, Text, FlexItem } from '@toucan-ui/core';
 
 export type AlertVariant = 'info' | 'warning' | 'danger' | 'neutral';
 

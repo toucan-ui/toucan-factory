@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { describe, it, expect, vi } from 'vitest';
 import { useRef } from 'react';
-import { Input } from '@toucanui/core';
+import { Input } from '@toucan-ui/core';
 import { FormField, runRules } from './form-field.js';
 import type { FormFieldHandle, ValidationRule } from './form-field.js';
 

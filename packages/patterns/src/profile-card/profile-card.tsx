@@ -1,6 +1,6 @@
 import { forwardRef } from 'react';
-import { cn, Box, Avatar, Heading, Text, Button } from '@toucanui/core';
-import type { Elevation } from '@toucanui/core';
+import { cn, Box, Avatar, Heading, Text, Button } from '@toucan-ui/core';
+import type { Elevation } from '@toucan-ui/core';
 
 export interface ProfileCardProps extends React.HTMLAttributes<HTMLDivElement> {
   name: string;

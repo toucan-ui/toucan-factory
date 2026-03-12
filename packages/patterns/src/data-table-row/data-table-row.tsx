@@ -1,6 +1,6 @@
 import { forwardRef } from 'react';
-import { cn, Text, Badge, FlexItem } from '@toucanui/core';
-import type { BadgeVariant } from '@toucanui/core';
+import { cn, Text, Badge, FlexItem } from '@toucan-ui/core';
+import type { BadgeVariant } from '@toucan-ui/core';
 
 export interface DataTableRowProps extends React.HTMLAttributes<HTMLDivElement> {
   label: string;

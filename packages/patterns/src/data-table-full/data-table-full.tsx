@@ -9,8 +9,8 @@ import {
   TableHeader,
   TableCell,
   Badge,
-} from '@toucanui/core';
-import type { BadgeVariant, SortDirection } from '@toucanui/core';
+} from '@toucan-ui/core';
+import type { BadgeVariant, SortDirection } from '@toucan-ui/core';
 
 export interface DataTableColumn {
   key: string;

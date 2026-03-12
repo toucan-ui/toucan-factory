@@ -4,8 +4,8 @@ import {
   type DisclosureAction,
   type DisclosureConfig,
   type Effect,
-} from '@toucanui/interactions';
-import { onClickOutside } from '@toucanui/interactions/dom';
+} from '@toucan-ui/interactions';
+import { onClickOutside } from '@toucan-ui/interactions/dom';
 
 export interface UseDisclosureOptions {
   open?: boolean;

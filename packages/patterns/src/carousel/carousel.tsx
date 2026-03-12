@@ -1,5 +1,5 @@
 import { forwardRef, useCallback, useEffect, useRef, useState, Children } from 'react';
-import { cn, Button } from '@toucanui/core';
+import { cn, Button } from '@toucan-ui/core';
 
 // --- CarouselSlide ---
 

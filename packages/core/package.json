@@ -1,5 +1,5 @@
 {
-  "name": "@toucanui/core",
+  "name": "@toucan-ui/core",
   "version": "0.0.0",
   "description": "Accessible React component primitives for ToucanUI",
   "license": "MIT",
@@ -36,7 +36,7 @@
     "test": "vitest run"
   },
   "dependencies": {
-    "@toucanui/interactions": "workspace:*"
+    "@toucan-ui/interactions": "workspace:*"
   },
   "peerDependencies": {
     "react": "^19.0.0",

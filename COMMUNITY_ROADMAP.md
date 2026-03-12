@@ -4,7 +4,7 @@ This document outlines what would need to change if Design System Factory moved 
 
 ## Package Distribution
 
-Publish to npm as public packages. Developers need `npm install @toucanui/core` — not cloning a monorepo. Changesets is already configured, so the versioning pipeline is half-built. The monorepo stays as the development environment, but the packages are the product.
+Publish to npm as public packages. Developers need `npm install @toucan-ui/core` — not cloning a monorepo. Changesets is already configured, so the versioning pipeline is half-built. The monorepo stays as the development environment, but the packages are the product.
 
 ## Repo Structure
 
@@ -16,12 +16,12 @@ Docs and wizard should live in **separate repos** consuming published packages. 
 
 ### Tokens package — framework-agnostic positioning
 
-Already framework-agnostic (CSS custom properties). Explicitly market and document this. A Vue or Svelte developer should be able to use `@toucanui/tokens` with their own components.
+Already framework-agnostic (CSS custom properties). Explicitly market and document this. A Vue or Svelte developer should be able to use `@toucan-ui/tokens` with their own components.
 
 ### Core package
 
 - **Tree-shaking** — consumers only pay for what they import. Tsup with ESM handles this, but verify with bundlesize tracking.
-- **CSS delivery** — currently one `index.css`. Community users will want per-component CSS imports (`@toucanui/tokens/css/button`) or a build plugin that extracts only what's used.
+- **CSS delivery** — currently one `index.css`. Community users will want per-component CSS imports (`@toucan-ui/tokens/css/button`) or a build plugin that extracts only what's used.
 - **Peer dependencies** — React as a peer dep pinned to a range, not exact.
 - **SSR compatibility** — Next.js, Remix, Astro all need to work out of the box. Every component must handle hydration correctly.
 
@@ -36,7 +36,7 @@ Becomes critical. Any change to token naming, alias references, or component API
 - **Dedicated docs domain** — e.g. `factory.dev` or similar
 - **Bundlesize CI** — track the cost of each package per commit
 - **Browser/a11y CI** — automated axe-core + cross-browser testing on every PR
-- **A CLI or init tool** — `npx create-toucanui-app` or `npx @toucanui/cli init` that scaffolds tokens + imports
+- **A CLI or init tool** — `npx create-toucanui-app` or `npx @toucan-ui/cli init` that scaffolds tokens + imports
 
 ### Documentation
 
