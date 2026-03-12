@@ -46,7 +46,7 @@ export const FOOTER_COLUMNS: FooterColumn[] = [
     heading: 'Project',
     links: [
       { label: 'Roadmap', href: '/#roadmap' },
-      { label: 'GitHub', href: 'https://github.com' },
+      { label: 'GitHub', href: 'https://github.com/toucan-ui' },
     ],
   },
 ];

@@ -44,7 +44,7 @@ import { Button, Input, Box } from '@toucan-ui/core';`}
         <Grid gap={4}>
           <Heading level={2}>Recommended App Globals</Heading>
           <Text>
-            Factory doesn&apos;t ship a CSS reset — that&apos;s your app&apos;s concern. We recommend adding these baseline styles to your global stylesheet:
+            Toucan doesn&apos;t ship a CSS reset — that&apos;s your app&apos;s concern. We recommend adding these baseline styles to your global stylesheet:
           </Text>
           <CodeBlock
             code={`*,
@@ -63,7 +63,7 @@ body {
             filename="globals.css"
           />
           <Text muted size="sm">
-            Factory components work without these, but <code>box-sizing: border-box</code> and the token-based font family ensure consistent rendering across your entire app.
+            Toucan components work without these, but <code>box-sizing: border-box</code> and the token-based font family ensure consistent rendering across your entire app.
           </Text>
         </Grid>
 

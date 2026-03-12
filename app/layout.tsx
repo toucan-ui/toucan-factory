@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Design System Factory',
+  title: 'Toucan',
   description:
-    'A modular, token-driven design system factory — patterns compose atoms, atoms reference tokens, themes override tokens.',
+    'A modular, token-driven design system — patterns compose atoms, atoms reference tokens, themes override tokens.',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

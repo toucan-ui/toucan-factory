@@ -3,13 +3,13 @@ import { SectionHeader, ComparisonTable } from '../patterns';
 import type { ComparisonFeature } from '../patterns';
 import { STAT_COMPONENT_COUNT } from '@/data/project-stats';
 
-const products = ['Factory', 'MUI', 'Chakra', 'Radix', 'Headless UI', 'shadcn/ui'];
+const products = ['Toucan', 'MUI', 'Chakra', 'Radix', 'Headless UI', 'shadcn/ui'];
 
 const features: ComparisonFeature[] = [
   {
     feature: 'Accessible components',
     values: {
-      Factory: { text: 'Hand-crafted', variant: 'success' },
+      Toucan: { text: 'Hand-crafted', variant: 'success' },
       MUI: { text: 'Yes', variant: 'success' },
       Chakra: { text: 'Yes', variant: 'success' },
       Radix: { text: 'Yes', variant: 'success' },
@@ -20,7 +20,7 @@ const features: ComparisonFeature[] = [
   {
     feature: 'Token architecture',
     values: {
-      Factory: { text: '3-tier cascade', variant: 'success' },
+      Toucan: { text: '3-tier cascade', variant: 'success' },
       MUI: 'Theme object',
       Chakra: 'Theme object',
       Radix: { text: 'None', variant: 'neutral' },
@@ -31,7 +31,7 @@ const features: ComparisonFeature[] = [
   {
     feature: 'Theme switching',
     values: {
-      Factory: { text: 'data-theme attr', variant: 'success' },
+      Toucan: { text: 'data-theme attr', variant: 'success' },
       MUI: 'ThemeProvider',
       Chakra: 'ChakraProvider',
       Radix: { text: 'N/A', variant: 'neutral' },
@@ -42,7 +42,7 @@ const features: ComparisonFeature[] = [
   {
     feature: 'Multi-theme from one source',
     values: {
-      Factory: { text: 'Core design', variant: 'success' },
+      Toucan: { text: 'Core design', variant: 'success' },
       MUI: 'Possible (work)',
       Chakra: 'Possible (work)',
       Radix: { text: 'N/A', variant: 'neutral' },
@@ -53,7 +53,7 @@ const features: ComparisonFeature[] = [
   {
     feature: 'Structure/style separation',
     values: {
-      Factory: { text: 'Strict', variant: 'success' },
+      Toucan: { text: 'Strict', variant: 'success' },
       MUI: { text: 'No', variant: 'danger' },
       Chakra: { text: 'No', variant: 'danger' },
       Radix: { text: 'Yes', variant: 'success' },
@@ -64,7 +64,7 @@ const features: ComparisonFeature[] = [
   {
     feature: 'CSS strategy',
     values: {
-      Factory: { text: 'Custom properties', variant: 'success' },
+      Toucan: { text: 'Custom properties', variant: 'success' },
       MUI: 'Emotion/CSS-in-JS',
       Chakra: 'Emotion/CSS-in-JS',
       Radix: 'None (BYO)',
@@ -75,7 +75,7 @@ const features: ComparisonFeature[] = [
   {
     feature: 'Framework-agnostic tokens',
     values: {
-      Factory: { text: 'Yes (CSS vars)', variant: 'success' },
+      Toucan: { text: 'Yes (CSS vars)', variant: 'success' },
       MUI: { text: 'No (JS)', variant: 'danger' },
       Chakra: { text: 'No (JS)', variant: 'danger' },
       Radix: { text: 'N/A', variant: 'neutral' },
@@ -86,7 +86,7 @@ const features: ComparisonFeature[] = [
   {
     feature: 'Component count',
     values: {
-      Factory: String(STAT_COMPONENT_COUNT),
+      Toucan: String(STAT_COMPONENT_COUNT),
       MUI: '50+',
       Chakra: '100+',
       Radix: '30+',
@@ -97,7 +97,7 @@ const features: ComparisonFeature[] = [
   {
     feature: 'Bundle includes CSS runtime',
     values: {
-      Factory: { text: 'No', variant: 'success' },
+      Toucan: { text: 'No', variant: 'success' },
       MUI: { text: 'Yes', variant: 'warning' },
       Chakra: { text: 'Yes', variant: 'warning' },
       Radix: { text: 'No', variant: 'success' },
@@ -108,7 +108,7 @@ const features: ComparisonFeature[] = [
   {
     feature: 'Animation system',
     values: {
-      Factory: { text: 'V2', variant: 'warning' },
+      Toucan: { text: 'V2', variant: 'warning' },
       MUI: 'Built-in',
       Chakra: 'Built-in',
       Radix: { text: 'None', variant: 'neutral' },
@@ -119,7 +119,7 @@ const features: ComparisonFeature[] = [
   {
     feature: 'Production maturity',
     values: {
-      Factory: { text: 'Portfolio', variant: 'warning' },
+      Toucan: { text: 'Portfolio', variant: 'warning' },
       MUI: { text: 'Enterprise', variant: 'success' },
       Chakra: { text: 'Production', variant: 'success' },
       Radix: { text: 'Production', variant: 'success' },
@@ -133,14 +133,14 @@ export function ComparisonSection() {
   return (
     <Section gap={8} id="comparison">
       <SectionHeader
-        title="How Factory compares"
-        subtitle="Honest positioning. Every tool has strengths — here's where Factory fits."
+        title="How Toucan compares"
+        subtitle="Honest positioning. Every tool has strengths — here's where Toucan fits."
       />
       <Box padding="none" radius="md" elevation={0} overflow="scroll">
         <ComparisonTable
           products={products}
           features={features}
-          highlightedProduct="Factory"
+          highlightedProduct="Toucan"
         />
       </Box>
     </Section>

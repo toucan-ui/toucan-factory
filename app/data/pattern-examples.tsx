@@ -278,12 +278,12 @@ export const PATTERN_EXAMPLES: Record<string, PatternExample> = {
   'field-row': {
     demo: (
       <Grid gap={3}>
-        <FieldRow label="Name" value="Design System Factory" />
+        <FieldRow label="Name" value="Toucan UI" />
         <FieldRow label="Version" value="1.0.0" mono />
         <FieldRow label="License" value="MIT" />
       </Grid>
     ),
-    code: `<FieldRow label="Name" value="Design System Factory" />
+    code: `<FieldRow label="Name" value="Toucan UI" />
 <FieldRow label="Version" value="1.0.0" mono />
 <FieldRow label="License" value="MIT" />`,
   },

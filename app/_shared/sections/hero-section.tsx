@@ -17,7 +17,7 @@ export function HeroSection() {
                 tokens. One source, infinite skins.
               </Text>
               <Text as="p" muted>
-                Factory is a design system that builds design systems. Swap a single
+                Toucan is a design system that builds design systems. Swap a single
                 JSON file and every component, every pattern, every layout re-skins
                 itself — no code changes, no overrides, no hacks.
               </Text>

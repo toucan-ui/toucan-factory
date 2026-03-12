@@ -595,85 +595,88 @@ export default function EcommercePage() {
             <Grid columns={{ base: 2, md: 4 }} gap={6}>
               {[
                 {
-                  title: 'Gut Health Probiotic',
-                  price: '$49',
-                  rating: 4.8,
-                  reviews: 2340,
-                  image: 'https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=400&h=400&fit=crop',
-                  alt: 'Probiotic supplement bottle',
-                },
-                {
-                  title: 'Omega-3 Fish Oil',
-                  price: '$39',
-                  rating: 4.7,
-                  reviews: 1890,
-                  image: 'https://images.unsplash.com/photo-1577401239170-897942555fb3?w=400&h=400&fit=crop',
-                  alt: 'Fish oil capsules',
-                },
-                {
-                  title: 'Vitamin D3 Drops',
-                  price: '$29',
+                  title: 'Running Retreat',
+                  price: '$249',
                   rating: 4.9,
-                  reviews: 3120,
-                  image: 'https://images.unsplash.com/photo-1471864190281-a93a3070b6de?w=400&h=400&fit=crop',
-                  alt: 'Vitamin D3 dropper bottle',
+                  reviews: 1240,
+                  image: 'https://images.unsplash.com/photo-1597892657493-6847b9640bac?w=400&h=400&fit=crop',
+                  alt: 'Person running outdoors',
+                },
+                {
+                  title: 'On the Go Nut Mix',
+                  price: '$12',
+                  rating: 4.7,
+                  reviews: 3890,
+                  image: 'https://images.unsplash.com/photo-1543158181-1274e5362710?w=400&h=400&fit=crop',
+                  alt: 'Assorted nuts in a bowl',
                   soldOut: true,
                 },
                 {
-                  title: 'Magnesium Complex',
+                  title: 'Naughty Nut Bar',
+                  price: '$8',
+                  rating: 4.8,
+                  reviews: 2120,
+                  image: 'https://images.unsplash.com/photo-1691200435618-2cda2edbd10c?w=400&h=400&fit=crop',
+                  alt: 'Nut bar snack',
+                },
+                {
+                  title: 'Guilt Free Cocktail Pack',
                   price: '$35',
                   rating: 4.6,
                   reviews: 1560,
-                  image: 'https://images.unsplash.com/photo-1550572017-edd951aa8f72?w=400&h=400&fit=crop',
-                  alt: 'Magnesium supplement',
+                  image: 'https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=400&h=400&fit=crop',
+                  alt: 'Colourful cocktail drinks',
                 },
                 {
-                  title: 'Collagen Peptides',
-                  price: '$59',
+                  title: 'Morning Berry Mix',
+                  price: '$15',
                   rating: 4.8,
                   reviews: 2780,
-                  image: 'https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=400&h=400&fit=crop',
-                  alt: 'Collagen powder container',
-                },
-                {
-                  title: 'Ashwagandha Extract',
-                  price: '$32',
-                  rating: 4.5,
-                  reviews: 980,
-                  image: 'https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=400&h=400&fit=crop',
-                  alt: 'Ashwagandha capsules',
+                  image: 'https://images.unsplash.com/photo-1494390248081-4e521a5940db?w=400&h=400&fit=crop',
+                  alt: 'Fresh mixed berries',
                   soldOut: true,
                 },
                 {
-                  title: 'Electrolyte Mix',
-                  price: '$25',
-                  rating: 4.7,
-                  reviews: 4210,
-                  image: 'https://images.unsplash.com/photo-1622597467836-f3285f2131b8?w=400&h=400&fit=crop',
-                  alt: 'Electrolyte powder sachets',
+                  title: 'Go Get It Granola',
+                  price: '$14',
+                  rating: 4.5,
+                  reviews: 980,
+                  image: 'https://images.unsplash.com/photo-1494597564530-871f2b93ac55?w=400&h=400&fit=crop',
+                  alt: 'Bowl of granola',
                 },
                 {
-                  title: 'Sleep Support',
-                  price: '$42',
-                  rating: 4.6,
-                  reviews: 1340,
-                  image: 'https://images.unsplash.com/photo-1512069772995-ec65ed45afd6?w=400&h=400&fit=crop',
-                  alt: 'Sleep supplement capsules',
+                  title: 'Solo Meditation Retreat',
+                  price: '$199',
+                  rating: 4.9,
+                  reviews: 870,
+                  image: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=400&h=400&fit=crop',
+                  alt: 'Person meditating peacefully',
+                  soldOut: true,
+                },
+                {
+                  title: 'Detox Done Right',
+                  price: '$29',
+                  rating: 4.7,
+                  reviews: 1640,
+                  image: 'https://images.unsplash.com/photo-1535914254981-b5012eebbd15?w=400&h=400&fit=crop',
+                  alt: 'Fresh detox juice drinks',
                 },
               ].map((product) => (
-                <Box key={product.title} padding="md" radius="md" elevation={1}>
-                  <Flex gap={3}>
-                    <img
-                      className="examples-ecom-feature-image"
-                      src={product.image}
-                      alt={product.alt}
-                    />
-                    <Heading level={5}>{product.title}</Heading>
-                    <Flex row gap={2} align="center">
-                      <Rating value={product.rating} size="sm" label={`${product.rating} out of 5`} />
-                      <Text size="xs" muted>({product.reviews.toLocaleString()})</Text>
+                <Box key={product.title} padding="md" radius="md" elevation={1} fill>
+                  <Flex gap={3} justify="between">
+                    <Flex gap={3}>
+                      <img
+                        className="examples-ecom-feature-image"
+                        src={product.image}
+                        alt={product.alt}
+                      />
+                      <Heading level={5}>{product.title}</Heading>
+                      <Flex row gap={2} align="center">
+                        <Rating value={product.rating} size="sm" label={`${product.rating} out of 5`} />
+                        <Text size="xs" muted>({product.reviews.toLocaleString()})</Text>
+                      </Flex>
+                      <Text weight="semibold">{product.price}</Text>
                     </Flex>
-                    <Text weight="semibold">{product.price}</Text>
                     {product.soldOut ? (
                       <Button size="sm" disabled>Sold Out</Button>
                     ) : (

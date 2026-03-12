@@ -1,4 +1,4 @@
-import { Text, Page } from '@toucan-ui/core';
+import { Page } from '@toucan-ui/core';
 import { Footer } from '../_shared/patterns';
 import { DocsNavBar } from '../_shared/docs-navbar';
 import { FOOTER_COLUMNS } from '../data/site-data';
@@ -11,9 +11,9 @@ export default function DocsLayout({ children }: { children: React.ReactNode }) 
       <Footer
         columns={FOOTER_COLUMNS}
         logo={
-          <Text as="strong" size="lg">Factory</Text>
+          <img src="/toucan-logo.svg" alt="Toucan" height={24} className="toucan-logo" />
         }
-        legal="Design System Factory. Built as a demonstration of the design system architecture."
+        legal="Toucan. Built as a demonstration of token-driven design system architecture."
       />
     </Page>
   );

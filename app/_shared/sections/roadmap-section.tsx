@@ -15,7 +15,7 @@ export function RoadmapSection() {
 
             <AlertBanner
               variant="info"
-              message="Factory V1 ships threads 1 and 2 only. The interaction thread is an intentional V2 boundary, not an oversight."
+              message="Toucan V1 ships threads 1 and 2 only. The interaction thread is an intentional V2 boundary, not an oversight."
             />
 
             <Text as="p" muted>
@@ -32,7 +32,7 @@ export function RoadmapSection() {
               stress-test this.
             </Text>
             <Text as="p" muted>
-              <strong>{STAT_COMPONENT_COUNT} components, not 50+.</strong> Factory ships the primitives
+              <strong>{STAT_COMPONENT_COUNT} components, not 50+.</strong> Toucan ships the primitives
               that most design systems need. It doesn&apos;t include charts, date
               pickers, rich text editors, or virtualized lists. The architecture
               supports adding them — but V1 prioritizes depth over breadth.

@@ -8,7 +8,7 @@ export function ArchitectureSection() {
       <SectionHeader
         eyebrow="Architecture"
         title="Three threads, zero entanglement"
-        subtitle="Factory separates every design system into three independent concerns. Change one without touching the others."
+        subtitle="Toucan separates every design system into three independent concerns. Change one without touching the others."
       />
       <Grid columns="auto" gap={6} minItemSize="var(--layout-60)">
         <FeatureCard

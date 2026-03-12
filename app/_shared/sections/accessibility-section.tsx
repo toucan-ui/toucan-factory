@@ -11,7 +11,7 @@ export function AccessibilitySection() {
       />
       <Wrapper size="xs">
         <Text as="p" muted>
-          Factory&apos;s {STAT_COMPONENT_COUNT} components are built from scratch — no wrapper
+          Toucan&apos;s {STAT_COMPONENT_COUNT} components are built from scratch — no wrapper
           libraries, no accessibility plugins, no &quot;add ARIA later&quot;.
           Every component starts from the WAI-ARIA Authoring Practices and
           implements keyboard navigation, focus management, screen reader
