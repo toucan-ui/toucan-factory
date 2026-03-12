@@ -81,3 +81,11 @@
 .tcn-box[data-overflow='scroll'] {
   overflow: scroll;
 }
+
+.tcn-box[data-fill] {
+  height: 100%;
+}
+
+.tcn-box[data-fill] > .tcn-flex {
+  height: 100%;
+}

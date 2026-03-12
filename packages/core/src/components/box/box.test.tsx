@@ -64,4 +64,14 @@ describe('Box', () => {
       expect(screen.getByTestId('b')).toHaveAttribute('data-overflow', overflow);
     },
   );
+
+  it('does not set data-fill by default', () => {
+    render(<Box data-testid="b" />);
+    expect(screen.getByTestId('b')).not.toHaveAttribute('data-fill');
+  });
+
+  it('sets data-fill when fill is true', () => {
+    render(<Box data-testid="b" fill />);
+    expect(screen.getByTestId('b')).toHaveAttribute('data-fill', '');
+  });
 });
