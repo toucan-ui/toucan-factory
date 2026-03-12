@@ -28,7 +28,10 @@ export default function ConfiguratorLayout({
         <Wrapper>
           <Flex gap={6}>
             <Flex row justify="between" align="center">
-              <Heading level={1}>Theme Wiz'rd</Heading>
+              <Flex row align="center" gap={3}>
+                <img src="/toucan-logo.svg" alt="Toucan" height={36} className="toucan-logo" />
+                <Heading level={1}>Wiz&apos;rd</Heading>
+              </Flex>
               <ResetAllButton />
             </Flex>
             <WizardNav />

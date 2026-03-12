@@ -12,9 +12,9 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@toucan-ui/core": "^0.1.0",
+    "@toucan-ui/core": "^0.1.1",
     "@toucan-ui/patterns": "^0.1.3",
-    "@toucan-ui/tokens": "^0.1.1",
+    "@toucan-ui/tokens": "^0.1.3",
     "fflate": "^0.8.0",
     "next": "^16.1.6",
     "react": "^19.1.0",

@@ -20,6 +20,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Toucan logo — invert in dark mode */
+[data-mode='dark'] .toucan-logo {
+  filter: invert(1);
+}
+
 /* --- Configurator-specific layout --- */
 
 .configurator-preview-sticky {
