@@ -1,0 +1,31 @@
+/* ==========================================================================
+   FormSection — Catalog Pattern CSS
+   Grouped form fields with heading and description.
+   ========================================================================== */
+
+.tcn-form-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--scale-4);
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-family: var(--text-font-family);
+}
+
+.tcn-form-section-legend {
+  display: flex;
+  flex-direction: column;
+  gap: var(--scale-1);
+  padding: 0;
+  width: 100%;
+}
+
+.tcn-form-section-title {
+  font-size: var(--text-heading-h4-font-size);
+  line-height: var(--text-heading-h4-line-height);
+}
+
+.tcn-form-section-description {
+  color: var(--color-on-surface-muted);
+}

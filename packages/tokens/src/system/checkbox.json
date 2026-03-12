@@ -1,0 +1,33 @@
+{
+  "checkbox": {
+    "size": { "$value": "{sizing.xs}", "$type": "dimension" },
+    "radius": { "$value": "{radius.md}", "$type": "dimension" },
+    "border-width": { "$value": "{border-width.thin}", "$type": "dimension" },
+    "border": {
+      "default": { "$value": "{color.border.default}", "$type": "color" },
+      "hover": { "$value": "{color.border.strong}", "$type": "color" },
+      "checked": { "$value": "{color.primary}", "$type": "color" },
+      "error": { "$value": "{color.danger}", "$type": "color" }
+    },
+    "surface": {
+      "default": { "$value": "{color.surface.default}", "$type": "color" },
+      "checked": { "$value": "{color.primary}", "$type": "color" },
+      "disabled": { "$value": "{color.disabled}", "$type": "color" }
+    },
+    "on-surface": {
+      "checked": { "$value": "{color.on-primary}", "$type": "color" },
+      "disabled": { "$value": "{color.on-disabled}", "$type": "color" }
+    },
+    "indicator": {
+      "width": { "$value": "{scale.1}", "$type": "dimension" },
+      "height": { "$value": "{scale.2}", "$type": "dimension" },
+      "dash-width": { "$value": "{scale.3}", "$type": "dimension" },
+      "stroke-width": { "$value": "{scale.0-5}", "$type": "dimension" },
+      "offset": { "$value": "{scale.0-25}", "$type": "dimension" }
+    },
+    "control-offset-y": { "$value": "{scale.0-5}", "$type": "dimension" },
+    "label-gap": { "$value": "{scale.0-5}", "$type": "dimension" },
+    "gap": { "$value": "{spacing.sm}", "$type": "dimension" },
+    "label-font-weight": { "$value": "{font.weight.medium}", "$type": "fontWeight" }
+  }
+}

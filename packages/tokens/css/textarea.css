@@ -1,0 +1,91 @@
+/* ==========================================================================
+   Textarea — Atom CSS
+   Maps core's .tcn-textarea data attributes to system token references.
+   Unscoped — resolves against :root or nearest [data-theme] ancestor.
+   ========================================================================== */
+
+.tcn-textarea-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--textarea-gap);
+}
+
+.tcn-textarea-label {
+  font-family: var(--text-font-family);
+  font-size: var(--text-sm-font-size);
+  font-weight: var(--textarea-label-font-weight);
+  color: var(--text-body-color);
+}
+
+.tcn-textarea {
+  font-family: var(--text-font-family);
+  font-size: var(--textarea-font-size);
+  color: var(--text-body-color);
+  background-color: var(--color-surface-default);
+  border: var(--textarea-border-width) solid var(--color-border-default);
+  border-radius: var(--textarea-radius);
+  padding: var(--textarea-padding-y) var(--textarea-padding-x);
+  min-height: var(--textarea-min-height);
+}
+
+.tcn-textarea[data-resize='none'] {
+  resize: none;
+}
+
+.tcn-textarea[data-resize='vertical'] {
+  resize: vertical;
+}
+
+.tcn-textarea[data-resize='horizontal'] {
+  resize: horizontal;
+}
+
+.tcn-textarea[data-resize='both'] {
+  resize: both;
+}
+
+.tcn-textarea::placeholder {
+  color: var(--text-muted-color);
+}
+
+.tcn-textarea:hover:not(:disabled):not(:focus):not([aria-invalid='true']) {
+  border-color: var(--color-border-strong);
+}
+
+.tcn-textarea:focus {
+  outline: none;
+  border-color: var(--color-border-focus);
+  box-shadow: 0 0 0 var(--focus-ring-width) var(--focus-ring-color);
+}
+
+.tcn-textarea[aria-invalid='true'] {
+  border-color: var(--color-danger);
+}
+
+.tcn-textarea[aria-invalid='true']:focus {
+  box-shadow: 0 0 0 var(--focus-ring-width) var(--color-danger);
+}
+
+.tcn-textarea:disabled {
+  background-color: var(--color-disabled);
+  color: var(--color-on-disabled);
+  cursor: not-allowed;
+}
+
+.tcn-textarea-description {
+  margin: 0;
+  font-family: var(--text-font-family);
+  font-size: var(--text-sm-font-size);
+  color: var(--text-muted-color);
+}
+
+.tcn-textarea-error {
+  margin: 0;
+  font-family: var(--text-font-family);
+  font-size: var(--text-sm-font-size);
+  color: var(--color-on-danger-surface);
+}
+
+.tcn-textarea-error:empty {
+  display: none;
+}

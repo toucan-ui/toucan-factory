@@ -1,0 +1,80 @@
+/* Flex — single-axis flex layout */
+
+.tcn-flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.tcn-flex[data-row='true'] {
+  flex-direction: row;
+}
+
+.tcn-flex[data-wrap='true'] {
+  flex-wrap: wrap;
+}
+
+/* Align (cross-axis) */
+.tcn-flex[data-align='start'] {
+  align-items: flex-start;
+}
+.tcn-flex[data-align='center'] {
+  align-items: center;
+}
+.tcn-flex[data-align='end'] {
+  align-items: flex-end;
+}
+.tcn-flex[data-align='stretch'] {
+  align-items: stretch;
+}
+.tcn-flex[data-align='baseline'] {
+  align-items: baseline;
+}
+
+/* Justify (main-axis) */
+.tcn-flex[data-justify='start'] {
+  justify-content: flex-start;
+}
+.tcn-flex[data-justify='center'] {
+  justify-content: center;
+}
+.tcn-flex[data-justify='end'] {
+  justify-content: flex-end;
+}
+.tcn-flex[data-justify='between'] {
+  justify-content: space-between;
+}
+
+/* Gap — same spacing scale as Grid */
+.tcn-flex[data-gap='0'] {
+  gap: var(--scale-0);
+}
+.tcn-flex[data-gap='1'] {
+  gap: var(--scale-1);
+}
+.tcn-flex[data-gap='2'] {
+  gap: var(--scale-2);
+}
+.tcn-flex[data-gap='3'] {
+  gap: var(--scale-3);
+}
+.tcn-flex[data-gap='4'] {
+  gap: var(--scale-4);
+}
+.tcn-flex[data-gap='5'] {
+  gap: var(--scale-5);
+}
+.tcn-flex[data-gap='6'] {
+  gap: var(--scale-6);
+}
+.tcn-flex[data-gap='8'] {
+  gap: var(--scale-8);
+}
+.tcn-flex[data-gap='10'] {
+  gap: var(--scale-10);
+}
+.tcn-flex[data-gap='12'] {
+  gap: var(--scale-12);
+}
+.tcn-flex[data-gap='16'] {
+  gap: var(--scale-16);
+}

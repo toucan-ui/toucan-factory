@@ -1,0 +1,32 @@
+/* ==========================================================================
+   SettingsRow — Catalog Pattern CSS
+   Label + description + control row for settings panels.
+   ========================================================================== */
+
+.tcn-settings-row {
+  container-type: inline-size;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--scale-4);
+  padding: var(--scale-3) 0;
+  font-family: var(--text-font-family);
+}
+
+.tcn-settings-row-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.tcn-settings-row-label {
+  font-weight: var(--text-heading-font-weight);
+}
+
+/* Compact: stack label and control */
+@container (max-width: 24rem) {
+  .tcn-settings-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

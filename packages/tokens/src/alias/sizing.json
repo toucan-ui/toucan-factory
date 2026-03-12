@@ -1,0 +1,11 @@
+{
+  "sizing": {
+    "3xs": { "$value": "{scale.3}", "$type": "dimension" },
+    "2xs": { "$value": "{scale.4}", "$type": "dimension" },
+    "xs": { "$value": "{scale.5}", "$type": "dimension" },
+    "sm": { "$value": "{scale.6}", "$type": "dimension" },
+    "md": { "$value": "{scale.8}", "$type": "dimension" },
+    "lg": { "$value": "{scale.10}", "$type": "dimension" },
+    "xl": { "$value": "{scale.12}", "$type": "dimension" }
+  }
+}

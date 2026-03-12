@@ -1,0 +1,78 @@
+/* Section — full-width page section with optional background, padding, and gap */
+
+.tcn-section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Block padding */
+.tcn-section[data-padding='sm'] {
+  padding-block: var(--section-padding-sm);
+}
+.tcn-section[data-padding='md'] {
+  padding-block: var(--section-padding-md);
+}
+.tcn-section[data-padding='lg'] {
+  padding-block: var(--section-padding-lg);
+}
+.tcn-section[data-padding='xl'] {
+  padding-block: var(--section-padding-xl);
+}
+
+/* Background — references alias palette directly (not system tokens) */
+.tcn-section[data-background='default'] {
+  background: var(--color-surface-default);
+}
+.tcn-section[data-background='muted'] {
+  background: var(--color-surface-muted);
+}
+/*
+ * Primary background — contextual colour cascade.
+ * Re-sets system text tokens so child atoms resolve to on-primary.
+ * var() references resolve where the property is *defined*, not inherited,
+ * so we must re-define text tokens here rather than just overriding
+ * --color-on-surface-default (which :root tokens won't re-resolve from).
+ */
+.tcn-section[data-background='primary'] {
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+  --text-body-color: var(--color-on-primary);
+  --text-heading-color: var(--color-on-primary);
+  --text-display-color: var(--color-on-primary);
+}
+
+/* Gap */
+.tcn-section[data-gap='0'] {
+  gap: var(--scale-0);
+}
+.tcn-section[data-gap='1'] {
+  gap: var(--scale-1);
+}
+.tcn-section[data-gap='2'] {
+  gap: var(--scale-2);
+}
+.tcn-section[data-gap='3'] {
+  gap: var(--scale-3);
+}
+.tcn-section[data-gap='4'] {
+  gap: var(--scale-4);
+}
+.tcn-section[data-gap='5'] {
+  gap: var(--scale-5);
+}
+.tcn-section[data-gap='6'] {
+  gap: var(--scale-6);
+}
+.tcn-section[data-gap='8'] {
+  gap: var(--scale-8);
+}
+.tcn-section[data-gap='10'] {
+  gap: var(--scale-10);
+}
+.tcn-section[data-gap='12'] {
+  gap: var(--scale-12);
+}
+.tcn-section[data-gap='16'] {
+  gap: var(--scale-16);
+}

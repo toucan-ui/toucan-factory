@@ -1,0 +1,23 @@
+{
+  "body": {
+    "font-family": { "$value": "{font.family.body}", "$type": "fontFamily" },
+    "font-weight": { "$value": "{font.weight.regular}", "$type": "fontWeight" },
+    "font-size": { "$value": "{font.size.base}", "$type": "dimension" },
+    "line-height": { "$value": "{font.line-height.normal}", "$type": "number" },
+    "letter-spacing": { "$value": "{font.letter-spacing.normal}", "$type": "dimension" }
+  },
+  "mono": {
+    "font-family": { "$value": "{font.family.mono}", "$type": "fontFamily" }
+  },
+  "heading": {
+    "font-family": { "$value": "{font.family.heading}", "$type": "fontFamily" },
+    "font-weight": { "$value": "{font.weight.semibold}", "$type": "fontWeight" },
+    "letter-spacing": { "$value": "{font.letter-spacing.tight}", "$type": "dimension" }
+  },
+  "display": {
+    "font-family": { "$value": "{font.family.display}", "$type": "fontFamily" },
+    "font-weight": { "$value": "{font.weight.bold}", "$type": "fontWeight" },
+    "letter-spacing": { "$value": "{font.letter-spacing.tight}", "$type": "dimension" },
+    "line-height": { "$value": "{font.line-height.tighter}", "$type": "number" }
+  }
+}

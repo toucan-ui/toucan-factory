@@ -1,0 +1,83 @@
+/* Box — presentational structural container */
+
+.tcn-box {
+  background-color: var(--color-surface-default);
+  border: var(--box-border-width) solid var(--box-border);
+
+  /*
+   * Re-establish on-surface text context.
+   * Must reference alias tokens directly — not system tokens like --box-on-surface
+   * which are declared on :root and carry baked-in :root values.
+   * Alias tokens ARE overridden by [data-theme] on the same element, so they
+   * resolve correctly in themed subtrees.
+   */
+  color: var(--color-on-surface-default);
+  --text-body-color: var(--color-on-surface-default);
+  --text-heading-color: var(--color-on-surface-default);
+  --text-display-color: var(--color-on-surface-default);
+  --text-muted-color: var(--color-on-surface-muted);
+}
+
+.tcn-box[data-elevation='0'] {
+  box-shadow: var(--box-elevation-0);
+}
+
+.tcn-box[data-elevation='1'] {
+  box-shadow: var(--box-elevation-1);
+}
+
+.tcn-box[data-elevation='2'] {
+  box-shadow: var(--box-elevation-2);
+}
+
+.tcn-box[data-elevation='3'] {
+  box-shadow: var(--box-elevation-3);
+}
+
+.tcn-box[data-radius='none'] {
+  border-radius: var(--box-radius-none);
+}
+
+.tcn-box[data-radius='sm'] {
+  border-radius: var(--box-radius-sm);
+}
+
+.tcn-box[data-radius='md'] {
+  border-radius: var(--box-radius-md);
+}
+
+.tcn-box[data-radius='lg'] {
+  border-radius: var(--box-radius-lg);
+}
+
+.tcn-box[data-padding='none'] {
+  padding: 0;
+}
+
+.tcn-box[data-padding='sm'] {
+  padding: var(--box-padding-sm);
+}
+
+.tcn-box[data-padding='md'] {
+  padding: var(--box-padding-md);
+}
+
+.tcn-box[data-padding='lg'] {
+  padding: var(--box-padding-lg);
+}
+
+.tcn-box[data-overflow='auto'] {
+  overflow: auto;
+}
+
+.tcn-box[data-overflow='hidden'] {
+  overflow: hidden;
+}
+
+.tcn-box[data-overflow='visible'] {
+  overflow: visible;
+}
+
+.tcn-box[data-overflow='scroll'] {
+  overflow: scroll;
+}

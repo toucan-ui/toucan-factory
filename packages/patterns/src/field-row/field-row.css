@@ -1,0 +1,40 @@
+/* ==========================================================================
+   FieldRow — Catalog Pattern CSS
+   Label-value pair for record detail pages.
+   ========================================================================== */
+
+.tcn-field-row {
+  container-type: inline-size;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  gap: var(--scale-4);
+  padding: var(--scale-3) 0;
+  border-bottom: var(--border-width-thin) solid var(--color-border-default);
+  font-family: var(--text-font-family);
+}
+
+.tcn-field-row-label {
+  width: var(--layout-40);
+  flex-shrink: 0;
+  color: var(--color-on-surface-muted);
+  font-size: var(--text-sm-font-size);
+  line-height: var(--text-sm-line-height);
+}
+
+.tcn-field-row-value {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Compact: stack label above value */
+@container (max-width: 20rem) {
+  .tcn-field-row {
+    flex-direction: column;
+    gap: var(--scale-1);
+  }
+
+  .tcn-field-row-label {
+    width: auto;
+  }
+}

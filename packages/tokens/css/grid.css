@@ -1,0 +1,110 @@
+/* Grid — responsive grid layout */
+
+.tcn-grid {
+  display: grid;
+  grid-template-columns: repeat(var(--tcn-grid-columns, var(--grid-columns-default)), 1fr);
+  gap: var(--grid-gap-default);
+  min-width: 0;
+}
+
+.tcn-grid > * {
+  min-width: 0;
+}
+
+/* Fixed columns — static overrides for 1–12 (no var lookup) */
+.tcn-grid[data-columns='1'] {
+  grid-template-columns: 1fr;
+}
+.tcn-grid[data-columns='2'] {
+  grid-template-columns: repeat(2, 1fr);
+}
+.tcn-grid[data-columns='3'] {
+  grid-template-columns: repeat(3, 1fr);
+}
+.tcn-grid[data-columns='4'] {
+  grid-template-columns: repeat(4, 1fr);
+}
+.tcn-grid[data-columns='5'] {
+  grid-template-columns: repeat(5, 1fr);
+}
+.tcn-grid[data-columns='6'] {
+  grid-template-columns: repeat(6, 1fr);
+}
+.tcn-grid[data-columns='7'] {
+  grid-template-columns: repeat(7, 1fr);
+}
+.tcn-grid[data-columns='8'] {
+  grid-template-columns: repeat(8, 1fr);
+}
+.tcn-grid[data-columns='9'] {
+  grid-template-columns: repeat(9, 1fr);
+}
+.tcn-grid[data-columns='10'] {
+  grid-template-columns: repeat(10, 1fr);
+}
+.tcn-grid[data-columns='11'] {
+  grid-template-columns: repeat(11, 1fr);
+}
+.tcn-grid[data-columns='12'] {
+  grid-template-columns: repeat(12, 1fr);
+}
+
+/* Auto columns — intrinsic reflow */
+.tcn-grid[data-columns='auto'] {
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(min(var(--tcn-grid-min-item-size, var(--grid-min-item-size)), 100%), 1fr)
+  );
+}
+
+/* Gap overrides */
+.tcn-grid[data-gap='0'] {
+  gap: var(--scale-0);
+}
+.tcn-grid[data-gap='1'] {
+  gap: var(--scale-1);
+}
+.tcn-grid[data-gap='2'] {
+  gap: var(--scale-2);
+}
+.tcn-grid[data-gap='3'] {
+  gap: var(--scale-3);
+}
+.tcn-grid[data-gap='4'] {
+  gap: var(--scale-4);
+}
+.tcn-grid[data-gap='5'] {
+  gap: var(--scale-5);
+}
+.tcn-grid[data-gap='6'] {
+  gap: var(--scale-6);
+}
+.tcn-grid[data-gap='8'] {
+  gap: var(--scale-8);
+}
+.tcn-grid[data-gap='10'] {
+  gap: var(--scale-10);
+}
+.tcn-grid[data-gap='12'] {
+  gap: var(--scale-12);
+}
+.tcn-grid[data-gap='16'] {
+  gap: var(--scale-16);
+}
+
+/* Align (vertical alignment of items within rows) */
+.tcn-grid[data-align='start'] {
+  align-items: start;
+}
+.tcn-grid[data-align='center'] {
+  align-items: center;
+}
+.tcn-grid[data-align='end'] {
+  align-items: end;
+}
+.tcn-grid[data-align='stretch'] {
+  align-items: stretch;
+}
+.tcn-grid[data-align='baseline'] {
+  align-items: baseline;
+}

@@ -1,0 +1,100 @@
+/* ==========================================================================
+   SideNav — Catalog Pattern CSS
+   Vertical sidebar navigation with sections and active state.
+   ========================================================================== */
+
+.tcn-side-nav {
+  display: flex;
+  flex-direction: column;
+  gap: var(--scale-4);
+  font-family: var(--text-font-family);
+  width: 100%;
+}
+
+.tcn-side-nav-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--scale-1);
+}
+
+.tcn-side-nav-heading {
+  color: var(--color-on-surface-muted);
+  font-weight: var(--text-heading-font-weight);
+  font-size: var(--text-xs-font-size);
+  line-height: var(--text-xs-line-height);
+  text-transform: uppercase;
+  letter-spacing: var(--font-letter-spacing-wide);
+  padding: var(--scale-1) var(--scale-3);
+}
+
+.tcn-side-nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.tcn-side-nav-link {
+  display: block;
+  padding: var(--scale-2) var(--scale-3);
+  border-radius: var(--radius-md);
+  color: var(--color-on-surface-default);
+  text-decoration: none;
+  font-size: var(--text-sm-font-size);
+  line-height: var(--text-sm-line-height);
+}
+
+.tcn-side-nav-link--active {
+  background: var(--color-surface-muted);
+  font-weight: var(--text-heading-font-weight);
+  color: var(--color-primary);
+}
+
+/* ==========================================================================
+   Collapsible variant
+   ========================================================================== */
+
+/* When collapsible, hide static heading by default (mobile-first) */
+.tcn-side-nav[data-collapsible] .tcn-side-nav-heading {
+  display: none;
+}
+
+/* Toggle button — inherits heading visual style */
+.tcn-side-nav-toggle {
+  appearance: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--color-on-surface-muted);
+  font-weight: var(--text-heading-font-weight);
+  font-size: var(--text-xs-font-size);
+  line-height: var(--text-xs-line-height);
+  text-transform: uppercase;
+  letter-spacing: var(--font-letter-spacing-wide);
+  padding: var(--scale-1) var(--scale-3);
+  font-family: var(--text-font-family);
+}
+
+/* Chevron indicator */
+.tcn-side-nav-toggle::after {
+  content: '';
+  width: var(--scale-3);
+  height: var(--scale-3);
+  border-right: var(--border-width-thin) solid currentColor;
+  border-bottom: var(--border-width-thin) solid currentColor;
+  transform: rotate(45deg);
+}
+
+.tcn-side-nav-toggle[aria-expanded='true']::after {
+  transform: rotate(-135deg);
+}
+
+/* Hidden list when collapsed */
+.tcn-side-nav-list[data-collapsed='true'] {
+  display: none;
+}

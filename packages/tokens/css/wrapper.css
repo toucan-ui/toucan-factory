@@ -1,0 +1,44 @@
+/* Wrapper — centered max-width layout constraint */
+
+.tcn-wrapper {
+  width: 100%;
+  margin-inline: auto;
+}
+
+/* Inline padding */
+.tcn-wrapper[data-padding='sm'] {
+  padding-inline: var(--wrapper-padding-x-sm);
+}
+.tcn-wrapper[data-padding='md'] {
+  padding-inline: var(--wrapper-padding-x-md);
+}
+.tcn-wrapper[data-padding='lg'] {
+  padding-inline: var(--wrapper-padding-x-lg);
+}
+.tcn-wrapper[data-padding='xl'] {
+  padding-inline: var(--wrapper-padding-x-xl);
+}
+
+.tcn-wrapper[data-size='xs'] {
+  max-width: var(--wrapper-xs-max-width);
+}
+
+.tcn-wrapper[data-size='sm'] {
+  max-width: var(--wrapper-sm-max-width);
+}
+
+.tcn-wrapper[data-size='md'] {
+  max-width: var(--wrapper-md-max-width);
+}
+
+.tcn-wrapper[data-size='lg'] {
+  max-width: var(--wrapper-lg-max-width);
+}
+
+.tcn-wrapper[data-size='xl'] {
+  max-width: var(--wrapper-xl-max-width);
+}
+
+.tcn-wrapper[data-size='full'] {
+  max-width: none;
+}

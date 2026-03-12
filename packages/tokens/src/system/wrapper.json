@@ -1,0 +1,25 @@
+{
+  "wrapper": {
+    "padding-x": {
+      "sm": { "$value": "{spacing.sm}", "$type": "dimension" },
+      "md": { "$value": "{spacing.md}", "$type": "dimension" },
+      "lg": { "$value": "{spacing.lg}", "$type": "dimension" },
+      "xl": { "$value": "{spacing.xl}", "$type": "dimension" }
+    },
+    "xs": {
+      "max-width": { "$value": "{layout.120}", "$type": "dimension" }
+    },
+    "sm": {
+      "max-width": { "$value": "{layout.140}", "$type": "dimension" }
+    },
+    "md": {
+      "max-width": { "$value": "{layout.192}", "$type": "dimension" }
+    },
+    "lg": {
+      "max-width": { "$value": "{layout.256}", "$type": "dimension" }
+    },
+    "xl": {
+      "max-width": { "$value": "{layout.320}", "$type": "dimension" }
+    }
+  }
+}

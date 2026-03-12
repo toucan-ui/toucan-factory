@@ -1,0 +1,45 @@
+{
+  "dropdown": {
+    "content": {
+      "surface": { "$value": "{color.surface.raised}", "$type": "color" },
+      "border": { "$value": "{color.border.default}", "$type": "color" },
+      "border-width": { "$value": "{border-width.thin}", "$type": "dimension" },
+      "radius": { "$value": "{radius.md}", "$type": "dimension" },
+      "padding-y": { "$value": "{spacing.xs}", "$type": "dimension" },
+      "shadow": { "$value": "{shadow.md}", "$type": "shadow" },
+      "min-width": { "$value": "{layout.40}", "$type": "dimension" },
+      "max-height": { "$value": "{layout.80}", "$type": "dimension" },
+      "z-index": { "$value": "{stacking.dropdown}", "$type": "number" },
+      "offset": { "$value": "{spacing.xs}", "$type": "dimension" }
+    },
+    "item": {
+      "padding-x": { "$value": "{spacing.md}", "$type": "dimension" },
+      "padding-y": { "$value": "{spacing.sm}", "$type": "dimension" },
+      "font-size": { "$value": "{font.size.sm}", "$type": "dimension" },
+      "radius": { "$value": "{radius.md}", "$type": "dimension" },
+      "surface": {
+        "default": { "$value": "{color.transparent}", "$type": "color" },
+        "active": { "$value": "{color.primary}", "$type": "color" }
+      },
+      "on-surface": {
+        "default": { "$value": "{color.on-surface.default}", "$type": "color" },
+        "active": { "$value": "{color.on-primary}", "$type": "color" },
+        "disabled": { "$value": "{color.on-disabled}", "$type": "color" }
+      }
+    },
+    "separator": {
+      "color": { "$value": "{color.border.default}", "$type": "color" },
+      "thickness": { "$value": "{border-width.thin}", "$type": "dimension" },
+      "margin-y": { "$value": "{spacing.xs}", "$type": "dimension" },
+      "margin-x": { "$value": "{spacing.sm}", "$type": "dimension" }
+    },
+    "item-margin-x": { "$value": "{spacing.xs}", "$type": "dimension" },
+    "label": {
+      "padding-x": { "$value": "{spacing.md}", "$type": "dimension" },
+      "padding-y": { "$value": "{spacing.xs}", "$type": "dimension" },
+      "font-size": { "$value": "{font.size.xs}", "$type": "dimension" },
+      "font-weight": { "$value": "{font.weight.semibold}", "$type": "fontWeight" },
+      "color": { "$value": "{color.on-surface.muted}", "$type": "color" }
+    }
+  }
+}

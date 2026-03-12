@@ -1,0 +1,11 @@
+{
+  "skeleton": {
+    "surface": { "$value": "{color.surface.muted}", "$type": "color" },
+    "radius": {
+      "text": { "$value": "{radius.md}", "$type": "dimension" },
+      "rectangular": { "$value": "{radius.md}", "$type": "dimension" },
+      "circular": { "$value": "{radius.full}", "$type": "dimension" }
+    },
+    "text-height": { "$value": "{font.size.base}", "$type": "dimension" }
+  }
+}

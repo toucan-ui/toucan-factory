@@ -1,0 +1,44 @@
+/* ==========================================================================
+   CommentThread — Catalog Pattern CSS
+   Comment entry with avatar, body text, and reply action.
+   ========================================================================== */
+
+.tcn-comment-thread {
+  display: flex;
+  flex-direction: row;
+  gap: var(--scale-3);
+  font-family: var(--text-font-family);
+}
+
+.tcn-comment-thread-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--scale-1);
+}
+
+.tcn-comment-thread-header {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  gap: var(--scale-2);
+}
+
+.tcn-comment-thread-user {
+  font-weight: var(--text-heading-font-weight);
+}
+
+.tcn-comment-thread-body {
+  margin: 0;
+}
+
+.tcn-comment-thread-reply {
+  align-self: flex-start;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-primary);
+  font-size: var(--text-sm-font-size);
+  font-family: var(--text-font-family);
+  padding: 0;
+  font-weight: var(--text-heading-font-weight);
+}

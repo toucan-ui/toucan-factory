@@ -1,0 +1,31 @@
+{
+  "slider": {
+    "track": {
+      "height": { "$value": "{scale.1}", "$type": "dimension" },
+      "radius": { "$value": "{radius.full}", "$type": "dimension" },
+      "surface": {
+        "default": { "$value": "{color.surface.muted}", "$type": "color" },
+        "disabled": { "$value": "{color.disabled}", "$type": "color" }
+      }
+    },
+    "fill": {
+      "surface": {
+        "default": { "$value": "{color.primary}", "$type": "color" },
+        "disabled": { "$value": "{color.on-disabled}", "$type": "color" }
+      }
+    },
+    "thumb": {
+      "size": { "$value": "{sizing.xs}", "$type": "dimension" },
+      "radius": { "$value": "{radius.full}", "$type": "dimension" },
+      "surface": {
+        "default": { "$value": "{color.surface.raised}", "$type": "color" },
+        "disabled": { "$value": "{color.disabled}", "$type": "color" }
+      },
+      "border-width": { "$value": "{border-width.thick}", "$type": "dimension" },
+      "border": {
+        "default": { "$value": "{color.primary}", "$type": "color" },
+        "disabled": { "$value": "{color.on-disabled}", "$type": "color" }
+      }
+    }
+  }
+}

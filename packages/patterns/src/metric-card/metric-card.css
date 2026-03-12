@@ -1,0 +1,25 @@
+/* ==========================================================================
+   MetricCard — Catalog Pattern CSS
+   Dashboard metric card for KPI display.
+   ========================================================================== */
+
+.tcn-metric-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--scale-2);
+  font-family: var(--text-font-family);
+}
+
+.tcn-metric-card-value {
+  font-size: var(--text-heading-h2-font-size);
+  font-weight: var(--text-heading-font-weight);
+  line-height: var(--text-heading-h2-line-height, 1.25);
+  color: var(--text-heading-color);
+  font-variant-numeric: tabular-nums;
+}
+
+.tcn-metric-card-change {
+  display: flex;
+  align-items: center;
+  gap: var(--scale-2);
+}

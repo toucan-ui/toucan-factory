@@ -1,0 +1,23 @@
+/* ==========================================================================
+   Separator — Atom CSS
+   Maps core's .tcn-separator data attributes to system token references.
+   Unscoped — resolves against :root or nearest [data-theme] ancestor.
+   ========================================================================== */
+
+.tcn-separator {
+  border: none;
+  background-color: var(--color-border-default);
+}
+
+.tcn-separator[data-orientation='horizontal'] {
+  width: 100%;
+  height: var(--separator-thickness);
+  margin-block: var(--separator-spacing);
+}
+
+.tcn-separator[data-orientation='vertical'] {
+  width: var(--separator-thickness);
+  height: auto;
+  align-self: stretch;
+  margin-inline: var(--separator-spacing);
+}

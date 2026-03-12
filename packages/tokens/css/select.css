@@ -1,0 +1,189 @@
+/* ==========================================================================
+   Select — Atom CSS
+   Maps core's .tcn-select data attributes to system token references.
+   Unscoped — resolves against :root or nearest [data-theme] ancestor.
+   ========================================================================== */
+
+.tcn-select-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--select-gap);
+}
+
+/* Sizer — invisible element that forces width to longest option */
+.tcn-select-sizer {
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  padding-inline: var(--select-trigger-padding-x);
+  padding-right: calc(
+    var(--select-trigger-padding-x) + var(--select-trigger-icon-size) + var(--select-trigger-gap)
+  );
+  font-family: var(--text-font-family);
+  font-size: var(--select-trigger-font-size);
+}
+
+.tcn-select-sizer > span {
+  display: block;
+  white-space: nowrap;
+}
+
+.tcn-select-label {
+  font-family: var(--text-font-family);
+  font-size: var(--text-sm-font-size);
+  font-weight: var(--select-label-font-weight);
+  color: var(--text-body-color);
+}
+
+/* Trigger */
+.tcn-select-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--select-trigger-gap);
+  font-family: var(--text-font-family);
+  font-size: var(--select-trigger-font-size);
+  color: var(--text-body-color);
+  background-color: var(--color-surface-default);
+  border: var(--select-trigger-border-width) solid var(--color-border-default);
+  border-radius: var(--select-trigger-radius);
+  padding: var(--select-trigger-padding-y) var(--select-trigger-padding-x);
+  min-height: var(--select-trigger-min-height);
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+}
+
+.tcn-select-trigger[data-placeholder] {
+  color: var(--text-muted-color);
+}
+
+.tcn-select-trigger:hover:not(:disabled):not(:focus):not([aria-invalid='true']) {
+  border-color: var(--color-border-strong);
+}
+
+.tcn-select-trigger:focus-visible {
+  outline: none;
+  border-color: var(--color-border-focus);
+  box-shadow: 0 0 0 var(--focus-ring-width) var(--focus-ring-color);
+}
+
+.tcn-select-trigger[aria-invalid='true'] {
+  border-color: var(--color-danger);
+}
+
+.tcn-select-trigger[aria-invalid='true']:focus-visible {
+  box-shadow: 0 0 0 var(--focus-ring-width) var(--color-danger);
+}
+
+.tcn-select-trigger:disabled {
+  background-color: var(--color-disabled);
+  color: var(--color-on-disabled);
+  cursor: not-allowed;
+}
+
+.tcn-select-value {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tcn-select-icon {
+  flex-shrink: 0;
+  width: var(--select-trigger-icon-size);
+  height: var(--select-trigger-icon-size);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Chevron via CSS borders */
+.tcn-select-icon::after {
+  content: '';
+  display: block;
+  width: var(--select-trigger-chevron-size);
+  height: var(--select-trigger-chevron-size);
+  border-right: var(--select-trigger-chevron-weight) solid currentColor;
+  border-bottom: var(--select-trigger-chevron-weight) solid currentColor;
+  transform: rotate(45deg)
+    translate(
+      calc(var(--select-trigger-chevron-offset) * -1),
+      calc(var(--select-trigger-chevron-offset) * -1)
+    );
+}
+
+.tcn-select-wrapper[data-open] .tcn-select-icon::after {
+  transform: rotate(-135deg)
+    translate(
+      calc(var(--select-trigger-chevron-offset) * -1),
+      calc(var(--select-trigger-chevron-offset) * -1)
+    );
+}
+
+/* Listbox */
+.tcn-select-listbox {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  margin: var(--select-listbox-margin-top) 0 0;
+  padding: var(--select-listbox-padding-y) 0;
+  list-style: none;
+  background-color: var(--color-surface-raised);
+  border: var(--select-listbox-border-width) solid var(--color-border-default);
+  border-radius: var(--select-listbox-radius);
+  box-shadow: var(--select-listbox-shadow);
+  max-height: var(--select-listbox-max-height);
+  overflow-y: auto;
+  z-index: var(--select-listbox-z-index);
+}
+
+/* Option */
+.tcn-select-option {
+  display: flex;
+  align-items: center;
+  padding: var(--select-option-padding-y) var(--select-option-padding-x);
+  margin: 0 var(--select-option-margin-x);
+  font-family: var(--text-font-family);
+  font-size: var(--select-option-font-size);
+  color: var(--text-body-color);
+  background-color: transparent;
+  border-radius: var(--select-option-radius);
+  cursor: pointer;
+  user-select: none;
+}
+
+.tcn-select-option[data-active] {
+  background-color: var(--color-surface-muted);
+}
+
+.tcn-select-option[aria-selected='true'] {
+  background-color: var(--color-surface-muted);
+}
+
+.tcn-select-option[data-disabled] {
+  color: var(--color-on-disabled);
+  cursor: not-allowed;
+}
+
+/* Description + Error */
+.tcn-select-description {
+  margin: 0;
+  font-family: var(--text-font-family);
+  font-size: var(--text-sm-font-size);
+  color: var(--text-muted-color);
+}
+
+.tcn-select-error {
+  margin: 0;
+  font-family: var(--text-font-family);
+  font-size: var(--text-sm-font-size);
+  color: var(--color-on-danger-surface);
+}
+
+.tcn-select-error:empty {
+  display: none;
+}

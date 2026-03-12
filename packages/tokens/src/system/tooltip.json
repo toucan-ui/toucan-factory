@@ -1,0 +1,16 @@
+{
+  "tooltip": {
+    "surface": { "$value": "{color.on-surface.default}", "$type": "color" },
+    "on-surface": { "$value": "{color.surface.default}", "$type": "color" },
+    "radius": { "$value": "{radius.md}", "$type": "dimension" },
+    "padding-x": { "$value": "{spacing.sm}", "$type": "dimension" },
+    "padding-y": { "$value": "{spacing.xs}", "$type": "dimension" },
+    "font-size": { "$value": "{font.size.xs}", "$type": "dimension" },
+    "font-weight": { "$value": "{font.weight.medium}", "$type": "fontWeight" },
+    "shadow": { "$value": "{shadow.sm}", "$type": "shadow" },
+    "z-index": { "$value": "{stacking.tooltip}", "$type": "number" },
+    "max-width": { "$value": "{layout.50}", "$type": "dimension" },
+    "offset": { "$value": "{spacing.sm}", "$type": "dimension" },
+    "gap": { "$value": "{spacing.xs}", "$type": "dimension" }
+  }
+}

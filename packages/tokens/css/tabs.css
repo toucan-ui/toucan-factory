@@ -1,0 +1,104 @@
+/* Tabs — maps .tcn-tabs-* classes to system tokens */
+
+.tcn-tabs {
+  display: flex;
+  flex-direction: column;
+}
+
+.tcn-tabs[data-orientation='vertical'] {
+  flex-direction: row;
+}
+
+.tcn-tabs-list {
+  display: flex;
+  gap: var(--tabs-list-gap);
+  border-bottom: var(--tabs-list-border-width) solid var(--color-border-default);
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.tcn-tabs-list::-webkit-scrollbar {
+  display: none;
+}
+
+.tcn-tabs[data-orientation='vertical'] .tcn-tabs-list {
+  flex-direction: column;
+  border-bottom: none;
+  border-right: var(--tabs-list-border-width) solid var(--color-border-default);
+}
+
+.tcn-tabs-tab {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--tabs-tab-padding-y) var(--tabs-tab-padding-x);
+  font-family: var(--text-font-family);
+  font-size: var(--tabs-tab-font-size);
+  font-weight: var(--tabs-tab-font-weight);
+  color: var(--text-muted-color);
+  background-color: transparent;
+  border: none;
+  border-radius: var(--tabs-tab-radius) var(--tabs-tab-radius) 0 0;
+  cursor: pointer;
+  white-space: nowrap;
+  user-select: none;
+}
+
+.tcn-tabs[data-orientation='vertical'] .tcn-tabs-tab {
+  justify-content: flex-start;
+  border-radius: var(--tabs-tab-radius) 0 0 var(--tabs-tab-radius);
+}
+
+.tcn-tabs-tab:hover:not(:disabled) {
+  color: var(--text-body-color);
+  background-color: var(--color-surface-muted);
+}
+
+.tcn-tabs-tab[data-selected] {
+  color: var(--color-primary);
+}
+
+.tcn-tabs-tab[data-selected]::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: var(--tabs-tab-indicator-height);
+  background-color: var(--color-primary);
+  border-radius: var(--tabs-tab-indicator-height);
+}
+
+.tcn-tabs[data-orientation='vertical'] .tcn-tabs-tab[data-selected]::after {
+  top: 0;
+  bottom: 0;
+  left: auto;
+  right: 0;
+  width: var(--tabs-tab-indicator-height);
+  height: auto;
+}
+
+.tcn-tabs-tab:disabled {
+  color: var(--color-on-disabled);
+  cursor: not-allowed;
+}
+
+.tcn-tabs-tab:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 var(--focus-ring-width) var(--focus-ring-color);
+}
+
+.tcn-tabs-panel {
+  padding-top: var(--tabs-panel-padding-top);
+}
+
+.tcn-tabs-panel:not([data-selected]) {
+  display: none;
+}
+
+.tcn-tabs[data-orientation='vertical'] .tcn-tabs-panel {
+  padding-top: 0;
+  padding-left: var(--tabs-panel-padding-top);
+}

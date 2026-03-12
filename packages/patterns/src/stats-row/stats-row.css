@@ -1,0 +1,42 @@
+/* ==========================================================================
+   StatsRow — Catalog Pattern CSS
+   Horizontal group of metric stat cards.
+   ========================================================================== */
+
+.tcn-stats-row {
+  container-type: inline-size;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--scale-4);
+}
+
+.tcn-stats-row-item {
+  flex: 1;
+  min-width: 8rem;
+  display: flex;
+  flex-direction: column;
+  gap: var(--scale-2);
+  font-family: var(--text-font-family);
+}
+
+.tcn-stats-row-label {
+  color: var(--color-on-surface-muted);
+  font-size: var(--text-sm-font-size);
+  line-height: var(--text-sm-line-height);
+}
+
+.tcn-stats-row-value {
+  font-size: var(--text-heading-h3-font-size);
+  font-weight: var(--text-heading-font-weight);
+  line-height: var(--text-heading-h3-line-height);
+  color: var(--color-on-surface-default);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Compact: stack items vertically */
+@container (max-width: 24rem) {
+  .tcn-stats-row {
+    flex-direction: column;
+  }
+}

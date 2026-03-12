@@ -1,0 +1,55 @@
+/* ==========================================================================
+   HeroSplit — Catalog Pattern CSS
+   50/50 split hero with content + optional image.
+   Layout (full-bleed, centering, edge padding) handled by Section + Wrapper.
+   ========================================================================== */
+
+.tcn-hero-split {
+  container-type: inline-size;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--scale-12);
+}
+
+.tcn-hero-split-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--scale-4);
+}
+
+.tcn-hero-split-subtitle {
+  color: var(--color-on-surface-muted);
+}
+
+.tcn-hero-split-cta {
+  align-self: flex-start;
+}
+
+.tcn-hero-split-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tcn-hero-split-image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.tcn-hero-split--reverse {
+  flex-direction: row-reverse;
+}
+
+/* Compact: stack vertically */
+@container (max-width: 40rem) {
+  .tcn-hero-split {
+    flex-direction: column;
+    gap: var(--scale-8);
+  }
+
+  .tcn-hero-split--reverse {
+    flex-direction: column;
+  }
+}

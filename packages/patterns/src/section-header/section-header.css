@@ -1,0 +1,26 @@
+/* ==========================================================================
+   SectionHeader — Catalog Pattern CSS
+   Section heading block with optional eyebrow badge and subtitle.
+   ========================================================================== */
+
+.tcn-section-header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--scale-3);
+  padding: var(--scale-8) 0;
+  font-family: var(--text-font-family);
+}
+
+.tcn-section-header[data-align='center'] {
+  align-items: center;
+  text-align: center;
+}
+
+.tcn-section-header[data-align='left'] {
+  align-items: flex-start;
+  text-align: left;
+}
+
+.tcn-section-header-subtitle {
+  max-width: var(--layout-140);
+}

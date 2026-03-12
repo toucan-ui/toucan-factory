@@ -1,0 +1,93 @@
+/* Popover — maps .tcn-popover-* classes to system tokens */
+
+.tcn-popover-wrapper {
+  position: relative;
+  display: inline-block;
+  width: max-content;
+}
+
+.tcn-popover-trigger {
+  cursor: pointer;
+}
+
+.tcn-popover-content {
+  position: absolute;
+  z-index: var(--popover-z-index);
+  width: max-content;
+  max-width: var(--popover-max-width);
+  padding: var(--popover-padding);
+  font-family: var(--text-font-family);
+  color: var(--color-on-surface-default);
+  background-color: var(--color-surface-default);
+  --text-body-color: var(--color-on-surface-default);
+  --text-heading-color: var(--color-on-surface-default);
+  --text-display-color: var(--color-on-surface-default);
+  --text-muted-color: var(--color-on-surface-muted);
+  border: var(--popover-border-width) solid var(--popover-border);
+  border-radius: var(--popover-radius);
+  box-shadow: var(--popover-shadow);
+}
+
+.tcn-popover-content:not([data-open]) {
+  display: none;
+}
+
+.tcn-popover-content:focus-visible {
+  outline: none;
+}
+
+/* Primary axis */
+.tcn-popover-content[data-anchor^='top'] {
+  bottom: 100%;
+  margin-bottom: var(--popover-offset);
+}
+.tcn-popover-content[data-anchor^='bottom'] {
+  top: 100%;
+  margin-top: var(--popover-offset);
+}
+.tcn-popover-content[data-anchor^='left'] {
+  right: 100%;
+  margin-right: var(--popover-offset);
+}
+.tcn-popover-content[data-anchor^='right'] {
+  left: 100%;
+  margin-left: var(--popover-offset);
+}
+
+/* Cross-axis for top/bottom — popover default is center */
+.tcn-popover-content[data-anchor='top'],
+.tcn-popover-content[data-anchor='bottom'],
+.tcn-popover-content[data-anchor='top-center'],
+.tcn-popover-content[data-anchor='bottom-center'] {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tcn-popover-content[data-anchor='top-left'],
+.tcn-popover-content[data-anchor='bottom-left'] {
+  left: 0;
+}
+
+.tcn-popover-content[data-anchor='top-right'],
+.tcn-popover-content[data-anchor='bottom-right'] {
+  right: 0;
+}
+
+/* Cross-axis for left/right — popover default is center */
+.tcn-popover-content[data-anchor='left'],
+.tcn-popover-content[data-anchor='right'],
+.tcn-popover-content[data-anchor='left-center'],
+.tcn-popover-content[data-anchor='right-center'] {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.tcn-popover-content[data-anchor='left-top'],
+.tcn-popover-content[data-anchor='right-top'] {
+  top: 0;
+}
+
+.tcn-popover-content[data-anchor='left-bottom'],
+.tcn-popover-content[data-anchor='right-bottom'] {
+  bottom: 0;
+}

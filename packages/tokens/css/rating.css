@@ -1,0 +1,36 @@
+/* ==========================================================================
+   Rating — Atom CSS
+   Maps core's .tcn-rating data attributes to system token references.
+   Unscoped — resolves against :root or nearest [data-theme] ancestor.
+   ========================================================================== */
+
+.tcn-rating {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--rating-gap);
+}
+
+.tcn-rating[data-size='sm'] .tcn-rating-star {
+  width: var(--rating-sm-size);
+  height: var(--rating-sm-size);
+}
+
+.tcn-rating[data-size='md'] .tcn-rating-star {
+  width: var(--rating-md-size);
+  height: var(--rating-md-size);
+}
+
+.tcn-rating[data-size='lg'] .tcn-rating-star {
+  width: var(--rating-lg-size);
+  height: var(--rating-lg-size);
+}
+
+.tcn-rating-star {
+  display: block;
+  fill: var(--rating-color-empty);
+  flex-shrink: 0;
+}
+
+.tcn-rating-star[data-filled] {
+  fill: var(--rating-color-filled);
+}

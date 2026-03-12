@@ -1,0 +1,14 @@
+{
+  "popover": {
+    "surface": { "$value": "{color.surface.raised}", "$type": "color" },
+    "on-surface": { "$value": "{color.on-surface.default}", "$type": "color" },
+    "border": { "$value": "{color.border.default}", "$type": "color" },
+    "border-width": { "$value": "{border-width.thin}", "$type": "dimension" },
+    "radius": { "$value": "{radius.md}", "$type": "dimension" },
+    "shadow": { "$value": "{shadow.lg}", "$type": "shadow" },
+    "padding": { "$value": "{spacing.lg}", "$type": "dimension" },
+    "z-index": { "$value": "{stacking.popover}", "$type": "number" },
+    "max-width": { "$value": "{layout.80}", "$type": "dimension" },
+    "offset": { "$value": "{spacing.sm}", "$type": "dimension" }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "section": {
+    "padding": {
+      "sm": { "$value": "{spacing.lg}", "$type": "dimension" },
+      "md": { "$value": "{spacing.2xl}", "$type": "dimension" },
+      "lg": { "$value": "{spacing.3xl}", "$type": "dimension" },
+      "xl": { "$value": "{spacing.4xl}", "$type": "dimension" }
+    }
+  }
+}

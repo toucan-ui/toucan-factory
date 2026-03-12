@@ -1,0 +1,44 @@
+/* ==========================================================================
+   HeroFull — Catalog Pattern CSS
+   Full-bleed background image hero with overlay text.
+   Layout (centering, edge padding) handled by Section + Wrapper.
+   Background image is pattern-specific (set via backgroundSrc prop).
+   ========================================================================== */
+
+.tcn-hero-full {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-surface-muted);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.tcn-hero-full-overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background: var(--color-backdrop);
+  padding: var(--scale-10);
+  border-radius: var(--radius-lg);
+}
+
+.tcn-hero-full-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--scale-4);
+  max-width: var(--layout-140);
+}
+
+.tcn-hero-full-subtitle {
+  color: var(--color-on-surface-muted);
+}
+
+.tcn-hero-full-cta {
+  margin-top: var(--scale-2);
+}

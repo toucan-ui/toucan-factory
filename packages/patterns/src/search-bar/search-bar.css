@@ -1,0 +1,21 @@
+/* ==========================================================================
+   SearchBar — Catalog Pattern CSS
+   Inline search form with input, optional filters, and submit.
+   ========================================================================== */
+
+.tcn-search-bar {
+  container-type: inline-size;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: var(--scale-2);
+  font-family: var(--text-font-family);
+}
+
+/* Compact: stack input and filters */
+@container (max-width: 24rem) {
+  .tcn-search-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

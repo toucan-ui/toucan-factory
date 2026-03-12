@@ -1,0 +1,48 @@
+/* ==========================================================================
+   Alert — Atom CSS
+   Maps core's .tcn-alert data attributes to system token references.
+   Unscoped — resolves against :root or nearest [data-theme] ancestor.
+   ========================================================================== */
+
+.tcn-alert {
+  padding: var(--alert-padding-y) var(--alert-padding-x);
+  border: var(--alert-border-width) solid;
+  border-radius: var(--alert-radius);
+  font-family: var(--text-font-family);
+}
+
+/* Variant colours — use alias tokens directly so [data-theme] overrides work */
+.tcn-alert[data-variant='info'] {
+  background-color: var(--color-info-surface);
+  color: var(--color-on-info-surface);
+  border-color: var(--color-info);
+  --text-body-color: var(--color-on-info-surface);
+}
+
+.tcn-alert[data-variant='success'] {
+  background-color: var(--color-success-surface);
+  color: var(--color-on-success-surface);
+  border-color: var(--color-success);
+  --text-body-color: var(--color-on-success-surface);
+}
+
+.tcn-alert[data-variant='warning'] {
+  background-color: var(--color-warning-surface);
+  color: var(--color-on-warning-surface);
+  border-color: var(--color-warning);
+  --text-body-color: var(--color-on-warning-surface);
+}
+
+.tcn-alert[data-variant='danger'] {
+  background-color: var(--color-danger-surface);
+  color: var(--color-on-danger-surface);
+  border-color: var(--color-danger);
+  --text-body-color: var(--color-on-danger-surface);
+}
+
+.tcn-alert[data-variant='custom'] {
+  background-color: var(--alert-surface);
+  color: var(--alert-on-surface);
+  border-color: var(--alert-custom-border);
+  --text-body-color: var(--alert-on-surface);
+}

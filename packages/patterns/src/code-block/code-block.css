@@ -1,0 +1,42 @@
+/* ==========================================================================
+   CodeBlock — Catalog Pattern CSS
+   Presentational code container with header bar and copy button.
+   Syntax highlighting is provided by the consuming app via children.
+   ========================================================================== */
+
+.tcn-code-block {
+  margin: 0;
+  background: var(--color-surface-muted);
+  border: var(--border-width-thin) solid var(--color-border-default);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  font-family: var(--text-font-family);
+}
+
+.tcn-code-block-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--scale-2) var(--scale-4);
+  border-bottom: var(--border-width-thin) solid var(--color-border-default);
+  background: var(--color-surface-default);
+}
+
+.tcn-code-block-actions {
+  display: flex;
+  justify-content: flex-end;
+  padding: var(--scale-2) var(--scale-4);
+}
+
+.tcn-code-block-pre {
+  margin: 0;
+  padding: var(--scale-4);
+  overflow-x: auto;
+}
+
+.tcn-code-block-code {
+  font-family: var(--text-mono-font-family);
+  font-size: var(--text-sm-font-size);
+  line-height: var(--text-body-line-height);
+  color: var(--color-on-surface-default);
+}

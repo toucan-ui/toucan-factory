@@ -1,0 +1,8 @@
+.tcn-flex-item[data-grow] {
+  flex: 1;
+  min-width: 0;
+}
+
+.tcn-flex-item[data-shrink='false'] {
+  flex-shrink: 0;
+}

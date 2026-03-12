@@ -1,0 +1,11 @@
+{
+  "z-index": {
+    "base": { "$value": "0", "$type": "number" },
+    "dropdown": { "$value": "1000", "$type": "number" },
+    "sticky": { "$value": "1100", "$type": "number" },
+    "popover": { "$value": "1200", "$type": "number" },
+    "tooltip": { "$value": "1300", "$type": "number" },
+    "modal": { "$value": "1400", "$type": "number" },
+    "toast": { "$value": "1500", "$type": "number" }
+  }
+}

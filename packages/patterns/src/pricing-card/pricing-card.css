@@ -1,0 +1,68 @@
+/* ==========================================================================
+   PricingCard — Catalog Pattern CSS
+   Pricing tier card with feature list and CTA.
+   ========================================================================== */
+
+.tcn-pricing-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--scale-4);
+  font-family: var(--text-font-family);
+}
+
+.tcn-pricing-card--highlighted {
+  border-color: var(--color-primary);
+  border-width: var(--border-width-thick);
+  border-style: solid;
+}
+
+.tcn-pricing-card-header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--scale-2);
+}
+
+.tcn-pricing-card-tier {
+  font-size: var(--text-heading-h4-font-size);
+  line-height: var(--text-heading-h4-line-height);
+}
+
+.tcn-pricing-card-price {
+  display: flex;
+  align-items: baseline;
+  gap: var(--scale-1);
+}
+
+.tcn-pricing-card-amount {
+  font-size: var(--text-heading-h1-font-size);
+  font-weight: var(--text-heading-font-weight);
+  line-height: var(--text-heading-h1-line-height);
+  color: var(--color-on-surface-default);
+}
+
+.tcn-pricing-card-features {
+  display: flex;
+  flex-direction: column;
+  gap: var(--scale-2);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tcn-pricing-card-feature {
+  padding-left: var(--scale-4);
+  position: relative;
+}
+
+.tcn-pricing-card-feature::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--color-success);
+  font-weight: var(--text-heading-font-weight);
+}
+
+.tcn-pricing-card-cta {
+  margin-top: var(--scale-2);
+  width: 100%;
+}

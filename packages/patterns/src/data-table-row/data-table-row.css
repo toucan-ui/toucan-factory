@@ -1,0 +1,24 @@
+/* ==========================================================================
+   DataTableRow — Catalog Pattern CSS
+   Row layout for data tables.
+   ========================================================================== */
+
+.tcn-data-table-row {
+  display: flex;
+  align-items: center;
+  gap: var(--scale-4);
+  padding: var(--scale-3) var(--scale-4);
+  border-bottom: var(--border-width-thin) solid var(--color-border-default);
+  font-family: var(--text-font-family);
+  font-size: var(--text-body-font-size);
+  line-height: var(--text-body-line-height);
+}
+
+.tcn-data-table-row-value {
+  text-align: right;
+}
+
+.tcn-mono {
+  font-family: var(--text-mono-font-family);
+  font-variant-numeric: tabular-nums;
+}

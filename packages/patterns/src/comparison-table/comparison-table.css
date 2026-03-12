@@ -1,0 +1,28 @@
+/* ==========================================================================
+   ComparisonTable — Catalog Pattern CSS
+   Feature comparison table with optional highlighted product column.
+   Builds on top of Table atom CSS for base styling.
+   ========================================================================== */
+
+.tcn-comparison-table-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.tcn-comparison-table {
+  font-family: var(--text-font-family);
+}
+
+.tcn-comparison-table-feature-name {
+  font-weight: var(--text-heading-font-weight);
+  color: var(--color-on-surface-default);
+}
+
+.tcn-comparison-table-product-header[data-highlighted] {
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+}
+
+.tcn-comparison-table .tcn-table-cell[data-highlighted] {
+  background: var(--color-primary-surface);
+}
