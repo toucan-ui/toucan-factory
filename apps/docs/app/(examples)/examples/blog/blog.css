@@ -1,0 +1,88 @@
+/* Blog example — page-specific CSS */
+
+/* Blog featured image */
+.examples-blog-image {
+  aspect-ratio: 16 / 9;
+  background: var(--color-surface-muted);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.examples-blog-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Blog article image */
+.examples-article-image {
+  aspect-ratio: 3 / 2;
+  background: var(--color-surface-muted);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.examples-article-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Blog masthead — centred editorial logo */
+.examples-masthead-logo {
+  font-family: var(--font-family-heading);
+  font-size: var(--text-heading-h1-font-size);
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* Masthead responsive — mobile-first, desktop at lg */
+.examples-masthead-desktop {
+  display: none;
+}
+
+.examples-masthead-mobile {
+  display: flex;
+}
+
+@media (min-width: 1024px) {
+  .examples-masthead-desktop {
+    display: flex;
+    align-items: center;
+  }
+
+  .examples-masthead-mobile {
+    display: none;
+  }
+}
+
+/* Vertical divider — stretches full height, hidden below lg */
+.examples-vertical-divider {
+  display: none;
+}
+
+.examples-vertical-divider .tcn-separator {
+  height: 100%;
+}
+
+@media (min-width: 1024px) {
+  .examples-vertical-divider {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+/* Most Read — large serif ranking numbers */
+.examples-most-read-number {
+  font-family: var(--font-family-heading);
+  font-size: var(--text-heading-h2-font-size);
+  line-height: 1;
+  color: var(--color-on-surface-muted);
+  flex-shrink: 0;
+}
+
+/* Testimonial quote — used by blog opinion section */
+.examples-testimonial {
+  border-left: var(--border-width-thick) solid var(--color-primary);
+  padding-left: var(--spacing-lg);
+}

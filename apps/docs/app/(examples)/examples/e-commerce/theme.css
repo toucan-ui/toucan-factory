@@ -1,0 +1,26 @@
+/* ==========================================================================
+   E-Commerce Theme — Health & Wellness
+   Deep green palette, warm stone accents, clean sans-serif typography
+   ========================================================================== */
+
+:root {
+  /* Primary — deep forest green */
+  --color-primary: #1a3c2a;
+  --color-primary-hover: #245236;
+  --color-on-primary: #ffffff;
+
+  /* Surface — white default, warm stone muted */
+  --color-surface-default: #ffffff;
+  --color-surface-muted: #f5f2ed;
+
+  /* On-surface — near-black text, muted grey */
+  --color-on-surface-default: #1a1a1a;
+  --color-on-surface-muted: #6b6b6b;
+
+  /* Border — warm neutral */
+  --color-border-default: #e5e0d8;
+
+  /* Typography — clean sans-serif */
+  --font-family-heading: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-family-body: 'Inter', system-ui, -apple-system, sans-serif;
+}

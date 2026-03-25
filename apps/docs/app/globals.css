@@ -1,0 +1,53 @@
+/* ==========================================================================
+   Toucan — Docs Site Global CSS
+   Import order: base tokens → pattern CSS → themes → resets
+   ========================================================================== */
+
+/* 1. Base tokens + atom CSS (ground zero) */
+@import '@toucan-ui/tokens/css';
+
+/* 2. Pattern CSS (all patterns) */
+@import '@toucan-ui/patterns/css';
+
+/* 3. Theme overrides (scoped to [data-theme="..."]) */
+@import '../themes/dist/toucan-light.css';
+@import '../themes/dist/toucan-dark.css';
+@import '../themes/dist/finance-light.css';
+@import '../themes/dist/finance-dark.css';
+@import '../themes/dist/wellness-light.css';
+@import '../themes/dist/wellness-dark.css';
+@import '../themes/dist/editorial-light.css';
+@import '../themes/dist/editorial-dark.css';
+
+/* Logo backdrop — persistent light rectangle, semi-circle bottom, bleeds off top */
+.logo-backdrop {
+  position: relative;
+  z-index: 1;
+}
+
+.logo-backdrop::before {
+  content: '';
+  position: absolute;
+  bottom: -16px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 45px;
+  height: 660px;
+  background: var(--color-neutral-0);
+  border-radius: 0 0 36px 36px;
+  z-index: -1;
+  pointer-events: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--text-font-family);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

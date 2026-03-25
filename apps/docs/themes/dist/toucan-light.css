@@ -1,0 +1,20 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ */
+
+[data-theme="toucan"] {
+  --color-neutral-0: #ffffff;
+  --color-neutral-200: #e5e5e5;
+  --color-neutral-300: #d4d4d4;
+  --color-neutral-950: #0a0a0a;
+  --font-family-sans: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --display-font-weight: 600;
+  --text-display-font-weight: 600;
+  --text-display-sm-font-weight: 600;
+  --text-display-md-font-weight: 600;
+  --text-display-lg-font-weight: 600;
+  --display-font-family: var(--font-family-sans);
+  --heading-font-family: var(--font-family-sans);
+  --text-display-font-family: var(--font-family-sans);
+  --text-heading-font-family: var(--font-family-sans);
+}

@@ -1,0 +1,18 @@
+{
+  "color": {
+    "neutral": {
+      "0": { "$value": "#ffffff", "$type": "color" },
+      "200": { "$value": "#e5e5e5", "$type": "color" },
+      "300": { "$value": "#d4d4d4", "$type": "color" },
+      "950": { "$value": "#0a0a0a", "$type": "color" }
+    }
+  },
+  "font": {
+    "family": {
+      "sans": {
+        "$value": "system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif",
+        "$type": "fontFamily"
+      }
+    }
+  }
+}

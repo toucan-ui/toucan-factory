@@ -1,0 +1,30 @@
+/* Dashboard example — page-specific CSS */
+
+/* Dashboard layout — sidebar + main grid */
+.examples-dashboard-layout {
+  display: grid;
+  grid-template-columns: var(--layout-60) 1fr;
+  min-height: 100vh;
+}
+
+@media (max-width: 768px) {
+  .examples-dashboard-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Dashboard sidebar border */
+.examples-dashboard-sidebar {
+  border-right: var(--border-width-thin) solid var(--color-border-default);
+}
+
+/* Dashboard main content padding */
+.examples-dashboard-main {
+  padding: var(--spacing-xl);
+}
+
+@media (max-width: 768px) {
+  .examples-dashboard-main {
+    padding: var(--spacing-md);
+  }
+}

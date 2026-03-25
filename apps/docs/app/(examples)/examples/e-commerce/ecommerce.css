@@ -1,0 +1,76 @@
+/* E-commerce example — page-specific CSS */
+
+/* Benefits carousel — edge-aligned bleed scroll */
+.examples-ecom-benefits-track {
+  display: flex;
+  gap: var(--spacing-lg);
+  overflow-x: auto;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+
+  /* Align first/last card to Wrapper content edge */
+  padding-left: max(
+    var(--wrapper-padding-x-lg),
+    calc((100vw - var(--wrapper-lg-max-width)) / 2 + var(--wrapper-padding-x-lg))
+  );
+  padding-right: max(
+    var(--wrapper-padding-x-lg),
+    calc((100vw - var(--wrapper-lg-max-width)) / 2 + var(--wrapper-padding-x-lg))
+  );
+}
+
+.examples-ecom-benefits-track::-webkit-scrollbar {
+  display: none;
+}
+
+.examples-ecom-benefit-card {
+  flex: 0 0 280px;
+  scroll-snap-align: start;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  position: relative;
+}
+
+.examples-ecom-benefit-card img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  display: block;
+}
+
+.examples-ecom-benefit-card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: var(--spacing-lg);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+}
+
+.examples-ecom-benefit-card-overlay .tcn-heading,
+.examples-ecom-benefit-card-overlay .tcn-text {
+  color: white;
+}
+
+/* Accreditation logo placeholders */
+.examples-ecom-accreditation-logo {
+  flex-shrink: 0;
+  color: var(--color-on-surface-muted);
+}
+
+/* E-commerce feature card images */
+.examples-ecom-feature-image {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+}
+
+/* E-commerce hero / product image */
+.examples-ecom-hero-image {
+  min-height: 75vh;
+  width: 100%;
+  max-width: 500px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+}
