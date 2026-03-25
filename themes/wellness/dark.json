@@ -1,0 +1,44 @@
+{
+  "color": {
+    "primary": { "$value": "{color.sage.400}", "$type": "color" },
+    "primary-hover": { "$value": "{color.sage.300}", "$type": "color" },
+    "primary-active": { "$value": "{color.sage.200}", "$type": "color" },
+    "on-primary": { "$value": "{color.sage.950}", "$type": "color" },
+    "surface": {
+      "default": { "$value": "{color.sage.950}", "$type": "color" },
+      "muted": { "$value": "{color.sage.900}", "$type": "color" },
+      "raised": { "$value": "{color.sage.900}", "$type": "color" }
+    },
+    "on-surface": {
+      "default": { "$value": "{color.cream.50}", "$type": "color" },
+      "muted": { "$value": "{color.sage.300}", "$type": "color" }
+    },
+    "border": {
+      "default": { "$value": "{color.sage.700}", "$type": "color" },
+      "strong": { "$value": "{color.sage.500}", "$type": "color" },
+      "focus": { "$value": "{color.sage.400}", "$type": "color" }
+    },
+    "disabled": { "$value": "{color.sage.900}", "$type": "color" },
+    "on-disabled": { "$value": "{color.sage.600}", "$type": "color" },
+    "backdrop": { "$value": "rgba(21, 32, 24, 0.7)", "$type": "color" }
+  },
+  "radius": {
+    "sm": { "$value": "8px", "$type": "dimension" },
+    "md": { "$value": "12px", "$type": "dimension" },
+    "lg": { "$value": "16px", "$type": "dimension" }
+  },
+  "elevation": {
+    "1": { "$value": "{shadow.wellness.dark.sm}", "$type": "shadow" },
+    "2": { "$value": "{shadow.wellness.dark.md}", "$type": "shadow" },
+    "3": { "$value": "{shadow.wellness.dark.lg}", "$type": "shadow" }
+  },
+  "body": {
+    "font-weight": { "$value": "400", "$type": "fontWeight" }
+  },
+  "heading": {
+    "font-weight": { "$value": "500", "$type": "fontWeight" }
+  },
+  "display": {
+    "font-weight": { "$value": "500", "$type": "fontWeight" }
+  }
+}

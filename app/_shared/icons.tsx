@@ -61,3 +61,16 @@ export function MenuIcon() {
     </Icon>
   );
 }
+
+export function PaletteIcon() {
+  return (
+    <Icon size="sm">
+      <svg viewBox="0 0 16 16" fill="none">
+        <path d="M8 1a7 7 0 0 0 0 14c.7 0 1.3-.6 1.3-1.3 0-.3-.1-.6-.3-.8-.2-.2-.3-.5-.3-.9 0-.7.6-1.3 1.3-1.3H11a3.9 3.9 0 0 0 4-3.9A7 7 0 0 0 8 1Z" stroke="currentColor" strokeWidth="1.3" />
+        <circle cx="4.5" cy="6.5" r="1" fill="currentColor" />
+        <circle cx="7" cy="4.5" r="1" fill="currentColor" />
+        <circle cx="10" cy="5.5" r="1" fill="currentColor" />
+      </svg>
+    </Icon>
+  );
+}

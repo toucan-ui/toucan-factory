@@ -4,8 +4,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "next dev --webpack -p 3001",
-    "build": "next build --webpack",
+    "build:themes": "tsx themes/build.ts",
+    "dev": "tsx themes/build.ts && next dev --webpack -p 3001",
+    "build": "tsx themes/build.ts && next build --webpack",
     "start": "next start",
     "clean": "rm -rf .next",
     "lint": "eslint app/",
@@ -28,6 +29,8 @@
     "@types/node": "25.3.3",
     "@types/react": "^19.1.4",
     "@types/react-dom": "^19.1.5",
+    "style-dictionary": "^5.4.0",
+    "tsx": "^4.21.0",
     "typescript": "^5.7.3",
     "typescript-eslint": "^8.33.0"
   }

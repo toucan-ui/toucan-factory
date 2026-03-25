@@ -1,0 +1,52 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ */
+
+[data-theme="wellness"][data-mode="dark"] {
+  --color-sage-50: #f3f6f3;
+  --color-sage-100: #e4ebe5;
+  --color-sage-200: #c9d7cb;
+  --color-sage-300: #a3b9a6;
+  --color-sage-400: #7d9b81;
+  --color-sage-500: #6b8f71;
+  --color-sage-600: #4e7254;
+  --color-sage-700: #3e5b43;
+  --color-sage-800: #344a38;
+  --color-sage-900: #2c3e30;
+  --color-sage-950: #152018;
+  --color-cream-0: #fffdf9;
+  --color-cream-50: #fdfbf7;
+  --color-cream-100: #f9f5ed;
+  --color-cream-200: #f2ebdd;
+  --color-white: #ffffff;
+  --color-backdrop: rgba(21, 32, 24, 0.7);
+  --shadow-wellness-sm: 0 2px 8px -2px rgba(107, 143, 113, 0.12);
+  --shadow-wellness-md: 0 6px 16px -4px rgba(107, 143, 113, 0.14), 0 2px 6px -2px rgba(107, 143, 113, 0.08);
+  --shadow-wellness-lg: 0 12px 32px -8px rgba(107, 143, 113, 0.16), 0 4px 12px -4px rgba(107, 143, 113, 0.08);
+  --shadow-wellness-dark-sm: 0 2px 8px -2px rgba(0, 0, 0, 0.25);
+  --shadow-wellness-dark-md: 0 6px 16px -4px rgba(0, 0, 0, 0.3), 0 2px 6px -2px rgba(0, 0, 0, 0.2);
+  --shadow-wellness-dark-lg: 0 12px 32px -8px rgba(0, 0, 0, 0.35), 0 4px 12px -4px rgba(0, 0, 0, 0.2);
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --body-font-weight: 400;
+  --heading-font-weight: 500;
+  --display-font-weight: 500;
+  --color-primary: var(--color-sage-400);
+  --color-primary-hover: var(--color-sage-300);
+  --color-primary-active: var(--color-sage-200);
+  --color-on-primary: var(--color-sage-950);
+  --color-surface-default: var(--color-sage-950);
+  --color-surface-muted: var(--color-sage-900);
+  --color-surface-raised: var(--color-sage-900);
+  --color-on-surface-default: var(--color-cream-50);
+  --color-on-surface-muted: var(--color-sage-300);
+  --color-border-default: var(--color-sage-700);
+  --color-border-strong: var(--color-sage-500);
+  --color-border-focus: var(--color-sage-400);
+  --color-disabled: var(--color-sage-900);
+  --color-on-disabled: var(--color-sage-600);
+  --elevation-1: var(--shadow-wellness-dark-sm);
+  --elevation-2: var(--shadow-wellness-dark-md);
+  --elevation-3: var(--shadow-wellness-dark-lg);
+}

@@ -1,0 +1,51 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ */
+
+[data-theme="editorial"][data-mode="dark"] {
+  --color-ink-0: #ffffff;
+  --color-ink-50: #fafafa;
+  --color-ink-100: #f5f5f5;
+  --color-ink-200: #ebebeb;
+  --color-ink-300: #d4d4d4;
+  --color-ink-400: #a3a3a3;
+  --color-ink-500: #737373;
+  --color-ink-700: #404040;
+  --color-ink-800: #2d2d2d;
+  --color-ink-900: #1a1a1a;
+  --color-ink-950: #0d0d0d;
+  --color-burgundy-400: #d94f66;
+  --color-burgundy-500: #c41e3a;
+  --color-burgundy-600: #a91830;
+  --color-white: #ffffff;
+  --color-backdrop: rgba(13, 13, 13, 0.8);
+  --shadow-editorial-sm: 0 1px 1px 0 rgba(0, 0, 0, 0.02);
+  --shadow-editorial-md: 0 1px 2px 0 rgba(0, 0, 0, 0.03);
+  --shadow-editorial-lg: 0 2px 4px -1px rgba(0, 0, 0, 0.04);
+  --radius-sm: 0;
+  --radius-md: 1px;
+  --radius-lg: 2px;
+  --body-font-weight: 300;
+  --body-letter-spacing: 0.025em;
+  --heading-font-weight: 700;
+  --heading-letter-spacing: -0.05em;
+  --display-font-weight: 700;
+  --display-letter-spacing: -0.05em;
+  --color-primary: var(--color-ink-0);
+  --color-primary-hover: var(--color-burgundy-400);
+  --color-primary-active: var(--color-burgundy-500);
+  --color-on-primary: var(--color-ink-900);
+  --color-surface-default: var(--color-ink-950);
+  --color-surface-muted: var(--color-ink-900);
+  --color-surface-raised: var(--color-ink-900);
+  --color-on-surface-default: var(--color-ink-50);
+  --color-on-surface-muted: var(--color-ink-400);
+  --color-border-default: var(--color-ink-800);
+  --color-border-strong: var(--color-ink-50);
+  --color-border-focus: var(--color-burgundy-400);
+  --color-disabled: var(--color-ink-900);
+  --color-on-disabled: var(--color-ink-500);
+  --elevation-1: var(--shadow-editorial-sm);
+  --elevation-2: var(--shadow-editorial-md);
+  --elevation-3: var(--shadow-editorial-lg);
+}

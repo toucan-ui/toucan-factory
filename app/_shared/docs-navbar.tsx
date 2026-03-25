@@ -109,7 +109,9 @@ export function DocsNavBar() {
       gap={6}
       logo={
         <Link href="/" variant="standalone">
-          <img src="/toucan-logo.svg" alt="Toucan" height={32} className="toucan-logo" />
+          <div className="logo-backdrop">
+            <img src="/toucan-logo.svg" alt="Toucan" height={32} className="toucan-logo" />
+          </div>
         </Link>
       }
       links={NAV_LINKS.map((link) => (
