@@ -38,7 +38,7 @@ export function ThemeSwitcher() {
       <DropdownMenu anchor="top-right">
         <DropdownMenuTrigger asChild>
           <Button
-            variant="filled"
+            variant="primary"
             size="md"
             iconOnly
             aria-label="Switch theme"

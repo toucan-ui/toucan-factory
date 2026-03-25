@@ -5,6 +5,8 @@
     { "path": "packages/tokens" },
     { "path": "packages/interactions" },
     { "path": "packages/core" },
-    { "path": "packages/patterns" }
+    { "path": "packages/patterns" },
+    { "path": "apps/docs" },
+    { "path": "apps/wizard" }
   ]
 }

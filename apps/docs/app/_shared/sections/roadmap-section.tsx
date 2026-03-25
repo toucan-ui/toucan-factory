@@ -53,7 +53,7 @@ export function RoadmapSection() {
               <TimelineGroup date="Additional themes">
                 <Text>
                   Out of the box themed verticals for use or inspiration, think marketing,
-                  e-commerce and editorial UI's.
+                  e-commerce and editorial UIs.
                 </Text>
               </TimelineGroup>
               <TimelineGroup date="Framework ports">

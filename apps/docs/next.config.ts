@@ -20,7 +20,7 @@ const nextConfig: NextConfig = {
   pageExtensions: ['ts', 'tsx', 'md', 'mdx'],
   transpilePackages: ['@toucan-ui/core', '@toucan-ui/tokens', '@toucan-ui/patterns'],
   turbopack: {
-    root: path.join(__dirname, '..'),
+    root: path.join(__dirname, '../..'),
   },
   headers: async () => [
     {

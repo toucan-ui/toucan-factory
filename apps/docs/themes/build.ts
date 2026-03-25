@@ -35,7 +35,7 @@ async function build() {
         },
       });
 
-      builds.push(sd.buildAllPlatforms());
+      builds.push(sd.buildAllPlatforms().then(() => {}));
     }
   }
 

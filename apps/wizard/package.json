@@ -1,5 +1,5 @@
 {
-  "name": "ui-configurator",
+  "name": "@toucan-ui/wizard",
   "version": "0.0.0",
   "private": true,
   "type": "module",
@@ -12,9 +12,9 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@toucan-ui/core": "^0.1.1",
-    "@toucan-ui/patterns": "^0.1.3",
-    "@toucan-ui/tokens": "^0.1.3",
+    "@toucan-ui/core": "workspace:*",
+    "@toucan-ui/patterns": "workspace:*",
+    "@toucan-ui/tokens": "workspace:*",
     "@vercel/analytics": "^2.0.1",
     "fflate": "^0.8.0",
     "next": "^16.1.6",
