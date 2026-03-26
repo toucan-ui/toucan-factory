@@ -13,7 +13,7 @@ for (const name of patterns) {
 export default defineConfig({
   entry,
   format: ['esm', 'cjs'],
-  dts: true,
+  dts: false,
   clean: false,
   external: ['react', 'react-dom', '@toucan-ui/core', '@toucan-ui/tokens'],
   banner: { js: "'use client';" },

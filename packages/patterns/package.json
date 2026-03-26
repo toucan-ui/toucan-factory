@@ -36,7 +36,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsx scripts/build-css.ts && tsup",
+    "build": "tsx scripts/build-css.ts && tsup && tsc -p tsconfig.build.json",
     "clean": "rm -rf dist",
     "test": "vitest run",
     "typecheck": "tsc --noEmit",
