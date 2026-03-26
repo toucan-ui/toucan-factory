@@ -1,9 +1,9 @@
 import { notFound } from 'next/navigation';
 import { Heading, Text, Flex, Grid } from '@toucan-ui/core';
-import { PageHeader } from '../../../_shared/patterns';
-import { PropTable } from '../../../_shared/prop-table';
-import { ComponentExample } from '../../../_shared/component-example';
-import { COMPONENTS, COMPONENT_SLUGS } from '../../../data/component-data';
+import { PageHeader } from '../../../../_shared/patterns';
+import { PropTable } from '../../../../_shared/prop-table';
+import { ComponentExample } from '../../../../_shared/component-example';
+import { COMPONENTS, COMPONENT_SLUGS } from '../../../../data/component-data';
 
 export function generateStaticParams() {
   return COMPONENT_SLUGS.map((slug) => ({ slug }));
@@ -22,7 +22,8 @@ export default async function ComponentPage({ params }: { params: Promise<{ slug
         description={component.description}
         breadcrumbs={[
           { label: 'Home', href: '/' },
-          { label: 'Components', href: '/components' },
+          { label: 'Docs', href: '/docs' },
+          { label: 'Components', href: '/docs/components' },
           { label: component.name },
         ]}
       />

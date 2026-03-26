@@ -1,9 +1,9 @@
 import { notFound } from 'next/navigation';
 import { Heading, Badge, Flex, Grid, Link } from '@toucan-ui/core';
-import { PageHeader } from '../../../_shared/patterns';
-import { PropTable } from '../../../_shared/prop-table';
-import { PatternExample } from '../../../_shared/pattern-example';
-import { PATTERNS, PATTERN_SLUGS } from '../../../data/pattern-data';
+import { PageHeader } from '../../../../_shared/patterns';
+import { PropTable } from '../../../../_shared/prop-table';
+import { PatternExample } from '../../../../_shared/pattern-example';
+import { PATTERNS, PATTERN_SLUGS } from '../../../../data/pattern-data';
 
 export function generateStaticParams() {
   return PATTERN_SLUGS.map((slug) => ({ slug }));
@@ -22,7 +22,8 @@ export default async function PatternPage({ params }: { params: Promise<{ slug: 
         description={pattern.description}
         breadcrumbs={[
           { label: 'Home', href: '/' },
-          { label: 'Patterns', href: '/patterns' },
+          { label: 'Docs', href: '/docs' },
+          { label: 'Patterns', href: '/docs/patterns' },
           { label: pattern.name },
         ]}
       />
@@ -39,7 +40,7 @@ export default async function PatternPage({ params }: { params: Promise<{ slug: 
           <Heading level={2}>Composed Atoms</Heading>
           <Flex row wrap gap={3}>
             {pattern.composedAtoms.map((atom) => (
-              <Link key={atom} href={`/components/${atom.toLowerCase()}`} variant="standalone">
+              <Link key={atom} href={`/docs/components/${atom.toLowerCase()}`} variant="standalone">
                 <Badge variant="info">{atom}</Badge>
               </Link>
             ))}

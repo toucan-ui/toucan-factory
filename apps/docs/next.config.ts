@@ -22,6 +22,12 @@ const nextConfig: NextConfig = {
   turbopack: {
     root: path.join(__dirname, '../..'),
   },
+  redirects: async () => [
+    { source: '/components', destination: '/docs/components', permanent: true },
+    { source: '/components/:slug', destination: '/docs/components/:slug', permanent: true },
+    { source: '/patterns', destination: '/docs/patterns', permanent: true },
+    { source: '/patterns/:slug', destination: '/docs/patterns/:slug', permanent: true },
+  ],
   headers: async () => [
     {
       source: '/(.*)',

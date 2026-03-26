@@ -1,32 +1,48 @@
-import { Wrapper, Grid } from '@toucan-ui/core';
-import { HeroSection } from '../_shared/sections/hero-section';
-import { ProblemSection } from '../_shared/sections/problem-section';
-import { ArchitectureSection } from '../_shared/sections/architecture-section';
-import { TokenSection } from '../_shared/sections/token-section';
-import { ComponentGallery } from '../_shared/sections/component-gallery';
-import { PatternCatalog } from '../_shared/sections/pattern-catalog';
-import { ComparisonSection } from '../_shared/sections/comparison-section';
-import { AccessibilitySection } from '../_shared/sections/accessibility-section';
-import { GettingStartedSection } from '../_shared/sections/getting-started-section';
-import { RoadmapSection } from '../_shared/sections/roadmap-section';
+import { Heading, Text, Button, Section, Wrapper, Grid, Link } from '@toucan-ui/core';
+import { CodeBlock } from '../_shared/patterns';
 
 export default function Home() {
   return (
-    <Grid gap={16}>
-      <HeroSection />
-      <Wrapper size="lg">
-        <Grid gap={16}>
-          <ProblemSection />
-          <ArchitectureSection />
-          <TokenSection />
-          <ComponentGallery />
-          <PatternCatalog />
-          <ComparisonSection />
-          <AccessibilitySection />
-          <GettingStartedSection />
-          <RoadmapSection />
+    <Section padding="lg">
+      <Wrapper size="sm">
+        <Grid gap={8} align="center">
+          <Heading level={1} display="lg">
+            One architecture. Infinite design systems.
+          </Heading>
+          <Text as="p" size="lg" muted>
+            Patterns compose atoms, atoms reference tokens, themes override tokens. Swap a single
+            JSON file and every component re-skins itself.
+          </Text>
+          <CodeBlock
+            code="npm install @toucan-ui/core @toucan-ui/tokens"
+            language="bash"
+            filename="Install"
+          />
+          <Button as="a" href="/docs/getting-started" variant="primary" size="lg">
+            Get Started
+          </Button>
+          <Grid gap={3}>
+            <Text as="p" size="sm">
+              <Link href="/docs/tokens" variant="standalone">
+                Tokens
+              </Link>{' '}
+              — Three-tier cascade: raw values, semantic aliases, system bindings.
+            </Text>
+            <Text as="p" size="sm">
+              <Link href="/docs/components" variant="standalone">
+                Components
+              </Link>{' '}
+              — Accessible React primitives. Structure and ARIA, no visual opinions.
+            </Text>
+            <Text as="p" size="sm">
+              <Link href="/docs/patterns" variant="standalone">
+                Patterns
+              </Link>{' '}
+              — Composed layouts that re-skin automatically under any theme.
+            </Text>
+          </Grid>
         </Grid>
       </Wrapper>
-    </Grid>
+    </Section>
   );
 }

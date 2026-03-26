@@ -1,17 +1,7 @@
 import { DocsShell } from '../../_shared/docs-shell';
-import type { SideNavSection } from '../../_shared/patterns';
+import { buildUnifiedSidebar } from '../../data/sidebar-data';
 
-const sections: SideNavSection[] = [
-  {
-    heading: 'Guides',
-    items: [
-      { label: 'Getting Started', href: '/docs/getting-started' },
-      { label: 'Architecture', href: '/docs/architecture' },
-      { label: 'Tokens', href: '/docs/tokens' },
-      { label: 'Themes', href: '/docs/themes' },
-    ],
-  },
-];
+const sections = buildUnifiedSidebar();
 
 export default function DocsLayout({ children }: { children: React.ReactNode }) {
   return <DocsShell sections={sections}>{children}</DocsShell>;
