@@ -19,26 +19,6 @@
 @import '../themes/dist/editorial-light.css';
 @import '../themes/dist/editorial-dark.css';
 
-/* Logo backdrop — persistent light rectangle, semi-circle bottom, bleeds off top */
-.logo-backdrop {
-  position: relative;
-  z-index: 1;
-}
-
-.logo-backdrop::before {
-  content: '';
-  position: absolute;
-  bottom: -16px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 45px;
-  height: 660px;
-  background: var(--color-neutral-0);
-  border-radius: 0 0 36px 36px;
-  z-index: -1;
-  pointer-events: none;
-}
-
 *,
 *::before,
 *::after {

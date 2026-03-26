@@ -11,6 +11,7 @@ import {
 } from '@toucan-ui/core';
 import { NavBar } from './patterns';
 import { ThemeToggle } from './theme-toggle';
+import { AnimatedLogo } from './animated-logo';
 import { MenuIcon, ChevronDownIcon } from './icons';
 import { NAV_LINKS, isDropdownLink } from '../data/site-data';
 import type { NavLink } from '../data/site-data';
@@ -116,9 +117,7 @@ export function DocsNavBar() {
       gap={6}
       logo={
         <Link href="/" variant="standalone">
-          <div className="logo-backdrop">
-            <img src="/toucan-logo.svg" alt="Toucan" height={32} className="toucan-logo" />
-          </div>
+          <AnimatedLogo />
         </Link>
       }
       links={NAV_LINKS.map((link) => (
