@@ -18,6 +18,7 @@ const HOLD_DURATION = 15000;
 const FADE_DURATION = 600;
 
 export function AnimatedLogo() {
+  const [videoReady, setVideoReady] = useState(false);
   const [index, setIndex] = useState(0);
   const nextIndex = (index + 1) % ANIMATIONS.length;
 
@@ -105,12 +106,28 @@ export function AnimatedLogo() {
 
   return (
     <div style={{ width: 64, height: 64, position: 'relative' }}>
+      <img
+        src="/toucan-logo.svg"
+        alt="Toucan"
+        width={64}
+        height={64}
+        style={{
+          ...size,
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          zIndex: -1,
+          opacity: videoReady ? 0 : 1,
+          transition: `opacity ${FADE_DURATION}ms ease`,
+        }}
+      />
       <video
         ref={videoARef}
         src={ANIMATIONS[0]}
         muted
         playsInline
         preload="auto"
+        onCanPlayThrough={() => setVideoReady(true)}
         onEnded={handleEnded(videoARef)}
         style={{
           ...size,
