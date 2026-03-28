@@ -1,7 +1,7 @@
 {
   "name": "@toucan-ui/core",
-  "version": "0.1.2",
-  "description": "Accessible React component primitives for ToucanUI",
+  "version": "0.2.0",
+  "description": "Accessible React component primitives and token-to-CSS build pipeline for ToucanUI",
   "license": "MIT",
   "keywords": [
     "design-system",
@@ -13,20 +13,32 @@
   "publishConfig": {
     "access": "public"
   },
-  "sideEffects": false,
+  "sideEffects": [
+    "**/*.css"
+  ],
   "type": "module",
+  "bin": {
+    "toucan": "./dist/bin/toucan.js"
+  },
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js",
       "require": "./dist/index.cjs"
+    },
+    "./config": {
+      "types": "./dist/cli/config.d.ts",
+      "import": "./dist/cli/config.js"
     }
   },
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "files": [
-    "dist"
+    "dist",
+    "src/components/**/*.css",
+    "src/components/**/*.css.tpl",
+    "src/utils/**/*.css"
   ],
   "scripts": {
     "build": "tsup",
@@ -36,7 +48,8 @@
     "test": "vitest run"
   },
   "dependencies": {
-    "@toucan-ui/interactions": "workspace:*"
+    "@toucan-ui/interactions": "workspace:*",
+    "style-dictionary": "^5.3.1"
   },
   "peerDependencies": {
     "react": "^19.0.0",
@@ -46,6 +59,7 @@
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^14.6.1",
+    "@types/node": "^22.0.0",
     "@types/react": "^19.1.4",
     "@types/react-dom": "^19.2.3",
     "jsdom": "^26.1.0",

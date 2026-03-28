@@ -1,8 +1,6 @@
 import { forwardRef } from 'react';
 import { cn } from '../../utils/cn.js';
-import type { LinkVariant } from '../../types.js';
-
-type LinkSize = 'sm' | 'base' | 'lg';
+import type { LinkVariant, LinkSize } from '../../types.js';
 
 export interface LinkProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
   variant?: LinkVariant;

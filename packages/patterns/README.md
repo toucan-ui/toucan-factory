@@ -1,11 +1,11 @@
 # @toucan-ui/patterns
 
-Theme-agnostic layout patterns that compose [Toucan UI](https://github.com/toucan-ui/toucan-factory) core atoms into ready-to-use UI sections. Each pattern is a higher-level component built from `@toucan-ui/core` primitives and styled with `@toucan-ui/tokens`.
+Theme-agnostic layout patterns that compose [Toucan UI](https://github.com/toucan-ui/toucan-factory) core atoms into ready-to-use UI sections. Each pattern is a higher-level component built from `@toucan-ui/core` primitives.
 
 ## Install
 
 ```bash
-npm install @toucan-ui/patterns @toucan-ui/core @toucan-ui/tokens
+npm install @toucan-ui/patterns @toucan-ui/core
 ```
 
 **Peer dependencies:** React 19, React DOM 19
@@ -14,7 +14,7 @@ npm install @toucan-ui/patterns @toucan-ui/core @toucan-ui/tokens
 
 ```tsx
 import { NavBar, HeroCentered, Footer } from '@toucan-ui/patterns';
-import '@toucan-ui/tokens/css';
+import '@toucan-ui/core/foundation';
 import '@toucan-ui/patterns/css';
 
 function LandingPage() {
@@ -68,10 +68,10 @@ function LandingPage() {
 
 ## CSS
 
-Patterns ship their own CSS for layout concerns (spacing, grid placement). Import it alongside the token CSS:
+Patterns ship their own CSS for layout concerns (spacing, grid placement). Import it alongside the foundation CSS:
 
 ```css
-@import '@toucan-ui/tokens/css';
+@import '@toucan-ui/core/foundation';
 @import '@toucan-ui/patterns/css';
 ```
 
@@ -89,7 +89,7 @@ Patterns ship their own CSS for layout concerns (spacing, grid placement). Impor
 | Package                                                                          | Description                               |
 | -------------------------------------------------------------------------------- | ----------------------------------------- |
 | [@toucan-ui/core](https://www.npmjs.com/package/@toucan-ui/core)                 | Accessible React component primitives     |
-| [@toucan-ui/tokens](https://www.npmjs.com/package/@toucan-ui/tokens)             | Design tokens and atom CSS                |
+| [@toucan-ui/tokens](https://www.npmjs.com/package/@toucan-ui/tokens)             | Design tokens (foundation CSS)            |
 | [@toucan-ui/interactions](https://www.npmjs.com/package/@toucan-ui/interactions) | Framework-agnostic interaction primitives |
 
 ## License

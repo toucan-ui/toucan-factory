@@ -14,12 +14,12 @@ See [docs/architecture.md](docs/architecture.md) for the full architecture guide
 
 ## Packages
 
-| Package                   | Description                                         |
-| ------------------------- | --------------------------------------------------- |
-| `@toucan-ui/tokens`       | Style Dictionary config, JSON tokens, and atom CSS  |
-| `@toucan-ui/core`         | React primitives — structure and accessibility only |
-| `@toucan-ui/patterns`     | Theme-agnostic layout patterns composing core atoms |
-| `@toucan-ui/interactions` | Motion thread (V2)                                  |
+| Package                   | Description                                                   |
+| ------------------------- | ------------------------------------------------------------- |
+| `@toucan-ui/tokens`       | Style Dictionary config + JSON tokens → builds foundation CSS |
+| `@toucan-ui/core`         | React primitives + co-located atom CSS + foundation tokens    |
+| `@toucan-ui/patterns`     | Theme-agnostic layout patterns composing core atoms           |
+| `@toucan-ui/interactions` | Motion thread (V2)                                            |
 
 ### Build Order
 

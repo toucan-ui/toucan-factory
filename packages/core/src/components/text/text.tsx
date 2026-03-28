@@ -1,11 +1,8 @@
 import { forwardRef } from 'react';
 import { cn } from '../../utils/cn.js';
+import type { TextSize, TextWeight, TextVariant, TextAlign } from '../../types.js';
 
 type TextElement = 'p' | 'span' | 'label' | 'small' | 'strong' | 'em' | 'div';
-type TextSize = 'xs' | 'sm' | 'base' | 'lg';
-type TextWeight = 'regular' | 'medium' | 'semibold' | 'bold';
-type TextVariant = 'default' | 'muted';
-type TextAlign = 'left' | 'center' | 'right';
 
 export interface TextProps extends React.HTMLAttributes<HTMLElement> {
   as?: TextElement;

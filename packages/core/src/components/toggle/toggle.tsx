@@ -1,5 +1,6 @@
 import { forwardRef, useId, useState, useCallback } from 'react';
 import { cn } from '../../utils/cn.js';
+import type { ToggleSize } from '../../types.js';
 
 export interface ToggleProps extends Omit<
   React.ButtonHTMLAttributes<HTMLButtonElement>,
@@ -12,7 +13,7 @@ export interface ToggleProps extends Omit<
   defaultChecked?: boolean;
   onChange?: (checked: boolean) => void;
   hideLabel?: boolean;
-  size?: 'sm' | 'md';
+  size?: ToggleSize;
 }
 
 export const Toggle = forwardRef<HTMLButtonElement, ToggleProps>(function Toggle(

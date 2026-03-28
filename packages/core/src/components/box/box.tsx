@@ -1,8 +1,6 @@
 import { forwardRef } from 'react';
 import { cn } from '../../utils/cn.js';
-import type { Elevation, Radius, BoxOverflow } from '../../types.js';
-
-type BoxPadding = 'none' | 'sm' | 'md' | 'lg';
+import type { Elevation, Radius, BoxOverflow, BoxPadding } from '../../types.js';
 
 export interface BoxProps extends React.HTMLAttributes<HTMLDivElement> {
   elevation?: Elevation;

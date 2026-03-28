@@ -32,8 +32,8 @@ cd my-app`}</CodeBlock>
         </Flex>
 
         <Flex gap={2}>
-          <Text weight="semibold">2. Install the factory tokens package</Text>
-          <CodeBlock>{`npm install @toucan-ui/tokens`}</CodeBlock>
+          <Text weight="semibold">2. Install the core package</Text>
+          <CodeBlock>{`npm install @toucan-ui/core`}</CodeBlock>
         </Flex>
 
         <Flex gap={2}>
@@ -49,7 +49,7 @@ cd my-app`}</CodeBlock>
           <Text size="sm" variant="muted">
             Import the base tokens first, then your theme override:
           </Text>
-          <CodeBlock>{`import '@toucan-ui/tokens/css';
+          <CodeBlock>{`import '@toucan-ui/core/foundation';
 import './themes/${name}.css';`}</CodeBlock>
         </Flex>
 
@@ -164,7 +164,7 @@ npm run build:tokens`}</CodeBlock>
             5. Import the generated CSS and add data-theme to &lt;html&gt;
           </Text>
           <CodeBlock>{`// app/layout.tsx
-import '@toucan-ui/tokens/css';
+import '@toucan-ui/core/foundation';
 import './themes/${name}.css';
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

@@ -7,14 +7,23 @@ const patterns = readdirSync('src', { withFileTypes: true })
 
 const entry: Record<string, string> = {};
 for (const name of patterns) {
-  entry[`${name}/${name}`] = `src/${name}/${name}.tsx`;
+  entry[`${name}/${name}`] = `src/${name}/index.ts`;
 }
 
-export default defineConfig({
-  entry,
-  format: ['esm', 'cjs'],
-  dts: false,
-  clean: false,
-  external: ['react', 'react-dom', '@toucan-ui/core', '@toucan-ui/tokens'],
-  banner: { js: "'use client';" },
-});
+export default defineConfig([
+  {
+    entry,
+    format: ['esm', 'cjs'],
+    dts: false,
+    clean: true,
+    external: ['react', 'react-dom', '@toucan-ui/core'],
+    banner: { js: "'use client';" },
+  },
+  {
+    entry: { 'css/index': 'src/css.ts' },
+    format: ['esm'],
+    dts: false,
+    clean: false,
+    external: ['react', 'react-dom', '@toucan-ui/core'],
+  },
+]);

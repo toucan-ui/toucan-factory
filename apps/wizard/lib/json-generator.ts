@@ -6,8 +6,6 @@ import {
   RADIUS_ALIASES,
   BORDER_WIDTH_ALIASES,
 } from './alias-maps';
-import { getGoogleFontsUrl } from './font-presets';
-
 type TokenValue = { $value: string; $type: string };
 interface TokenGroup {
   [key: string]: TokenValue | TokenGroup;
@@ -480,44 +478,5 @@ export function generateJsonFiles(state: ConfigState): Record<string, string> {
     }
   }
 
-  // Font loading metadata
-  files['fonts.json'] = pretty(generateFontsJson(state));
-
   return files;
-}
-
-/** Generate fonts.json with Google Fonts URLs and custom font info */
-function generateFontsJson(state: ConfigState): object {
-  const { typography } = state;
-  const googleFonts: { family: string; url: string }[] = [];
-  const custom: string[] = [];
-
-  const slots = [
-    { value: typography.fontFamilyBody },
-    { value: typography.fontFamilyHeading },
-    { value: typography.fontFamilyMono },
-    { value: typography.fontFamilyDisplay },
-  ];
-
-  const seenUrls = new Set<string>();
-
-  for (const { value } of slots) {
-    const url = getGoogleFontsUrl(value);
-    if (url && !seenUrls.has(url)) {
-      seenUrls.add(url);
-      // Extract family name from the font-family value (first quoted name)
-      const match = value.match(/^'([^']+)'/);
-      const family = match ? match[1] : value.split(',')[0].trim();
-      googleFonts.push({ family, url });
-    } else if (url === null && !value.startsWith('system-ui') && !value.startsWith("'SF Mono'")) {
-      // Custom font — extract name
-      const match = value.match(/^'([^']+)'/);
-      const family = match ? match[1] : value.split(',')[0].trim();
-      if (!custom.includes(family)) {
-        custom.push(family);
-      }
-    }
-  }
-
-  return { googleFonts, custom };
 }

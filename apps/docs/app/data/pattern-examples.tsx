@@ -560,14 +560,14 @@ export const PATTERN_EXAMPLES: Record<string, PatternExample> = {
   'code-block': {
     demo: (
       <CodeBlock
-        code={`import '@toucan-ui/tokens/css';
+        code={`import '@toucan-ui/core/foundation';
 import { Button } from '@toucan-ui/core';`}
         language="tsx"
         filename="app.tsx"
       />
     ),
     code: `<CodeBlock
-  code={\`import '@toucan-ui/tokens/css';
+  code={\`import '@toucan-ui/core/foundation';
 import { Button } from '@toucan-ui/core';\`}
   language="tsx"
   filename="app.tsx"

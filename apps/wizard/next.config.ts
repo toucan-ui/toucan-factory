@@ -15,7 +15,7 @@ const cspHeader = [
 ].join('; ');
 
 const nextConfig: NextConfig = {
-  transpilePackages: ['@toucan-ui/core', '@toucan-ui/tokens', '@toucan-ui/patterns'],
+  transpilePackages: ['@toucan-ui/core', '@toucan-ui/patterns'],
   headers: async () => [
     {
       source: '/(.*)',

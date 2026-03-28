@@ -1328,14 +1328,15 @@ export const COMPONENT_EXAMPLES: Record<string, ComponentExample> = {
           <AccordionItem value="installation">
             <AccordionTrigger>Installation</AccordionTrigger>
             <AccordionPanel>
-              <Text size="sm">Install with pnpm: pnpm add @toucan-ui/core @toucan-ui/tokens</Text>
+              <Text size="sm">Install with pnpm: pnpm add @toucan-ui/core</Text>
             </AccordionPanel>
           </AccordionItem>
           <AccordionItem value="usage">
             <AccordionTrigger>Usage</AccordionTrigger>
             <AccordionPanel>
               <Text size="sm">
-                Import components from @toucan-ui/core and tokens CSS from @toucan-ui/tokens/css.
+                Import foundation CSS from @toucan-ui/core/foundation and components from
+                @toucan-ui/core.
               </Text>
             </AccordionPanel>
           </AccordionItem>

@@ -3,8 +3,11 @@
    Import order: base tokens → pattern CSS → themes → resets
    ========================================================================== */
 
-/* 1. Base tokens + atom CSS (ground zero) */
-@import '@toucan-ui/tokens/css';
+/* 1. Foundation tokens (raw + alias + system + dark) */
+@import '../css/toucan/foundation/foundation.css';
+
+/* 2. Component CSS (all atom styles + responsive) */
+@import '../css/toucan/styles.css';
 
 /* 2. Pattern CSS (all patterns) */
 @import '@toucan-ui/patterns/css';

@@ -1,9 +1,39 @@
-export type Size = 'sm' | 'md' | 'lg';
+// ── Scale vocabulary ──
+// The canonical set of scale step names. All size/padding/radius types
+// pick from this vocabulary so we never get drift (xs vs xsm, md vs med).
+type ScaleStep = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
 
+// ── Component sizes ──
+export type Size = Extract<ScaleStep, 'sm' | 'md' | 'lg'>;
+export type ToggleSize = Extract<ScaleStep, 'sm' | 'md'>;
+export type DisplaySize = Extract<ScaleStep, 'sm' | 'md' | 'lg'>;
+export type DrawerSize = Extract<ScaleStep, 'sm' | 'md' | 'lg'>;
+export type WrapperSize = ScaleStep | 'full';
+
+// ── Text sizes (include 'base' which maps to font-size-base, not a scale step) ──
+export type TextSize = 'xs' | 'sm' | 'base' | 'lg';
+export type LinkSize = 'sm' | 'base' | 'lg';
+
+// ── Spacing / padding ──
+export type BoxPadding = 'none' | Extract<ScaleStep, 'sm' | 'md' | 'lg'>;
+export type WrapperPadding = 'none' | ScaleStep;
+export type SectionPadding = 'none' | ScaleStep;
+
+// ── Shape ──
+export type Radius = 'none' | Extract<ScaleStep, 'sm' | 'md' | 'lg'>;
+export type Elevation = 0 | 1 | 2 | 3;
+
+// ── Typography ──
+export type TextWeight = 'regular' | 'medium' | 'semibold' | 'bold';
+export type TextAlign = 'left' | 'center' | 'right';
+
+// ── Breakpoints & responsive ──
+export type Breakpoint = Extract<ScaleStep, 'sm' | 'md' | 'lg' | 'xl'>;
+export type Responsive<T> = T | { base?: T; sm?: T; md?: T; lg?: T; xl?: T };
+
+// ── Component variants ──
 export type ButtonVariant = 'primary' | 'secondary' | 'ghost';
-
 export type ButtonElement = 'button' | 'a';
-
 export type BadgeVariant =
   | 'neutral'
   | 'primary'
@@ -12,23 +42,23 @@ export type BadgeVariant =
   | 'danger'
   | 'info'
   | 'custom';
-
-export type Elevation = 0 | 1 | 2 | 3;
-
-export type Radius = 'none' | 'sm' | 'md' | 'lg';
-
-export type Orientation = 'horizontal' | 'vertical';
-
 export type AvatarVariant = 'neutral' | 'primary';
-
 export type AlertVariant = 'info' | 'success' | 'warning' | 'danger' | 'custom';
-
+export type ToastVariant = 'info' | 'success' | 'warning' | 'danger';
+export type LinkVariant = 'inline' | 'standalone';
+export type TextVariant = 'default' | 'muted';
+export type SectionBackground = 'default' | 'muted' | 'primary';
 export type SkeletonVariant = 'text' | 'circular' | 'rectangular';
 
-export type SortDirection = 'ascending' | 'descending' | 'none';
+// ── Layout ──
+export type Orientation = 'horizontal' | 'vertical';
+export type GridColumns = number | 'auto';
+export type GridGap = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 8 | 10 | 12 | 16;
+export type BoxOverflow = 'auto' | 'hidden' | 'visible' | 'scroll';
+export type FlexAlign = 'start' | 'center' | 'end' | 'stretch' | 'baseline';
+export type FlexJustify = 'start' | 'center' | 'end' | 'between';
 
-export type LinkVariant = 'inline' | 'standalone';
-
+// ── Positioning ──
 export type Anchor =
   | 'top'
   | 'top-left'
@@ -46,37 +76,7 @@ export type Anchor =
   | 'right-top'
   | 'right-center'
   | 'right-bottom';
-
-export type WrapperSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'full';
-
-export type WrapperPadding = 'none' | 'sm' | 'md' | 'lg' | 'xl';
-
-export type GridColumns = number | 'auto';
-
-export type GridGap = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 8 | 10 | 12 | 16;
-
-export type SectionPadding = 'none' | 'sm' | 'md' | 'lg' | 'xl';
-
-export type SectionBackground = 'default' | 'muted' | 'primary';
-
-export type Breakpoint = 'sm' | 'md' | 'lg' | 'xl';
-
-export type Responsive<T> = T | { base?: T; sm?: T; md?: T; lg?: T; xl?: T };
-
-export type BoxOverflow = 'auto' | 'hidden' | 'visible' | 'scroll';
-
-export type FlexAlign = 'start' | 'center' | 'end' | 'stretch' | 'baseline';
-
-export type FlexJustify = 'start' | 'center' | 'end' | 'between';
-
-export type AccordionType = 'single' | 'multiple';
-
 export type DrawerAnchor = 'left' | 'right' | 'top' | 'bottom';
-
-export type DrawerSize = 'sm' | 'md' | 'lg';
-
-export type ToastVariant = 'info' | 'success' | 'warning' | 'danger';
-
 export type ToastPosition =
   | 'top-left'
   | 'top-center'
@@ -84,3 +84,7 @@ export type ToastPosition =
   | 'bottom-left'
   | 'bottom-center'
   | 'bottom-right';
+
+// ── Misc ──
+export type SortDirection = 'ascending' | 'descending' | 'none';
+export type AccordionType = 'single' | 'multiple';

@@ -1,52 +1,23 @@
 {
   "name": "@toucan-ui/tokens",
-  "version": "0.1.4",
-  "description": "Design tokens and atom CSS for ToucanUI — the token-driven design system",
+  "version": "0.2.0",
+  "description": "Design token presets for ToucanUI — ready-made JSON themes",
   "license": "MIT",
   "keywords": [
     "design-system",
     "toucanui",
     "design-tokens",
-    "css-custom-properties",
-    "style-dictionary"
+    "css-custom-properties"
   ],
   "publishConfig": {
     "access": "public"
   },
-  "sideEffects": [
-    "dist/css/*.css"
-  ],
   "type": "module",
   "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
-    },
-    "./css": "./dist/css/index.css",
-    "./css/tokens": "./dist/css/variables.css",
-    "./css/raw": "./dist/css/raw.css",
-    "./css/alias": "./dist/css/alias.css",
-    "./css/system": "./dist/css/system.css",
-    "./css/dark": "./dist/css/dark.css"
+    "./package.json": "./package.json",
+    "./presets/default": "./presets/default"
   },
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
   "files": [
-    "dist"
-  ],
-  "scripts": {
-    "build": "tsx config/sd.config.ts && tsup",
-    "dev": "tsx --watch-path=src --watch-path=css config/sd.config.ts",
-    "clean": "rm -rf dist",
-    "lint": "eslint src/",
-    "typecheck": "tsc --noEmit"
-  },
-  "devDependencies": {
-    "style-dictionary": "^5.3.1",
-    "tsup": "^8.5.0",
-    "tsx": "^4.19.4",
-    "typescript": "^5.7.3"
-  }
+    "presets"
+  ]
 }

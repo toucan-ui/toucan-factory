@@ -1,20 +1,38 @@
 # @toucan-ui/core
 
-Accessible React component primitives for [Toucan UI](https://github.com/toucan-ui/toucan-factory). Each component emits semantic HTML, correct ARIA attributes, and `data-*` / `.tcn-*` hooks — with no baked-in styles. Pair with `@toucan-ui/tokens` for the visual layer.
+Accessible React component primitives for [Toucan UI](https://github.com/toucan-ui/toucan-factory). Each component emits semantic HTML, correct ARIA attributes, and `data-*` / `.tcn-*` hooks — with co-located atom CSS that maps these hooks to token values.
+
+Ships the `toucan` CLI for compiling design token JSON into CSS.
 
 ## Install
 
 ```bash
-npm install @toucan-ui/core @toucan-ui/tokens
+npm install @toucan-ui/core
 ```
 
 **Peer dependencies:** React 19, React DOM 19
 
 ## Quick start
 
+```bash
+# 1. Install a token preset (or bring your own token JSON)
+npm install @toucan-ui/tokens
+
+# 2. Build CSS from your tokens
+npx toucan build --tokens node_modules/@toucan-ui/tokens/presets/default --out ./toucan-out
+```
+
+```css
+/* globals.css */
+/* 1. Foundation tokens (raw + alias + system + dark) */
+@import './toucan-out/foundation/foundation.css';
+
+/* 2. Component + responsive CSS */
+@import './toucan-out/styles.css';
+```
+
 ```tsx
 import { Button, Text, Box } from '@toucan-ui/core';
-import '@toucan-ui/tokens/css';
 
 function App() {
   return (
@@ -27,6 +45,23 @@ function App() {
   );
 }
 ```
+
+## CLI
+
+```
+Usage:
+  toucan build [options]
+
+Options:
+  --tokens <path>   Path to token directory (raw/, alias/, system/, dark/ JSON)
+  --out <path>      Output directory (default: ./toucan-out)
+```
+
+Token sources:
+
+- **Preset**: `--tokens node_modules/@toucan-ui/tokens/presets/default`
+- **Wizard output**: `--tokens ./my-wizard-output`
+- **Hand-crafted**: `--tokens ./my-tokens` (must contain `raw/`, `alias/`, `system/`, `dark/` with DTCG JSON)
 
 ## Components
 
@@ -70,11 +105,15 @@ function App() {
 
 Toucan UI separates concerns into independent threads:
 
-- **Structure** (`@toucan-ui/core`) — semantic DOM, ARIA, keyboard behaviour, data hooks
-- **Aesthetics** (`@toucan-ui/tokens`) — design tokens and atom CSS that style the hooks
+- **Structure + Aesthetics** (`@toucan-ui/core`) — semantic DOM, ARIA, keyboard behaviour, data hooks, and co-located atom CSS. Ships the CLI for compiling token JSON into CSS.
 - **Interaction** (`@toucan-ui/interactions`) — state machines for keyboard and focus logic
+- **Token presets** (`@toucan-ui/tokens` or custom) — JSON token definitions that the CLI compiles into foundation CSS
 
-Components output class names like `.tcn-button` and data attributes like `data-variant="primary"`. The token package provides CSS that targets these hooks, so you get a fully styled component with zero runtime CSS.
+Components output class names like `.tcn-button` and data attributes like `data-variant="primary"`. Atom CSS targets these hooks, so you get a fully styled component with zero runtime CSS.
+
+## Theming
+
+The CLI compiles your token JSON into foundation CSS with neutral defaults from the alias tier. To apply your own brand, import a theme CSS file after the compiled output. Themes override alias tokens via a `data-theme` attribute on any ancestor element.
 
 ## Accessibility
 
@@ -93,7 +132,7 @@ All components export their prop types (e.g. `ButtonProps`, `DialogProps`). Shar
 
 | Package                                                                          | Description                               |
 | -------------------------------------------------------------------------------- | ----------------------------------------- |
-| [@toucan-ui/tokens](https://www.npmjs.com/package/@toucan-ui/tokens)             | Design tokens and atom CSS                |
+| [@toucan-ui/tokens](https://www.npmjs.com/package/@toucan-ui/tokens)             | Design token presets (JSON)               |
 | [@toucan-ui/patterns](https://www.npmjs.com/package/@toucan-ui/patterns)         | Composable layout patterns                |
 | [@toucan-ui/interactions](https://www.npmjs.com/package/@toucan-ui/interactions) | Framework-agnostic interaction primitives |
 

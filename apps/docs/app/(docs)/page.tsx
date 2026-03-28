@@ -13,11 +13,7 @@ export default function Home() {
             Patterns compose atoms, atoms reference tokens, themes override tokens. Swap a single
             JSON file and every component re-skins itself.
           </Text>
-          <CodeBlock
-            code="npm install @toucan-ui/core @toucan-ui/tokens"
-            language="bash"
-            filename="Install"
-          />
+          <CodeBlock code="npm install @toucan-ui/core" language="bash" filename="Install" />
           <Button as="a" href="/docs/getting-started" variant="primary" size="lg">
             Get Started
           </Button>

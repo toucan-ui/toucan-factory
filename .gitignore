@@ -3,6 +3,7 @@ node_modules/
 
 # Build outputs
 dist/
+css/toucan/
 .next/
 
 # Turbo
@@ -15,6 +16,9 @@ coverage/
 .env
 .env.local
 .env.*.local
+
+# Documentation (local reference only)
+/docs/
 
 # OS
 .DS_Store

@@ -1,3 +1,4 @@
+import './visually-hidden.css';
 import { forwardRef } from 'react';
 
 export type VisuallyHiddenProps = React.HTMLAttributes<HTMLSpanElement>;

@@ -6,6 +6,10 @@
       "inputs": ["src/**", "patterns/**", "tsconfig.json", "tsup.config.ts", "package.json"],
       "outputs": ["dist/**"]
     },
+    "build#@toucan-ui/tokens": {
+      "inputs": ["presets/**/*.json"],
+      "outputs": []
+    },
     "build#@toucan-ui/docs": {
       "dependsOn": ["^build"],
       "inputs": ["app/**", "themes/**", "next.config.ts", "tsconfig.json", "package.json"],

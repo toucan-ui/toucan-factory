@@ -11,7 +11,6 @@ import {
   RADIUS_ALIASES,
   BORDER_WIDTH_ALIASES,
 } from './alias-maps';
-import { getGoogleFontsUrl } from './font-presets';
 
 /**
  * Resolve a semantic colour reference to its hex value.
@@ -565,72 +564,5 @@ export function generateCssFile(state: ConfigState): string {
     }
   }
 
-  const header = generateFontLoadingComment(state);
-  return `${header}${selector} {\n${lines.join('\n')}\n}\n`;
-}
-
-/**
- * Generate a CSS comment block with font-loading instructions.
- * Only included when non-system (Google) fonts are used.
- */
-function generateFontLoadingComment(state: ConfigState): string {
-  const { typography } = state;
-  const fonts: { slot: string; value: string; url: string }[] = [];
-
-  const slots = [
-    { slot: 'Body', value: typography.fontFamilyBody },
-    { slot: 'Heading', value: typography.fontFamilyHeading },
-    { slot: 'Mono', value: typography.fontFamilyMono },
-    { slot: 'Display', value: typography.fontFamilyDisplay },
-  ];
-
-  const seenUrls = new Set<string>();
-
-  for (const { slot, value } of slots) {
-    const url = getGoogleFontsUrl(value);
-    if (url && !seenUrls.has(url)) {
-      seenUrls.add(url);
-      fonts.push({ slot, value, url });
-    }
-  }
-
-  // Check for custom fonts (no Google URL and not a system font stack)
-  const customFonts = slots.filter(({ value }) => {
-    const url = getGoogleFontsUrl(value);
-    return url === null && !value.startsWith('system-ui') && !value.startsWith("'SF Mono'");
-  });
-
-  if (fonts.length === 0 && customFonts.length === 0) return '';
-
-  const lines: string[] = [
-    '/* ==========================================================================',
-    '   Font Loading',
-    '   Add these to your HTML <head> or CSS to load the required fonts.',
-    '   ========================================================================== */',
-  ];
-
-  if (fonts.length > 0) {
-    lines.push('/*');
-    lines.push(' * HTML <link> tags:');
-    for (const { url } of fonts) {
-      lines.push(` *   <link rel="stylesheet" href="${url}" />`);
-    }
-    lines.push(' *');
-    lines.push(' * Or CSS @import (place at top of stylesheet):');
-    for (const { url } of fonts) {
-      lines.push(` *   @import url('${url}');`);
-    }
-    lines.push(' */');
-  }
-
-  if (customFonts.length > 0) {
-    lines.push('/*');
-    for (const { slot, value } of customFonts) {
-      lines.push(` * Custom font (${slot}): ensure ${value} is loaded in your application`);
-    }
-    lines.push(' */');
-  }
-
-  lines.push('');
-  return lines.join('\n');
+  return `${selector} {\n${lines.join('\n')}\n}\n`;
 }

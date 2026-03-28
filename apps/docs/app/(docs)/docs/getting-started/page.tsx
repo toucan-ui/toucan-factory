@@ -24,23 +24,35 @@ export default function GettingStartedPage() {
         <Grid gap={4}>
           <Heading level={2}>Installation</Heading>
           <Text>
-            Install the core packages with your package manager. The tokens package provides CSS
-            custom properties and atom styles. The core package provides React components.
+            Install the core package — it ships accessible React components, co-located atom CSS,
+            and the <code>toucan</code> CLI for compiling your token JSON into CSS. Then install a
+            token preset (or bring your own).
           </Text>
-          <CodeBlock code={`pnpm add @toucan-ui/tokens @toucan-ui/core`} language="bash" />
+          <CodeBlock code={`pnpm add @toucan-ui/core @toucan-ui/tokens`} language="bash" />
         </Grid>
 
         <Grid gap={4}>
-          <Heading level={2}>Two Imports</Heading>
+          <Heading level={2}>Build Your CSS</Heading>
           <Text>
-            Every application starts with two imports: tokens (the visual foundation) and components
-            (the structure).
+            Run the <code>toucan</code> CLI to compile your token JSON into CSS. Add this to your
+            build script so it runs before your app builds.
           </Text>
           <CodeBlock
-            code={`// 1. Base tokens + atom CSS (ground zero)
-import '@toucan-ui/tokens/css';
+            code={`npx toucan build --tokens node_modules/@toucan-ui/tokens/presets/default --out ./toucan-out`}
+            language="bash"
+          />
+          <Text>Then import the compiled CSS and your components:</Text>
+          <CodeBlock
+            code={`// 1. Foundation tokens (raw + alias + system + dark)
+@import './toucan-out/foundation/foundation.css';
 
-// 2. Components (structure + accessibility)
+// 2. Component + responsive CSS
+@import './toucan-out/styles.css';`}
+            language="css"
+            filename="globals.css"
+          />
+          <CodeBlock
+            code={`// Components — each import includes its co-located CSS
 import { Button, Input, Box } from '@toucan-ui/core';`}
             language="tsx"
             filename="app.tsx"
@@ -99,12 +111,33 @@ body {
         <Grid gap={4}>
           <Heading level={2}>Theming</Heading>
           <Text>
-            Themes override tokens via a <code>data-theme</code> attribute on any ancestor element.
+            The compiled foundation includes neutral defaults from the alias tier — everything works
+            out of the box. To apply your own brand, import a theme CSS file after the compiled
+            output. Themes override alias tokens via a <code>data-theme</code> attribute on any
+            ancestor element.
+          </Text>
+          <CodeBlock
+            code={`/* globals.css */
+@import './toucan-out/foundation/foundation.css';
+@import './toucan-out/styles.css';
+@import './my-theme.css';  /* alias overrides */`}
+            language="css"
+            filename="globals.css"
+          />
+          <CodeBlock
+            code={`<html data-theme="my-brand">
+  <App />
+</html>`}
+            language="tsx"
+            filename="layout.tsx"
+          />
+          <Text>
             See the{' '}
             <Link href="/docs/themes" variant="inline">
               Themes
             </Link>{' '}
-            guide for details on creating custom themes.
+            guide for the full override model, custom raw values, and how to build a theme with
+            Style Dictionary.
           </Text>
         </Grid>
 
@@ -143,7 +176,7 @@ body {
               token reference
             </Link>
             , or dive into the{' '}
-            <Link href="/components" variant="inline">
+            <Link href="/docs/components" variant="inline">
               component docs
             </Link>
             .

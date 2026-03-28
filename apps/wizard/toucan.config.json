@@ -1,0 +1,4 @@
+{
+  "tokens": "node_modules/@toucan-ui/tokens/presets/default",
+  "outDir": "./css/toucan"
+}

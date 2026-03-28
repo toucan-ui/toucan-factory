@@ -18,7 +18,7 @@ const cspHeader = [
 
 const nextConfig: NextConfig = {
   pageExtensions: ['ts', 'tsx', 'md', 'mdx'],
-  transpilePackages: ['@toucan-ui/core', '@toucan-ui/tokens', '@toucan-ui/patterns'],
+  transpilePackages: ['@toucan-ui/core', '@toucan-ui/patterns'],
   turbopack: {
     root: path.join(__dirname, '../..'),
   },

@@ -151,19 +151,26 @@ export default function TokensPage() {
           <Heading level={2}>How the Cascade Works</Heading>
           <Text>
             Tokens flow through three tiers with strict referencing direction. Raw tokens hold
-            primitive values. Alias tokens add semantic meaning. System tokens bind to specific
-            components.
+            primitive values. Alias tokens (the base theme) add semantic meaning. System tokens bind
+            to specific components. All three tiers ship as foundation CSS with{' '}
+            <code>@toucan-ui/core</code>.
           </Text>
           <CodeBlock
-            code={`Raw:    --color-blue-500: #3b82f6
-Alias:  --color-primary: var(--color-blue-500)
-System: --button-primary-surface-default: var(--color-primary)
-CSS:    .tcn-button-primary { background: var(--button-primary-surface-default) }`}
+            code={`/* Colors — alias tokens used directly in atom CSS */
+Raw:    --color-neutral-900: #171717
+Alias:  --color-primary: var(--color-neutral-900)    ← base theme default
+CSS:    .tcn-button[data-variant="primary"] { background-color: var(--color-primary) }
+
+/* Structure — system tokens add component-specific tuning */
+Raw:    --radius-md: 0.5rem
+System: --button-radius: var(--radius-md)
+CSS:    .tcn-button { border-radius: var(--button-radius) }`}
             language="css"
           />
           <Text>
-            A theme overrides at the system tier by picking different raw values. The component CSS
-            never changes.
+            A theme overrides at the alias tier by remapping semantic roles to different raw values.
+            Colors flow directly from alias to atom CSS. Structural properties (sizing, spacing,
+            radius) route through system tokens for per-component tuning.
           </Text>
         </Grid>
 
@@ -254,7 +261,9 @@ CSS:    .tcn-button-primary { background: var(--button-primary-surface-default) 
               <Grid gap={4}>
                 <Heading level={3}>Color Aliases</Heading>
                 <Text muted>
-                  Semantic color roles that reference raw values. Themes remap these.
+                  Semantic color roles that reference raw values. The base theme fills every slot
+                  with neutral defaults. Branded themes override these to express a different
+                  identity.
                 </Text>
                 {ALIAS_COLORS.map((group) => (
                   <Grid key={group.name} gap={2}>
@@ -298,8 +307,9 @@ CSS:    .tcn-button-primary { background: var(--button-primary-surface-default) 
               <Grid gap={4}>
                 <Heading level={3}>Component Tokens</Heading>
                 <Text muted>
-                  System tokens bind to specific components using the surface/on-surface convention.
-                  Each component has tokens for background, text color, border, and size variants.
+                  System tokens handle structural properties — sizing, spacing, radius, font weight
+                  — giving each component its own tuning knobs. For colors, atom CSS references
+                  alias tokens directly so theme overrides cascade without extra indirection.
                 </Text>
                 <Flex row wrap gap={3}>
                   {SYSTEM_COMPONENTS.map((comp) => (
@@ -312,16 +322,26 @@ CSS:    .tcn-button-primary { background: var(--button-primary-surface-default) 
 
               <Grid gap={4}>
                 <Heading level={3}>Example: Button Tokens</Heading>
+                <Text muted>Structural system tokens consumed by button atom CSS:</Text>
                 <CodeBlock
-                  code={`--button-primary-surface-default     → var(--color-primary)
---button-primary-surface-hover       → var(--color-primary-hover)
---button-primary-on-surface-default  → var(--color-on-primary)
---button-secondary-surface-default   → var(--color-surface-default)
---button-ghost-surface-default       → transparent
---button-radius                      → var(--radius-md)
---button-sm-padding                  → var(--scale-1) var(--scale-3)
---button-md-padding                  → var(--scale-2) var(--scale-4)
---button-lg-padding                  → var(--scale-3) var(--scale-6)`}
+                  code={`--button-radius       → var(--radius-md)
+--button-font-weight  → var(--font-weight-medium)
+--button-gap          → var(--spacing-sm)
+--button-border-width → var(--border-width-thin)
+--button-sm-height    → var(--sizing-md)
+--button-sm-padding-x → var(--spacing-md)
+--button-md-height    → var(--sizing-lg)
+--button-md-padding-x → var(--spacing-lg)
+--button-lg-height    → var(--sizing-xl)
+--button-lg-padding-x → var(--spacing-xl)`}
+                  language="css"
+                />
+                <Text muted>Colors reference alias tokens directly in atom CSS:</Text>
+                <CodeBlock
+                  code={`.tcn-button[data-variant="primary"] {
+  background-color: var(--color-primary);
+  color: var(--color-on-primary);
+}`}
                   language="css"
                 />
               </Grid>

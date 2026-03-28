@@ -65,19 +65,11 @@ export default function DownloadPage() {
         <Flex gap={1}>
           <Text size="sm" variant="muted">
             <strong>CSS:</strong> A single file scoped to [data-theme=&quot;{state.themeName}
-            &quot;]. Import after @toucan-ui/tokens/css to override the base theme. If your theme
-            uses Google Fonts, loading instructions are included as a comment at the top of the
-            file.
+            &quot;]. Import after your foundation CSS to override the base theme.
           </Text>
           <Text size="sm" variant="muted">
             <strong>JSON:</strong> A ZIP containing raw/, alias/, and system/ directories in DTCG
-            format, compatible with Style Dictionary pipelines. A fonts.json file lists required
-            Google Fonts URLs for easy integration.
-          </Text>
-          <Text size="sm" variant="muted">
-            <strong>Custom fonts:</strong> If you specified a custom font family, you are
-            responsible for loading it in your application (via @font-face, a CDN link, or a hosted
-            file).
+            format. Run <code>npx toucan build --tokens ./your-theme</code> to compile into CSS.
           </Text>
         </Flex>
       </Flex>

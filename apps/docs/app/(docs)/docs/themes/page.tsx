@@ -1,4 +1,4 @@
-import { Heading, Text, Grid } from '@toucan-ui/core';
+import { Heading, Text, Grid, Link } from '@toucan-ui/core';
 import { PageHeader, CodeBlock } from '../../../_shared/patterns';
 import { STAT_TOKEN_COUNT } from '@/data/project-stats';
 
@@ -7,7 +7,7 @@ export default function ThemesPage() {
     <>
       <PageHeader
         title="Themes"
-        description="How the override model works and how to create your own theme."
+        description="How the base theme, override model, and branded themes work together."
         breadcrumbs={[
           { label: 'Home', href: '/' },
           { label: 'Docs', href: '/docs' },
@@ -17,29 +17,99 @@ export default function ThemesPage() {
 
       <Grid gap={8}>
         <Grid gap={4}>
+          <Heading level={2}>The Base Theme</Heading>
+          <Text>
+            Foundation CSS includes a base theme — neutral, functional defaults that fill every
+            alias slot. Neutral-900 primary, system-ui fonts, white surfaces. A site that imports
+            only <code>@toucan-ui/core/foundation</code> with no additional theme renders cleanly
+            out of the box.
+          </Text>
+          <Text>
+            The base theme is not a brand. It is a safety net that guarantees every token has a
+            value, so components never break from a missing variable.
+          </Text>
+          <CodeBlock
+            code={`// This works — base theme provides all defaults
+import '@toucan-ui/core/foundation';
+import { Button } from '@toucan-ui/core';
+
+// Button renders with neutral-900 background, white text, md radius
+<Button variant="primary">Works without a theme</Button>`}
+            language="tsx"
+          />
+        </Grid>
+
+        <Grid gap={4}>
           <Heading level={2}>The Override Model</Heading>
           <Text>
             A theme is a partial set of token overrides scoped under a <code>[data-theme]</code> CSS
-            selector. Themes never create new raw values — they remap at the alias or system tier by
-            picking different steps on the raw scales the base already provides.
+            selector. Themes override at the alias tier — remapping semantic roles to different raw
+            values. Only include the tokens you want to change; everything else inherits from the
+            base theme.
           </Text>
           <Text>
-            A theme that overrides nothing is identical to the base. This means every theme inherits
-            all {STAT_TOKEN_COUNT} tokens and only needs to override the ones it wants to change.
+            Every theme inherits all {STAT_TOKEN_COUNT} tokens. A theme that overrides nothing is
+            identical to the base.
           </Text>
           <CodeBlock
-            code={`/* Base (no data-theme attribute needed) */
+            code={`/* Base theme (ships with foundation — no attribute needed) */
 :root {
   --color-primary: var(--color-neutral-900);
   --button-radius: var(--radius-md);
 }
 
-/* Custom theme — scoped override */
+/* Branded theme — overrides only what it needs */
 [data-theme="ocean"] {
   --color-primary: var(--color-blue-600);
+  --color-primary-hover: var(--color-blue-700);
   --button-radius: var(--radius-sm);
 }`}
             language="css"
+          />
+        </Grid>
+
+        <Grid gap={4}>
+          <Heading level={2}>Three Ways to Theme</Heading>
+
+          <Heading level={3}>1. No theme (base defaults)</Heading>
+          <Text>Import foundation and components. Everything works with neutral styling.</Text>
+          <CodeBlock
+            code={`import '@toucan-ui/core/foundation';
+import { Button } from '@toucan-ui/core';`}
+            language="tsx"
+          />
+
+          <Heading level={3}>2. Custom brand theme</Heading>
+          <Text>
+            Write a CSS file with alias overrides scoped under{' '}
+            <code>[data-theme=&quot;yourname&quot;]</code>. If your brand uses colours outside the
+            default raw palette, add custom raw values alongside the alias overrides.
+          </Text>
+          <CodeBlock
+            code={`import '@toucan-ui/core/foundation';
+import './my-brand-theme.css';
+import { Button } from '@toucan-ui/core';
+
+<html data-theme="my-brand">
+  <Button variant="primary">Branded button</Button>
+</html>`}
+            language="tsx"
+          />
+
+          <Heading level={3}>3. Wizard-generated theme</Heading>
+          <Text>
+            Use the{' '}
+            <Link href="/examples/dashboard" variant="inline">
+              theme configurator
+            </Link>{' '}
+            to visually build a theme, then download the CSS file. Same import pattern as a custom
+            theme.
+          </Text>
+          <CodeBlock
+            code={`import '@toucan-ui/core/foundation';
+import './wizard-theme.css';
+import { Button } from '@toucan-ui/core';`}
+            language="tsx"
           />
         </Grid>
 
@@ -63,51 +133,67 @@ export default function ThemesPage() {
         </Grid>
 
         <Grid gap={4}>
-          <Heading level={2}>Token Override JSON Structure</Heading>
+          <Heading level={2}>What a Theme Can Override</Heading>
           <Text>
-            Theme overrides are JSON files with the same structure as the base tokens. Only include
-            the tokens you want to change — everything else is inherited.
+            Themes primarily override alias tokens — the semantic layer between raw values and
+            component bindings. A single alias change cascades to every component that references
+            it.
           </Text>
 
-          <Heading level={3}>Alias Overrides</Heading>
+          <Heading level={3}>Alias overrides (most common)</Heading>
           <Text>
-            Remap semantic roles to different raw values. This is the most powerful lever — a single
-            alias change cascades to every component that references it.
+            Remap semantic roles to different raw values. This is the most powerful lever.
           </Text>
           <CodeBlock
-            code={`// src/alias/color.json — remap primary to blue
-{
-  "color": {
-    "primary": { "$value": "{color.blue.600}", "$type": "color" },
-    "primary-hover": { "$value": "{color.blue.700}", "$type": "color" }
-  }
+            code={`/* Remap primary from neutral to blue */
+[data-theme="ocean"] {
+  --color-primary: var(--color-blue-600);
+  --color-primary-hover: var(--color-blue-700);
+  --color-primary-active: var(--color-blue-800);
 }`}
-            language="json"
-            filename="src/alias/color.json"
+            language="css"
           />
 
-          <Heading level={3}>System Overrides</Heading>
+          <Heading level={3}>Custom raw values (brand palettes)</Heading>
           <Text>
-            Fine-tune individual component tokens. Use this when you need component-specific tweaks
-            beyond what alias changes provide.
+            If your brand uses colours outside the built-in palette, add custom raw values alongside
+            your alias overrides. For example, a brand purple that doesn&apos;t exist in the default
+            raw scales.
           </Text>
           <CodeBlock
-            code={`// src/system/button.json — smaller radius for this theme
-{
-  "button": {
-    "radius": { "$value": "{radius.sm}", "$type": "dimension" }
-  }
+            code={`[data-theme="acme"] {
+  /* Custom raw values for brand palette */
+  --color-acme-purple-500: #7c3aed;
+  --color-acme-purple-600: #6d28d9;
+  --color-acme-purple-700: #5b21b6;
+
+  /* Alias overrides referencing custom raws */
+  --color-primary: var(--color-acme-purple-500);
+  --color-primary-hover: var(--color-acme-purple-600);
+  --color-primary-active: var(--color-acme-purple-700);
 }`}
-            language="json"
-            filename="src/system/button.json"
+            language="css"
+          />
+
+          <Heading level={3}>System overrides (rare)</Heading>
+          <Text>
+            Fine-tune individual component tokens when alias changes aren&apos;t granular enough.
+            Most themes never need this.
+          </Text>
+          <CodeBlock
+            code={`[data-theme="compact"] {
+  --button-radius: var(--radius-sm);
+  --button-sm-padding: var(--scale-0-5) var(--scale-2);
+}`}
+            language="css"
           />
         </Grid>
 
         <Grid gap={4}>
           <Heading level={2}>Building a Theme with Style Dictionary</Heading>
           <Text>
-            Theme packages use the same Style Dictionary v5 build pipeline as the base tokens. The
-            key difference is scoping all output under a <code>[data-theme]</code> selector.
+            For JSON-based workflows, use Style Dictionary v5 to compile token overrides into a
+            scoped CSS file. This is the same pipeline that builds the foundation tokens.
           </Text>
           <CodeBlock
             code={`import StyleDictionary from 'style-dictionary';
@@ -117,9 +203,9 @@ const sd = new StyleDictionary({
   platforms: {
     css: {
       transformGroup: 'css',
-      buildPath: 'dist/css/',
+      buildPath: 'dist/',
       files: [{
-        destination: 'variables.css',
+        destination: 'ocean-theme.css',
         format: 'css/variables',
         options: {
           outputReferences: true,
@@ -139,36 +225,37 @@ await sd.buildAllPlatforms();`}
         <Grid gap={4}>
           <Heading level={2}>Creating a New Theme</Heading>
 
-          <Heading level={3}>1. Create the override files</Heading>
+          <Heading level={3}>1. Create alias overrides</Heading>
           <Text>
-            Create JSON files under <code>src/alias/</code> and <code>src/system/</code> that
-            override the tokens you want to change. Reference raw tokens that already exist in the
-            base.
+            Write a CSS file (or JSON files for Style Dictionary) that overrides the alias tokens
+            you want to change. Start with primary colour and typography — these cascade the
+            furthest.
           </Text>
 
-          <Heading level={3}>2. Add fonts (optional)</Heading>
+          <Heading level={3}>2. Add custom raws if needed</Heading>
           <Text>
-            Create <code>css/fonts.css</code> with your font imports, and override the display/text
-            font family tokens.
+            If your brand palette includes colours not in the default raw scales, define them as
+            custom properties in the same file.
           </Text>
 
-          <Heading level={3}>3. Build with Style Dictionary</Heading>
+          <Heading level={3}>3. Add fonts (optional)</Heading>
           <Text>
-            Run Style Dictionary with <code>outputReferences: true</code> and scope output under{' '}
-            <code>[data-theme=&quot;yourname&quot;]</code>.
+            Load your brand fonts via <code>@font-face</code>, a CDN link, or a Google Fonts import.
+            Override <code>--text-font-family</code> and <code>--display-font-family</code> to
+            reference them.
           </Text>
 
-          <Heading level={3}>4. Consume it</Heading>
+          <Heading level={3}>4. Import after foundation</Heading>
           <CodeBlock
-            code={`// Import after base tokens
-import '@toucan-ui/tokens/css';
-import './theme-ocean.css';
+            code={`// app/globals.css or layout.tsx
+import '@toucan-ui/core/foundation';
+import './my-theme.css';
 
 // Apply globally
-<html data-theme="ocean">
+<html data-theme="mytheme">
 
-// Or scope to a container
-<div data-theme="ocean">
+// Or scope to a section
+<div data-theme="mytheme">
   <Button>Themed button</Button>
 </div>`}
             language="tsx"
@@ -176,11 +263,29 @@ import './theme-ocean.css';
         </Grid>
 
         <Grid gap={4}>
+          <Heading level={2}>Dark Mode</Heading>
+          <Text>
+            Foundation CSS includes dark mode overrides scoped to{' '}
+            <code>[data-mode=&quot;dark&quot;]</code>. These swap alias values so surfaces darken,
+            text lightens, and status colours adjust contrast — all without changing component code
+            or theme overrides.
+          </Text>
+          <CodeBlock
+            code={`// Enable dark mode on any ancestor
+<html data-mode="dark">
+
+// Combine with a theme
+<html data-theme="ocean" data-mode="dark">`}
+            language="tsx"
+          />
+        </Grid>
+
+        <Grid gap={4}>
           <Heading level={2}>Example Themes</Heading>
           <Text>
-            The example pages in this docs site demonstrate theming in action. Each example page
-            applies a different set of token overrides to show how the same components adapt to
-            different visual styles — all without changing any component code.
+            The example pages in this docs site demonstrate theming in action. Each example applies
+            a different set of token overrides to show how the same components adapt to different
+            visual styles — all without changing any component code.
           </Text>
         </Grid>
       </Grid>

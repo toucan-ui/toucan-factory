@@ -36,15 +36,14 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsx scripts/build-css.ts && tsup && tsc -p tsconfig.build.json",
+    "build": "tsup && tsc -p tsconfig.build.json",
     "clean": "rm -rf dist",
     "test": "vitest run",
     "typecheck": "tsc --noEmit",
     "lint": "eslint src/"
   },
   "dependencies": {
-    "@toucan-ui/core": "workspace:*",
-    "@toucan-ui/tokens": "workspace:*"
+    "@toucan-ui/core": "workspace:*"
   },
   "peerDependencies": {
     "react": "^19.0.0",

@@ -3,5 +3,5 @@
   "compilerOptions": {
     "outDir": "dist"
   },
-  "include": ["src", "test-setup.ts", "vitest-axe.d.ts"]
+  "include": ["src"]
 }
