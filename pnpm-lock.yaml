@@ -215,9 +215,6 @@ importers:
       '@toucan-ui/core':
         specifier: workspace:*
         version: link:../core
-      '@toucan-ui/tokens':
-        specifier: workspace:*
-        version: link:../tokens
     devDependencies:
       '@testing-library/jest-dom':
         specifier: ^6.6.3
