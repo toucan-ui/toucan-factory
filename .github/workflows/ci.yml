@@ -14,9 +14,10 @@ env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 jobs:
-  install:
-    name: Install
+  ci:
+    name: Lint / Typecheck / Test / Format
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v4
 
@@ -38,63 +39,18 @@ jobs:
             turbo-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}-
             turbo-${{ runner.os }}-
 
-      # Build packages (needed by lint, typecheck, and test)
-      - run: pnpm build
+      # Build library packages (apps are built by Vercel, not CI)
+      - name: Build packages
+        run: pnpm turbo build --filter='./packages/*'
 
-      - name: Cache workspace
-        uses: actions/cache/save@v4
-        with:
-          path: .
-          key: workspace-${{ github.sha }}
+      - name: Lint
+        run: pnpm lint
 
-  lint:
-    name: Lint
-    needs: install
-    runs-on: ubuntu-latest
-    steps:
-      - name: Restore workspace
-        uses: actions/cache/restore@v4
-        with:
-          path: .
-          key: workspace-${{ github.sha }}
+      - name: Typecheck
+        run: pnpm typecheck
 
-      - run: pnpm lint
+      - name: Test
+        run: pnpm test
 
-  typecheck:
-    name: Typecheck
-    needs: install
-    runs-on: ubuntu-latest
-    steps:
-      - name: Restore workspace
-        uses: actions/cache/restore@v4
-        with:
-          path: .
-          key: workspace-${{ github.sha }}
-
-      - run: pnpm typecheck
-
-  test:
-    name: Test
-    needs: install
-    runs-on: ubuntu-latest
-    steps:
-      - name: Restore workspace
-        uses: actions/cache/restore@v4
-        with:
-          path: .
-          key: workspace-${{ github.sha }}
-
-      - run: pnpm test
-
-  format:
-    name: Format check
-    needs: install
-    runs-on: ubuntu-latest
-    steps:
-      - name: Restore workspace
-        uses: actions/cache/restore@v4
-        with:
-          path: .
-          key: workspace-${{ github.sha }}
-
-      - run: pnpm format:check
+      - name: Format check
+        run: pnpm format:check

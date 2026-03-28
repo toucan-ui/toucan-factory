@@ -41,6 +41,7 @@
     "src/utils/**/*.css"
   ],
   "scripts": {
+    "prepare": "mkdir -p dist/bin && [ -f dist/bin/toucan.js ] || printf '#!/usr/bin/env node\\nconsole.error(\"@toucan-ui/core not built yet — run: pnpm turbo build --filter=@toucan-ui/core\");process.exit(1);' > dist/bin/toucan.js",
     "build": "tsup",
     "clean": "rm -rf dist",
     "lint": "eslint src/",
