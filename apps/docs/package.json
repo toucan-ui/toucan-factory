@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "build:themes": "tsx themes/build.ts",
-    "dev": "pnpm exec toucan build && tsx themes/build.ts && next dev --webpack -p 3001",
-    "build": "pnpm exec toucan build && tsx themes/build.ts && next build --webpack",
+    "dev": "toucan build && tsx themes/build.ts && next dev --webpack -p 3001",
+    "build": "toucan build && tsx themes/build.ts && next build --webpack",
     "start": "next start",
     "clean": "rm -rf .next",
     "lint": "eslint app/",

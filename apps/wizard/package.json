@@ -4,8 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "pnpm exec toucan build && next dev --webpack -p 3002",
-    "build": "pnpm exec toucan build && next build --webpack",
+    "dev": "toucan build && next dev --webpack -p 3002",
+    "build": "toucan build && next build --webpack",
     "start": "next start",
     "clean": "rm -rf .next",
     "lint": "eslint app/",
