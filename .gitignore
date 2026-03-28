@@ -20,6 +20,9 @@ coverage/
 # Documentation (local reference only)
 /docs/
 
+# Claude Code
+.claude/
+
 # OS
 .DS_Store
 Thumbs.db
