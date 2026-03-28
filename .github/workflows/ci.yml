@@ -38,8 +38,8 @@ jobs:
             turbo-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}-
             turbo-${{ runner.os }}-
 
-      # Build packages (needed by lint, typecheck, and test)
-      - run: pnpm build
+      # Build library packages only (apps are built by Vercel, not CI)
+      - run: pnpm turbo build --filter='./packages/*'
 
       - name: Cache workspace
         uses: actions/cache/save@v4
